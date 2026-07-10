@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Réservation — Lucie VH Coach Pilates</title>
+  <meta name="description" content="Réservez votre séance de pilates en ligne. Choisissez votre créneau et votre formule en quelques clics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .service-picker {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    .service-option {
+      border: 2px solid #E8E8E8;
+      border-radius: 16px;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .service-option:hover {
+      border-color: var(--orange-light);
+    }
+    .service-option.selected {
+      border-color: var(--orange);
+      background: rgba(255,92,26,0.05);
+    }
+    .service-option .icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .service-option .name {
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+    .service-option .price {
+      font-size: 0.8rem;
+      color: var(--orange);
+      font-weight: 600;
+    }
+    .step-indicator {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 3rem;
+    }
+    .step-dot {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .step-dot.active { color: var(--orange); }
+    .step-dot.done { color: var(--black); }
+    .step-circle {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      border: 2px solid #E8E8E8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+    .step-dot.active .step-circle {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: var(--white);
+    }
+    .step-dot.done .step-circle {
+      background: var(--black);
+      border-color: var(--black);
+      color: var(--white);
+    }
+    .step-line {
+      flex: 1;
+      height: 2px;
+      background: #E8E8E8;
+      margin: 0 0.8rem;
+    }
+    .step-line.done { background: var(--orange); }
+
+    .success-box {
+      display: none;
+      background: var(--light-grey);
+      border-radius: 24px;
+      padding: 4rem 3rem;
+      text-align: center;
+    }
+    .success-box.visible { display: block; }
+    .success-icon {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      margin: 0 auto 1.5rem;
+    }
+    .success-box h3 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.8rem;
+    }
+    .success-box p { color: var(--text-muted); margin-bottom: 2rem; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="logo">Lucie<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="booking.html" class="active">Réservation</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="booking.html" class="nav-cta">Réserver →</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-content">
+    <span class="section-tag">Prise de rendez-vous</span>
+    <h1>Réserve ta<br/><em>séance.</em></h1>
+    <p>Choisis ton format, sélectionne un créneau et c'est parti. Simple, rapide, sans engagement.</p>
+  </div>
+</div>
+
+<!-- BOOKING -->
+<section style="background: var(--white); padding: 5rem 4rem;">
+  <div class="booking-grid">
+    <div>
+      <!-- STEP INDICATOR -->
+      <div class="step-indicator" id="stepIndicator">
+        <div class="step-dot done" id="step1dot">
+          <div class="step-circle">1</div>
+          Service
+        </div>
+        <div class="step-line" id="line1"></div>
+        <div class="step-dot active" id="step2dot">
+          <div class="step-circle">2</div>
+          Créneau
+        </div>
+        <div class="step-line" id="line2"></div>
+        <div class="step-dot" id="step3dot">
+          <div class="step-circle">3</div>
+          Infos
+        </div>
+        <div class="step-line" id="line3"></div>
+        <div class="step-dot" id="step4dot">
+          <div class="step-circle">4</div>
+          Confirmation
+        </div>
+      </div>
+
+      <!-- SERVICE PICKER -->
+      <h3 style="font-size:1.1rem; font-weight:800; margin-bottom:1rem;">1. Choisis ton service</h3>
+      <div class="service-picker">
+        <div class="service-option selected" data-service="Séance Privée" data-price="70" onclick="selectService(this)">
+          <div class="icon">🎯</div>
+          <div class="name">Séance Privée</div>
+          <div class="price">70€</div>
+        </div>
+        <div class="service-option" data-service="Cours Collectif" data-price="25" onclick="selectService(this)">
+          <div class="icon">👥</div>
+          <div class="name">Cours Collectif</div>
+          <div class="price">25€</div>
+        </div>
+        <div class="service-option" data-service="Cours en Ligne" data-price="35" onclick="selectService(this)">
+          <div class="icon">💻</div>
+          <div class="name">Cours en Ligne</div>
+          <div class="price">35€</div>
+        </div>
+        <div class="service-option" data-service="Séance Découverte" data-price="0" onclick="selectService(this)">
+          <div class="icon">🎁</div>
+          <div class="name">Découverte</div>
+          <div class="price">Offert</div>
+        </div>
+      </div>
+
+      <!-- CALENDAR -->
+      <h3 style="font-size:1.1rem; font-weight:800; margin-bottom:1rem;">2. Choisis ton créneau</h3>
+      <div class="calendar-box">
+        <div class="cal-header">
+          <div class="cal-month" id="calMonth">Juillet 2025</div>
+          <div class="cal-nav">
+            <button onclick="changeMonth(-1)" aria-label="Mois précédent">‹</button>
+            <button onclick="changeMonth(1)" aria-label="Mois suivant">›</button>
+          </div>
+        </div>
+        <div class="cal-grid" id="calGrid"></div>
+
+        <div class="time-slots" id="timeSlots" style="display:none;">
+          <h4>Horaires disponibles</h4>
+          <div class="slots-grid" id="slotsGrid"></div>
+        </div>
+      </div>
+
+      <!-- PERSONAL INFO -->
+      <div style="margin-top:2rem;" id="bookingFormSection" style="display:none;">
+        <h3 style="font-size:1.1rem; font-weight:800; margin-bottom:1.5rem;">3. Tes informations</h3>
+        <div class="form-box" style="box-shadow:none; border: 2px solid #F0F0F0; padding: 2rem;">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Prénom</label>
+              <input type="text" id="firstName" placeholder="Sophie" />
+            </div>
+            <div class="form-group">
+              <label>Nom</label>
+              <input type="text" id="lastName" placeholder="Martin" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="sophie@email.fr" />
+          </div>
+          <div class="form-group">
+            <label>Téléphone</label>
+            <input type="tel" id="phone" placeholder="+33 6 12 34 56 78" />
+          </div>
+          <div class="form-group">
+            <label>Niveau (optionnel)</label>
+            <select id="level">
+              <option value="">Sélectionne ton niveau</option>
+              <option>Débutante complète</option>
+              <option>J'ai déjà pratiqué un peu</option>
+              <option>Intermédiaire</option>
+              <option>Avancée</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message (optionnel)</label>
+            <textarea id="message" placeholder="Blessures, objectifs, questions particulières..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="success-box" id="successBox">
+        <div class="success-icon">✓</div>
+        <h3>Réservation confirmée !</h3>
+        <p>Un email de confirmation t'a été envoyé. Lucie te contactera sous 24h pour finaliser les détails.</p>
+        <a href="index.html" class="btn btn-primary">Retour à l'accueil →</a>
+      </div>
+    </div>
+
+    <!-- SUMMARY SIDEBAR -->
+    <div>
+      <div class="booking-summary">
+        <h3>📋 Récapitulatif</h3>
+        <div class="summary-row">
+          <span class="summary-label">Service</span>
+          <span class="summary-value highlight" id="sumService">Séance Privée</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Date</span>
+          <span class="summary-value" id="sumDate">—</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Horaire</span>
+          <span class="summary-value" id="sumTime">—</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Format</span>
+          <span class="summary-value">En studio / En ligne</span>
+        </div>
+        <hr class="summary-divider" />
+        <div class="summary-total">
+          <span>Total</span>
+          <span id="sumPrice">70€</span>
+        </div>
+        <button class="btn btn-primary" onclick="confirmBooking()" id="confirmBtn" disabled style="width:100%;justify-content:center;margin-top:1.5rem;font-size:1rem;padding:1rem;opacity:0.5;cursor:not-allowed;">
+          Confirmer →
+        </button>
+        <p style="color:rgba(255,255,255,0.4);font-size:0.75rem;text-align:center;margin-top:1rem;">
+          Annulation gratuite jusqu'à 24h avant
+        </p>
+      </div>
+
+      <div style="margin-top:1.5rem; background:var(--light-grey); border-radius:20px; padding:1.5rem;">
+        <div style="font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); margin-bottom:1rem;">Besoin d'aide ?</div>
+        <a href="contact.html" style="display:flex; align-items:center; gap:0.8rem; font-size:0.9rem; font-weight:600; color:var(--dark); transition:color 0.2s;" onmouseover="this.style.color='var(--orange)'" onmouseout="this.style.color='var(--dark)'">
+          💬 Me contacter directement
+        </a>
+        <div style="margin-top:0.8rem; color:var(--text-muted); font-size:0.85rem;">
+          <a href="tel:+33600000000" style="color:inherit;">+33 6 00 00 00 00</a><br/>
+          <a href="mailto:lucie@pilates.fr" style="color:inherit;">lucie@pilates.fr</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Une question avant<br/>de réserver ?</h2>
+  <p>Je suis disponible pour répondre à toutes tes questions. Contacte-moi, c'est gratuit et sans engagement.</p>
+  <a href="contact.html" class="btn btn-outline">Me contacter →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <div class="logo">Lucie<span>.</span></div>
+    <p>Coach Pilates certifiée à Paris. Je t'accompagne vers un corps plus fort, une posture alignée et un mental apaisé.</p>
+  </div>
+  <div class="footer-col">
+    <h4>Navigation</h4>
+    <a href="index.html">Accueil</a>
+    <a href="services.html">Services</a>
+    <a href="booking.html">Réservation</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="footer-col">
+    <h4>Services</h4>
+    <a href="services.html#prive">Séance Privée</a>
+    <a href="services.html#collectif">Cours Collectif</a>
+    <a href="services.html#ligne">Cours en Ligne</a>
+    <a href="services.html#programme">Programmes</a>
+  </div>
+  <div class="footer-col">
+    <h4>Contact</h4>
+    <a href="mailto:lucie@pilates.fr">lucie@pilates.fr</a>
+    <a href="tel:+33600000000">+33 6 00 00 00 00</a>
+    <a href="#">Instagram</a>
+    <a href="#">Paris, France</a>
+  </div>
+</footer>
+<div class="footer-bottom">
+  © 2025 Lucie VH · Tous droits réservés
+</div>
+
+<script src="main.js"></script>
+<script>
+  /* ===== BOOKING LOGIC ===== */
+  let currentYear = 2025, currentMonth = 6; // July (0-indexed)
+  let selectedDay = null, selectedSlot = null, selectedService = { name: 'Séance Privée', price: 70 };
+
+  const monthNames = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+  const dayNames = ['Lu','Ma','Me','Je','Ve','Sa','Di'];
+  const availableSlots = ['09:00','10:00','11:00','14:00','15:00','16:00','17:00','18:00','19:00'];
+  const availableDays = [2,3,4,7,8,9,10,14,15,16,17,21,22,23,24,28,29,30];
+
+  function buildCalendar() {
+    document.getElementById('calMonth').textContent = `${monthNames[currentMonth]} ${currentYear}`;
+    const grid = document.getElementById('calGrid');
+    grid.innerHTML = '';
+
+    dayNames.forEach(d => {
+      const el = document.createElement('div');
+      el.className = 'cal-day-name';
+      el.textContent = d;
+      grid.appendChild(el);
+    });
+
+    const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+    const offset = (firstDay === 0 ? 6 : firstDay - 1);
+    const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+    const today = new Date();
+
+    for (let i = 0; i < offset; i++) {
+      const el = document.createElement('div');
+      el.className = 'cal-day empty';
+      grid.appendChild(el);
+    }
+
+    for (let d = 1; d <= daysInMonth; d++) {
+      const el = document.createElement('div');
+      const date = new Date(currentYear, currentMonth, d);
+      const isPast = date < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      const isAvailable = availableDays.includes(d) && !isPast;
+
+      el.className = 'cal-day' + (isPast ? ' past' : '') + (isAvailable ? ' available' : '');
+      if (selectedDay === d && !isPast) el.classList.add('selected');
+      el.textContent = d;
+
+      if (isAvailable) {
+        el.onclick = () => selectDay(d);
+      }
+      grid.appendChild(el);
+    }
+  }
+
+  function selectDay(day) {
+    selectedDay = day;
+    selectedSlot = null;
+    buildCalendar();
+    document.getElementById('timeSlots').style.display = 'block';
+    buildSlots();
+    document.getElementById('bookingFormSection').style.display = 'block';
+    document.getElementById('sumDate').textContent = `${day} ${monthNames[currentMonth]} ${currentYear}`;
+    document.getElementById('sumTime').textContent = '—';
+    updateConfirmBtn();
+  }
+
+  function buildSlots() {
+    const grid = document.getElementById('slotsGrid');
+    grid.innerHTML = '';
+    availableSlots.forEach(s => {
+      const el = document.createElement('div');
+      el.className = 'slot' + (selectedSlot === s ? ' selected' : '');
+      el.textContent = s;
+      el.onclick = () => selectSlot(s, el);
+      grid.appendChild(el);
+    });
+  }
+
+  function selectSlot(slot, el) {
+    selectedSlot = slot;
+    document.querySelectorAll('.slot').forEach(s => s.classList.remove('selected'));
+    el.classList.add('selected');
+    document.getElementById('sumTime').textContent = slot;
+    updateConfirmBtn();
+  }
+
+  function changeMonth(dir) {
+    currentMonth += dir;
+    if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+    if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+    selectedDay = null; selectedSlot = null;
+    buildCalendar();
+    document.getElementById('timeSlots').style.display = 'none';
+    document.getElementById('bookingFormSection').style.display = 'none';
+    updateConfirmBtn();
+  }
+
+  function selectService(el) {
+    document.querySelectorAll('.service-option').forEach(e => e.classList.remove('selected'));
+    el.classList.add('selected');
+    selectedService = { name: el.dataset.service, price: parseInt(el.dataset.price) || 0 };
+    document.getElementById('sumService').textContent = selectedService.name;
+    document.getElementById('sumPrice').textContent = selectedService.price === 0 ? 'Offert' : `${selectedService.price}€`;
+    updateConfirmBtn();
+  }
+
+  function updateConfirmBtn() {
+    const btn = document.getElementById('confirmBtn');
+    const ready = selectedDay && selectedSlot;
+    btn.disabled = !ready;
+    btn.style.opacity = ready ? '1' : '0.5';
+    btn.style.cursor = ready ? 'pointer' : 'not-allowed';
+  }
+
+  function confirmBooking() {
+    const name = document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value;
+    if (!name.trim()) { alert('Merci de remplir tes informations.'); return; }
+    document.querySelector('.booking-grid').style.display = 'none';
+    document.getElementById('successBox').classList.add('visible');
+    window.scrollTo({ top: 400, behavior: 'smooth' });
+  }
+
+  buildCalendar();
+</script>
+</body>
+</html>

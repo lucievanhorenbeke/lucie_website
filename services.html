@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Lucie VH Coach Pilates</title>
+  <meta name="description" content="Découvrez tous mes services pilates : séances privées, cours collectifs, cours en ligne et programmes personnalisés." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .pricing-table {
+      background: var(--light-grey);
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 3rem;
+    }
+    .pricing-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 0;
+    }
+    .pricing-row:not(:first-child) { border-top: 1px solid rgba(0,0,0,0.07); }
+    .pricing-cell {
+      padding: 1.2rem 1.5rem;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+    }
+    .pricing-row.header .pricing-cell {
+      background: var(--black);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .pricing-row.header .pricing-cell.highlight { background: var(--orange); }
+    .pricing-row:not(.header):hover { background: rgba(255,92,26,0.04); }
+    .check { color: var(--orange); font-size: 1.1rem; }
+    .cross { color: #CCC; }
+
+    .service-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      padding: 4rem 0;
+      border-bottom: 1px solid #F0F0F0;
+    }
+    .service-detail:last-child { border-bottom: none; }
+    .service-detail.reverse .detail-text { order: 2; }
+    .service-detail.reverse .detail-visual { order: 1; }
+
+    .detail-visual {
+      border-radius: 24px;
+      background: var(--light-grey);
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+    }
+    .detail-tag {
+      display: inline-block;
+      background: rgba(255,92,26,0.1);
+      color: var(--orange);
+      padding: 0.3rem 0.8rem;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+    .detail-text h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+    .detail-text p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    .detail-list { margin-bottom: 1.5rem; }
+    .detail-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+    .detail-list li::before {
+      content: '→';
+      color: var(--orange);
+      font-weight: 700;
+    }
+    .price-badge {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.3rem;
+      background: var(--black);
+      color: var(--white);
+      padding: 0.5rem 1.2rem;
+      border-radius: 100px;
+      font-weight: 800;
+      font-size: 1rem;
+    }
+    .price-badge em {
+      font-style: normal;
+      color: var(--orange);
+      font-size: 1.3rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="logo">Lucie<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="booking.html">Réservation</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="booking.html" class="nav-cta">Réserver →</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-content">
+    <span class="section-tag">Mes services</span>
+    <h1>Tout ce que je<br/>peux faire pour <em>toi.</em></h1>
+    <p>Des formats flexibles adaptés à tous les niveaux, tous les budgets, et tous les emplois du temps.</p>
+  </div>
+</div>
+
+<!-- SERVICE DETAILS -->
+<section style="padding: 5rem 4rem;" id="prive">
+  <div class="service-detail fade-in">
+    <div class="detail-visual">🎯</div>
+    <div class="detail-text">
+      <span class="detail-tag">Le plus populaire</span>
+      <h2>Séance Privée</h2>
+      <p>Un accompagnement 100% personnalisé, en tête-à-tête. Je construis chaque séance autour de toi : ton niveau, tes douleurs, tes objectifs. C'est la voie la plus rapide pour des résultats concrets et durables.</p>
+      <ul class="detail-list">
+        <li>Bilan posture offert à la 1ère séance</li>
+        <li>Programme évolutif et personnalisé</li>
+        <li>Disponible en studio, à domicile ou en ligne</li>
+        <li>Durée : 60 ou 90 minutes</li>
+      </ul>
+      <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+        <span class="price-badge"><em>70€</em> / séance</span>
+        <a href="booking.html" class="btn btn-primary">Réserver →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="service-detail reverse fade-in" id="collectif">
+    <div class="detail-text">
+      <span class="detail-tag">Esprit de groupe</span>
+      <h2>Cours Collectif</h2>
+      <p>Des séances en petit groupe de 6 à 8 personnes maximum, pour garder un suivi de qualité. Une ambiance motivante, bienveillante, où chacune progresse à son rythme.</p>
+      <ul class="detail-list">
+        <li>Max 8 personnes par groupe</li>
+        <li>Niveaux débutant, intermédiaire, avancé</li>
+        <li>Cours récurrents chaque semaine</li>
+        <li>Durée : 55 minutes</li>
+      </ul>
+      <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+        <span class="price-badge"><em>25€</em> / cours</span>
+        <span class="price-badge"><em>190€</em> / mois (x10)</span>
+        <a href="booking.html" class="btn btn-primary">S'inscrire →</a>
+      </div>
+    </div>
+    <div class="detail-visual">👥</div>
+  </div>
+
+  <div class="service-detail fade-in" id="ligne">
+    <div class="detail-visual">💻</div>
+    <div class="detail-text">
+      <span class="detail-tag">Depuis chez toi</span>
+      <h2>Cours en Ligne</h2>
+      <p>Pratique le pilates depuis n'importe où. Séances live en visio avec retour en temps réel, ou accès à mes replays pour t'entraîner à ton rythme. Aucun équipement nécessaire.</p>
+      <ul class="detail-list">
+        <li>Sessions live avec feedback en direct</li>
+        <li>Accès aux replays 48h après le cours</li>
+        <li>Aucun équipement requis (tapis suffit)</li>
+        <li>Durée : 45 à 60 minutes</li>
+      </ul>
+      <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+        <span class="price-badge"><em>35€</em> / séance live</span>
+        <a href="booking.html" class="btn btn-primary">Essayer →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="service-detail reverse fade-in" id="programme">
+    <div class="detail-text">
+      <span class="detail-tag">Transformation complète</span>
+      <h2>Programme Personnalisé</h2>
+      <p>Un programme sur 4, 8 ou 12 semaines conçu sur mesure pour atteindre un objectif précis : perte de poids, renforcement, post-partum, rééducation... Je t'accompagne de A à Z.</p>
+      <ul class="detail-list">
+        <li>Bilan initial complet (posture + objectifs)</li>
+        <li>Programme hebdomadaire personnalisé</li>
+        <li>Suivi régulier et ajustements en continu</li>
+        <li>Support WhatsApp entre les séances</li>
+      </ul>
+      <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+        <span class="price-badge">À partir de <em>280€</em></span>
+        <a href="contact.html" class="btn btn-primary">Me contacter →</a>
+      </div>
+    </div>
+    <div class="detail-visual">📋</div>
+  </div>
+</section>
+
+<!-- PRICING TABLE -->
+<section style="background: var(--light-grey); padding: 6rem 4rem;">
+  <div class="fade-in">
+    <span class="section-tag">Tarifs</span>
+    <h2 class="section-title">Comparer les formules</h2>
+    <p class="section-sub">Toutes mes formules incluent un suivi de qualité. Choisis celle qui correspond le mieux à tes besoins.</p>
+  </div>
+  <div class="pricing-table fade-in">
+    <div class="pricing-row header">
+      <div class="pricing-cell">Formule</div>
+      <div class="pricing-cell">Privée</div>
+      <div class="pricing-cell highlight">Collectif</div>
+      <div class="pricing-cell">En ligne</div>
+    </div>
+    <div class="pricing-row">
+      <div class="pricing-cell">Suivi personnalisé</div>
+      <div class="pricing-cell check">✓</div>
+      <div class="pricing-cell check">✓</div>
+      <div class="pricing-cell check">✓</div>
+    </div>
+    <div class="pricing-row">
+      <div class="pricing-cell">Programme sur mesure</div>
+      <div class="pricing-cell check">✓</div>
+      <div class="pricing-cell cross">—</div>
+      <div class="pricing-cell cross">—</div>
+    </div>
+    <div class="pricing-row">
+      <div class="pricing-cell">Accès aux replays</div>
+      <div class="pricing-cell cross">—</div>
+      <div class="pricing-cell cross">—</div>
+      <div class="pricing-cell check">✓</div>
+    </div>
+    <div class="pricing-row">
+      <div class="pricing-cell">Bilan posture offert</div>
+      <div class="pricing-cell check">✓</div>
+      <div class="pricing-cell cross">—</div>
+      <div class="pricing-cell cross">—</div>
+    </div>
+    <div class="pricing-row">
+      <div class="pricing-cell">Flexibilité horaire</div>
+      <div class="pricing-cell check">✓✓</div>
+      <div class="pricing-cell">Fixe</div>
+      <div class="pricing-cell check">✓✓</div>
+    </div>
+    <div class="pricing-row" style="background: var(--white);">
+      <div class="pricing-cell" style="font-weight:800;">Prix</div>
+      <div class="pricing-cell" style="font-weight:800; color:var(--orange);">70€ / séance</div>
+      <div class="pricing-cell" style="font-weight:800; color:var(--orange);">25€ / cours</div>
+      <div class="pricing-cell" style="font-weight:800; color:var(--orange);">35€ / séance</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" style="padding: 6rem 4rem;">
+  <div class="fade-in">
+    <span class="section-tag">FAQ</span>
+    <h2 class="section-title">Questions fréquentes</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item fade-in">
+      <div class="faq-question">
+        Dois-je avoir un niveau particulier pour commencer ?
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-answer">Absolument pas ! Le pilates s'adapte à tous les niveaux, même grand débutant. Je commence toujours par évaluer ton niveau et tes besoins pour construire une séance adaptée.</div>
+    </div>
+    <div class="faq-item fade-in">
+      <div class="faq-question">
+        De quel équipement ai-je besoin ?
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-answer">Un simple tapis de yoga suffit pour commencer, surtout pour les cours en ligne. En studio, tout le matériel est fourni (tapis, elastic bands, ballon, etc.).</div>
+    </div>
+    <div class="faq-item fade-in">
+      <div class="faq-question">
+        Puis-je faire du pilates si j'ai des douleurs ou une blessure ?
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-answer">Oui, c'est même souvent recommandé ! Le pilates est connu pour son approche douce et thérapeutique. Je travaille avec des personnes ayant des douleurs dorsales, des problèmes de genou ou en post-partum. Parle-moi de ta situation lors du premier contact.</div>
+    </div>
+    <div class="faq-item fade-in">
+      <div class="faq-question">
+        Comment se déroule la première séance ?
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-answer">On commence par un bilan posture de 10-15 minutes pour évaluer ton alignement, tes tensions et tes objectifs. Ensuite, on passe à la pratique, avec beaucoup d'explications et de corrections bienveillantes.</div>
+    </div>
+    <div class="faq-item fade-in">
+      <div class="faq-question">
+        Peut-on annuler ou reporter une séance ?
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-answer">Oui, jusqu'à 24h avant la séance sans frais. En dessous de 24h, la séance est due. Je suis flexible et humaine — si quelque chose d'imprévu arrive, contacte-moi, on trouve une solution.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Convaincue ?<br/>Passons à l'action.</h2>
+  <p>Réserve ta séance découverte offerte dès maintenant. Pas d'engagement, juste une première expérience.</p>
+  <a href="booking.html" class="btn btn-outline">Réserver ma séance →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <div class="logo">Lucie<span>.</span></div>
+    <p>Coach Pilates certifiée à Paris. Je t'accompagne vers un corps plus fort, une posture alignée et un mental apaisé.</p>
+  </div>
+  <div class="footer-col">
+    <h4>Navigation</h4>
+    <a href="index.html">Accueil</a>
+    <a href="services.html">Services</a>
+    <a href="booking.html">Réservation</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="footer-col">
+    <h4>Services</h4>
+    <a href="#prive">Séance Privée</a>
+    <a href="#collectif">Cours Collectif</a>
+    <a href="#ligne">Cours en Ligne</a>
+    <a href="#programme">Programmes</a>
+  </div>
+  <div class="footer-col">
+    <h4>Contact</h4>
+    <a href="mailto:lucie@pilates.fr">lucie@pilates.fr</a>
+    <a href="tel:+33600000000">+33 6 00 00 00 00</a>
+    <a href="#">Instagram</a>
+    <a href="#">Paris, France</a>
+  </div>
+</footer>
+<div class="footer-bottom">
+  © 2025 Lucie VH · Tous droits réservés
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
