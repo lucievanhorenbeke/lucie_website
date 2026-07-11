@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos — Lucie VH Coach Sportif</title>
+  <meta name="description" content="Découvrez le parcours de Lucie Van Horenbeke : bachelier en coaching sportif, certification pilates, et mémoire de recherche sur le pilates et les femmes ménopausées." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .diploma-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      border: 1px solid #F0F0F0;
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      transition: box-shadow 0.2s;
+    }
+    .diploma-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+    .diploma-icon {
+      width: 56px; height: 56px; min-width: 56px;
+      border-radius: 14px;
+      background: rgba(255,92,26,0.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+    }
+    .diploma-tag {
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--orange); margin-bottom: 0.3rem;
+    }
+    .diploma-title { font-size: 1.05rem; font-weight: 800; margin-bottom: 0.3rem; line-height: 1.3; }
+    .diploma-school { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+    .diploma-detail { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+
+    .memoire-box {
+      background: var(--black);
+      border-radius: 24px;
+      padding: 3rem;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .memoire-box::before {
+      content: '🔬';
+      position: absolute;
+      right: 2rem; top: 2rem;
+      font-size: 4rem;
+      opacity: 0.15;
+    }
+    .memoire-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      line-height: 1.4;
+      font-style: italic;
+      margin: 1rem 0 1.5rem;
+      border-left: 3px solid var(--orange);
+      padding-left: 1.2rem;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px; bottom: 8px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--orange), rgba(255,92,26,0.1));
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-left: 1.5rem;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2rem;
+      top: 6px;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--orange);
+      border: 2px solid var(--white);
+      box-shadow: 0 0 0 2px var(--orange);
+    }
+    .timeline-date { font-size: 0.75rem; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.3rem; }
+    .timeline-name { font-size: 1rem; font-weight: 700; margin-bottom: 0.2rem; }
+    .timeline-detail { font-size: 0.85rem; color: var(--text-muted); }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .value-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+    }
+    .value-card .v-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+    .value-card .v-title { font-weight: 700; color: var(--white); font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .value-card .v-text { font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="logo"><img src="img/lucie-logo.png" alt="Lucie Coach" style="height:48px; width:auto; display:block;" /></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="about.html" class="active">À propos</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="booking.html">Réservation</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="booking.html" class="nav-cta">Réserver →</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-content">
+    <span class="section-tag">À propos</span>
+    <h1>Qui suis-je<br/>vraiment ?</h1>
+    <p>Coach sportif diplômée et certifiée en pilates, basée à Wavre. Un parcours construit avec passion pour t'accompagner avec expertise.</p>
+  </div>
+</div>
+
+<!-- INTRO STRIP -->
+<section class="about-strip">
+  <div class="about-img fade-in">
+    <img src="img/lucie-bench.jpg" alt="Lucie Van Horenbeke — Coach Sportif" style="width:100%; height:100%; object-fit:cover; object-position:top; border-radius:24px;" />
+  </div>
+  <div class="about-content fade-in">
+    <span class="section-tag">Mon histoire</span>
+    <h2 class="section-title">Lucie Van<br/>Horenbeke.</h2>
+    <p class="section-sub">
+      Je suis Lucie, coach sportif et instructrice pilates basée à Wavre, en Brabant Wallon. Passionnée par le mouvement et le bien-être féminin, j'ai choisi d'allier ma formation académique en coaching sportif à une certification spécialisée en pilates.
+    </p>
+    <p class="section-sub" style="margin-top:1rem;">
+      Mon approche est fondée sur la bienveillance, la rigueur et l'adaptation à chaque personne. Que tu sois débutante ou expérimentée, mon objectif est de te faire progresser en toute sécurité — avec des résultats concrets et durables.
+    </p>
+    <div class="about-features" style="margin-top:1.5rem;">
+      <div class="feature-item">Bachelier en Coaching Sportif (HE Léonard de Vinci)</div>
+      <div class="feature-item">Certifiée Coach Pilates Matwork 1 — Zenbox Pilates</div>
+      <div class="feature-item">Mémoire de recherche sur le pilates & plancher pelvien</div>
+      <div class="feature-item">Spécialisée femmes, ménopause, rééducation post-partum</div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATIONS -->
+<section style="padding: 6rem 4rem; background: var(--light-grey);">
+  <div class="fade-in" style="max-width: 900px; margin: 0 auto;">
+    <span class="section-tag">Formations & Diplômes</span>
+    <h2 class="section-title">Un parcours<br/>académique solide.</h2>
+    <p class="section-sub" style="margin-bottom:3rem;">Mes formations garantissent un encadrement professionnel, sécurisé et adapté à tes besoins.</p>
+
+    <!-- Bachelier -->
+    <div class="diploma-card fade-in">
+      <div class="diploma-icon">🎓</div>
+      <div>
+        <div class="diploma-tag">Bachelier · 2024–2025</div>
+        <div class="diploma-title">Bachelier en Coaching Sportif, Wellness et Activités Physiques Différenciées</div>
+        <div class="diploma-school">
+          Co-diplomation : Haute École Léonard de Vinci (Site Parnasse) · Haute École Francisco Ferrer · Haute École Bruxelles-Brabant (site Nivelles)
+        </div>
+        <div class="diploma-detail">
+          Formation complète en anatomie, physiologie, biomécanique, nutrition, préparation physique et coaching. Département Coaching sportif — Parnasse ISEI, Sciences Humaines et Sociales.
+        </div>
+      </div>
+    </div>
+
+    <!-- Certification Pilates -->
+    <div class="diploma-card fade-in">
+      <div class="diploma-icon">📜</div>
+      <div>
+        <div class="diploma-tag">Certification · 26 février 2025</div>
+        <div class="diploma-title">Coach Pilates Matwork 1 (débutant-intermédiaire)</div>
+        <div class="diploma-school">Zenbox Pilates & More — Silvia Del Monaco & Frédérick Dehem</div>
+        <div class="diploma-detail">
+          Certification Niveau d'Expertise — 28 heures de théorie et de pratique. Formation axée sur les techniques du pilates au sol, la biomécanique du mouvement, les corrections posturales et l'adaptation aux différents profils de pratiquants.
+        </div>
+      </div>
+    </div>
+
+    <!-- Coach Sportif -->
+    <div class="diploma-card fade-in">
+      <div class="diploma-icon">💪</div>
+      <div>
+        <div class="diploma-tag">Expertise</div>
+        <div class="diploma-title">Personal Trainer & Coach Sportif Certifié</div>
+        <div class="diploma-school">Spécialisation : remise en forme, renforcement musculaire, coaching féminin</div>
+        <div class="diploma-detail">
+          Accompagnement à domicile et en salle dans le Brabant Wallon. Programmes personnalisés adaptés à chaque objectif : perte de poids, renforcement, bien-être, rééducation. Approche holistique et bienveillante.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉMOIRE -->
+<section style="padding: 6rem 4rem; background: var(--white);">
+  <div style="max-width: 900px; margin: 0 auto;">
+    <div class="fade-in">
+      <span class="section-tag">Recherche scientifique</span>
+      <h2 class="section-title">Mon mémoire<br/>de fin d'études.</h2>
+      <p class="section-sub" style="margin-bottom:2.5rem;">Un travail de recherche approfondi qui nourrit ma pratique quotidienne avec mes clientes.</p>
+    </div>
+
+    <div class="memoire-box fade-in">
+      <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--orange);">Mémoire de bachelier · Session 2024–2025</div>
+      <div class="memoire-title">
+        « Le renforcement de la ceinture abdo-lombo-pelvienne via la pratique du Pilates induit-il une diminution de l'incontinence urinaire chez les femmes ménopausées ? »
+      </div>
+      <p style="color:rgba(255,255,255,0.6); font-size:0.9rem; line-height:1.7; margin-bottom:1.5rem;">
+        Ce projet de recherche collaborative explore l'impact du pilates sur la ceinture abdomino-lombo-pelvienne et son lien avec l'incontinence urinaire chez les femmes ménopausées. Une problématique profondément ancrée dans ma pratique quotidienne avec mes clientes.
+      </p>
+      <div style="display:flex; flex-wrap:wrap; gap:2rem; margin-bottom:2rem; font-size:0.85rem; color:rgba(255,255,255,0.5);">
+        <div><span style="color:var(--orange); font-weight:600;">Promoteur</span><br/>Van Landeghem Audrey</div>
+        <div><span style="color:var(--orange); font-weight:600;">Collaborateurs</span><br/>Havrez Christelle · Baudaux Marc</div>
+        <div><span style="color:var(--orange); font-weight:600;">Institution</span><br/>Haute École Léonard de Vinci</div>
+      </div>
+      <a href="https://drive.google.com/file/d/11z5PPK_ES_emTQxmLnr3ItcbkCTGxZ-3/view?usp=drivesdk" target="_blank" class="btn btn-primary" style="display:inline-flex;">
+        Lire le mémoire complet →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section style="padding: 6rem 4rem; background: var(--light-grey);">
+  <div style="max-width: 600px; margin: 0 auto;">
+    <div class="fade-in" style="margin-bottom:3rem;">
+      <span class="section-tag">Parcours</span>
+      <h2 class="section-title">Mon chemin<br/>jusqu'à toi.</h2>
+    </div>
+    <div class="timeline fade-in">
+      <div class="timeline-item">
+        <div class="timeline-date">2025 — Présent</div>
+        <div class="timeline-name">Coach Sportif & Instructrice Pilates à Wavre</div>
+        <div class="timeline-detail">Coaching à domicile, cours collectifs, séances privées et programmes en ligne. Studio au Chaussée de Louvain 328, Wavre.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Février 2025</div>
+        <div class="timeline-name">Certification Coach Pilates Matwork 1 — Zenbox</div>
+        <div class="timeline-detail">28h de formation théorique et pratique. Certification Niveau d'Expertise délivrée par Zenbox Pilates & More.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2024–2025</div>
+        <div class="timeline-name">Mémoire de fin d'études sur le Pilates & l'incontinence urinaire</div>
+        <div class="timeline-detail">Recherche collaborative sur les effets du pilates sur la ceinture abdo-lombo-pelvienne chez les femmes ménopausées.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2022–2025</div>
+        <div class="timeline-name">Bachelier en Coaching Sportif, Wellness et APAD</div>
+        <div class="timeline-detail">Haute École Léonard de Vinci · HE Francisco Ferrer · HE Bruxelles-Brabant. Co-diplomation.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALEURS -->
+<section style="background: var(--black); padding: 6rem 4rem;">
+  <div class="fade-in" style="text-align:center; margin-bottom:2rem;">
+    <span class="section-tag">Mes valeurs</span>
+    <h2 class="section-title" style="color:var(--white);">Ce en quoi<br/><em>je crois.</em></h2>
+  </div>
+  <div class="value-grid" style="max-width:1000px; margin:0 auto;">
+    <div class="value-card fade-in">
+      <div class="v-icon">🫶</div>
+      <div class="v-title">Bienveillance</div>
+      <div class="v-text">Pas de jugement, pas de pression. Chaque corps est différent et mérite un accompagnement adapté.</div>
+    </div>
+    <div class="value-card fade-in">
+      <div class="v-icon">🔬</div>
+      <div class="v-title">Rigueur scientifique</div>
+      <div class="v-text">Des méthodes fondées sur la recherche et la biomécanique, pas sur les tendances.</div>
+    </div>
+    <div class="value-card fade-in">
+      <div class="v-icon">🎯</div>
+      <div class="v-title">Personnalisation</div>
+      <div class="v-text">Chaque programme est construit pour toi, selon tes objectifs, ton niveau et tes contraintes.</div>
+    </div>
+    <div class="value-card fade-in">
+      <div class="v-icon">📈</div>
+      <div class="v-title">Résultats durables</div>
+      <div class="v-text">Pas de solution miracle. Un travail régulier, progressif et suivi pour des changements qui durent.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Envie de me<br/>rencontrer ?</h2>
+  <p>La première séance est offerte. Pas d'engagement, juste une rencontre pour voir si on est un bon match.</p>
+  <a href="booking.html" class="btn btn-outline">Réserver ma séance découverte →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <img src="img/lucie-logo.png" alt="Lucie Coach" style="height:50px; width:auto; margin-bottom:0.5rem;" />
+    <p>Coach sportif à Wavre, Belgique. Je t'accompagne vers un corps plus fort, une posture alignée et un mental apaisé.</p>
+  </div>
+  <div class="footer-col">
+    <h4>Navigation</h4>
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="services.html">Services</a>
+    <a href="booking.html">Réservation</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="footer-col">
+    <h4>Services</h4>
+    <a href="services.html#coaching">Coaching Remise en Forme</a>
+    <a href="services.html#pilates">Pilates One-to-One</a>
+    <a href="services.html#collectif">Cours Collectifs</a>
+    <a href="services.html#ligne">Programmes en Ligne</a>
+  </div>
+  <div class="footer-col">
+    <h4>Contact</h4>
+    <a href="mailto:lucie.coach.pt@gmail.com">lucie.coach.pt@gmail.com</a>
+    <a href="tel:+32475305861">0475/30.58.61</a>
+    <a href="https://www.instagram.com/lucie.coach" target="_blank">Instagram</a>
+    <a href="https://maps.google.com/?q=Chaussée+de+Louvain+328,+1300+Wavre" target="_blank">Wavre, Belgique</a>
+  </div>
+</footer>
+<div class="footer-bottom">
+  © 2025 Lucie VH · Tous droits réservés
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

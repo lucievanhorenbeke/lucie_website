@@ -117,9 +117,10 @@
 
 <!-- NAV -->
 <nav id="navbar">
-  <a href="index.html" class="logo"><img src="img/lucie-logo.png" alt="Lucie Coach" style="height:42px; width:auto; display:block;" /></a>
+  <a href="index.html" class="logo"><img src="img/lucie-logo.png" alt="Lucie Coach" style="height:48px; width:auto; display:block;" /></a>
   <ul class="nav-links">
     <li><a href="index.html">Accueil</a></li>
+    <li><a href="about.html">À propos</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="booking.html" class="active">Réservation</a></li>
     <li><a href="contact.html">Contact</a></li>
@@ -169,22 +170,22 @@
       <!-- SERVICE PICKER -->
       <h3 style="font-size:1.1rem; font-weight:800; margin-bottom:1rem;">1. Choisis ton service</h3>
       <div class="service-picker">
-        <div class="service-option selected" data-service="Séance Privée" data-price="70" onclick="selectService(this)">
+        <div class="service-option selected" data-service="Séance Privée" data-price="50" onclick="selectService(this)">
           <div class="icon">🎯</div>
           <div class="name">Séance Privée</div>
-          <div class="price">70€</div>
+          <div class="price">50€ / domicile</div>
         </div>
-        <div class="service-option" data-service="Cours Collectif" data-price="25" onclick="selectService(this)">
+        <div class="service-option" data-service="Cours Collectif (Mar/Jeu 18h ou Sam 10h)" data-price="15" onclick="selectService(this)">
           <div class="icon">👥</div>
           <div class="name">Cours Collectif</div>
-          <div class="price">25€</div>
+          <div class="price">À partir de 15€</div>
         </div>
-        <div class="service-option" data-service="Cours en Ligne" data-price="35" onclick="selectService(this)">
+        <div class="service-option" data-service="Coaching en Ligne (pack)" data-price="0" onclick="selectService(this)">
           <div class="icon">💻</div>
-          <div class="name">Cours en Ligne</div>
-          <div class="price">35€</div>
+          <div class="name">Coaching en Ligne</div>
+          <div class="price">Selon objectif</div>
         </div>
-        <div class="service-option" data-service="Séance Découverte" data-price="0" onclick="selectService(this)">
+        <div class="service-option" data-service="Séance Découverte (1ère séance offerte)" data-price="0" onclick="selectService(this)">
           <div class="icon">🎁</div>
           <div class="name">Découverte</div>
           <div class="price">Offert</div>
@@ -265,6 +266,10 @@
           <span class="summary-label">Service</span>
           <span class="summary-value highlight" id="sumService">Séance Privée</span>
         </div>
+        <div class="summary-row" id="collectifNote" style="display:none;">
+          <span class="summary-label" style="font-size:0.8rem; color:rgba(255,255,255,0.5);">Créneaux dispo</span>
+          <span class="summary-value" style="font-size:0.8rem;">Mar/Jeu 18h · Sam 10h</span>
+        </div>
         <div class="summary-row">
           <span class="summary-label">Date</span>
           <span class="summary-value" id="sumDate">—</span>
@@ -280,7 +285,7 @@
         <hr class="summary-divider" />
         <div class="summary-total">
           <span>Total</span>
-          <span id="sumPrice">70€</span>
+          <span id="sumPrice">50€</span>
         </div>
         <button class="btn btn-primary" onclick="confirmBooking()" id="confirmBtn" disabled style="width:100%;justify-content:center;margin-top:1.5rem;font-size:1rem;padding:1rem;opacity:0.5;cursor:not-allowed;">
           Confirmer →
@@ -320,6 +325,7 @@
   <div class="footer-col">
     <h4>Navigation</h4>
     <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
     <a href="services.html">Services</a>
     <a href="booking.html">Réservation</a>
     <a href="contact.html">Contact</a>
@@ -347,7 +353,7 @@
 <script>
   /* ===== BOOKING LOGIC ===== */
   let currentYear = 2025, currentMonth = 6; // July (0-indexed)
-  let selectedDay = null, selectedSlot = null, selectedService = { name: 'Séance Privée', price: 70 };
+  let selectedDay = null, selectedSlot = null, selectedService = { name: 'Séance Privée', price: 50 };
 
   const monthNames = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
   const dayNames = ['Lu','Ma','Me','Je','Ve','Sa','Di'];
