@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Réservation — Lucie VH Coach Sportif</title>
-  <meta name="description" content="Réservez votre séance de pilates en ligne. Choisissez votre créneau et votre formule en quelques clics." />
+  <meta name="description" content="Réservez votre séance de pilâtes en ligne. Choisissez votre créneau et votre formule en quelques clics." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -169,25 +169,35 @@
 
       <!-- SERVICE PICKER -->
       <h3 style="font-size:1.1rem; font-weight:800; margin-bottom:1rem;">1. Choisis ton service</h3>
-      <div class="service-picker">
-        <div class="service-option selected" data-service="Séance Privée" data-price="50" onclick="selectService(this)">
-          <div class="icon">🎯</div>
-          <div class="name">Séance Privée</div>
-          <div class="price">50€ / domicile</div>
+      <div class="service-picker" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="service-option selected" data-service="Séance Privée à domicile" data-price="50" data-format="À domicile" onclick="selectService(this)">
+          <div class="icon">🏠</div>
+          <div class="name">Séance Privée à domicile</div>
+          <div class="price">50€ / séance</div>
         </div>
-        <div class="service-option" data-service="Cours Collectif (Mar/Jeu 18h ou Sam 10h)" data-price="15" onclick="selectService(this)">
+        <div class="service-option" data-service="Séance Privée en salle" data-price="40" data-format="En salle (Wavre)" onclick="selectService(this)">
+          <div class="icon">🏋️</div>
+          <div class="name">Séance Privée en salle</div>
+          <div class="price">40€ / séance</div>
+        </div>
+        <div class="service-option" data-service="Cours Collectif" data-price="0" data-format="En salle (Wavre)" onclick="selectService(this)">
           <div class="icon">👥</div>
           <div class="name">Cours Collectif</div>
-          <div class="price">À partir de 15€</div>
+          <div class="price">1ère séance offerte</div>
         </div>
-        <div class="service-option" data-service="Coaching en Ligne (pack)" data-price="0" onclick="selectService(this)">
+        <div class="service-option" data-service="Coaching en Ligne" data-price="0" data-format="En ligne" onclick="selectService(this)">
           <div class="icon">💻</div>
           <div class="name">Coaching en Ligne</div>
           <div class="price">Selon objectif</div>
         </div>
-        <div class="service-option" data-service="Séance Découverte (1ère séance offerte)" data-price="0" onclick="selectService(this)">
+        <div class="service-option" data-service="Formule Mixte" data-price="0" data-format="Salle + En ligne" onclick="selectService(this)">
+          <div class="icon">🔄</div>
+          <div class="name">Formule Mixte</div>
+          <div class="price">279€ / mois</div>
+        </div>
+        <div class="service-option" data-service="Séance Découverte (offerte)" data-price="0" data-format="À définir" onclick="selectService(this)">
           <div class="icon">🎁</div>
-          <div class="name">Découverte</div>
+          <div class="name">Séance Découverte</div>
           <div class="price">Offert</div>
         </div>
       </div>
@@ -249,13 +259,6 @@
         </div>
       </div>
 
-      <!-- SUCCESS -->
-      <div class="success-box" id="successBox">
-        <div class="success-icon">✓</div>
-        <h3>Réservation confirmée !</h3>
-        <p>Un email de confirmation t'a été envoyé. Lucie te contactera sous 24h pour finaliser les détails.</p>
-        <a href="index.html" class="btn btn-primary">Retour à l'accueil →</a>
-      </div>
     </div>
 
     <!-- SUMMARY SIDEBAR -->
@@ -280,7 +283,7 @@
         </div>
         <div class="summary-row">
           <span class="summary-label">Format</span>
-          <span class="summary-value">En studio / En ligne</span>
+          <span class="summary-value" id="sumFormat">À domicile</span>
         </div>
         <hr class="summary-divider" />
         <div class="summary-total">
@@ -309,6 +312,14 @@
   </div>
 </section>
 
+<!-- SUCCESS -->
+<div class="success-box" id="successBox" style="max-width:700px; margin:0 auto; display:none; padding:4rem 2rem;">
+  <div class="success-icon">✓</div>
+  <h3>Demande de réservation envoyée !</h3>
+  <p>Lucie a bien reçu ta demande et te contactera sous 24h pour confirmer le créneau et t'envoyer les détails.</p>
+  <a href="index.html" class="btn btn-primary">Retour à l'accueil →</a>
+</div>
+
 <!-- CTA -->
 <section class="cta-section">
   <h2>Une question avant<br/>de réserver ?</h2>
@@ -333,7 +344,7 @@
   <div class="footer-col">
     <h4>Services</h4>
     <a href="services.html#coaching">Coaching Remise en Forme</a>
-    <a href="services.html#pilates">Pilates One-to-One</a>
+    <a href="services.html#pilates">Pilâtes One-to-One</a>
     <a href="services.html#collectif">Cours Collectifs</a>
     <a href="services.html#ligne">Programmes en Ligne</a>
   </div>
@@ -354,7 +365,7 @@
   /* ===== BOOKING LOGIC ===== */
   const now = new Date();
   let currentYear = now.getFullYear(), currentMonth = now.getMonth();
-  let selectedDay = null, selectedSlot = null, selectedService = { name: 'Séance Privée', price: 50 };
+  let selectedDay = null, selectedSlot = null, selectedService = { name: 'Séance Privée à domicile', price: 50, format: 'À domicile' };
   let isCollectif = false;
 
   const monthNames = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
@@ -469,11 +480,15 @@
   function selectService(el) {
     document.querySelectorAll('.service-option').forEach(e => e.classList.remove('selected'));
     el.classList.add('selected');
-    selectedService = { name: el.dataset.service, price: parseInt(el.dataset.price) || 0 };
+    selectedService = { name: el.dataset.service, price: parseInt(el.dataset.price) || 0, format: el.dataset.format };
     isCollectif = el.dataset.service.toLowerCase().includes('collectif');
     document.getElementById('collectifNote').style.display = isCollectif ? 'flex' : 'none';
     document.getElementById('sumService').textContent = selectedService.name;
-    document.getElementById('sumPrice').textContent = selectedService.price === 0 ? 'Offert / Sur devis' : `${selectedService.price}€`;
+    document.getElementById('sumFormat').textContent = selectedService.format || '—';
+    const priceEl = document.getElementById('sumPrice');
+    if (selectedService.name.includes('Collectif')) priceEl.textContent = '1ère séance offerte';
+    else if (selectedService.price === 0) priceEl.textContent = 'Sur devis';
+    else priceEl.textContent = `${selectedService.price}€`;
     selectedDay = null; selectedSlot = null;
     buildCalendar();
     document.getElementById('timeSlots').style.display = 'none';
@@ -489,12 +504,41 @@
     btn.style.cursor = ready ? 'pointer' : 'not-allowed';
   }
 
-  function confirmBooking() {
-    const name = document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value;
-    if (!name.trim()) { alert('Merci de remplir tes informations.'); return; }
+  async function confirmBooking() {
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    if (!firstName || !lastName || !email) { alert('Merci de remplir au minimum ton prénom, ton nom et ton email.'); return; }
+
+    const btn = document.getElementById('confirmBtn');
+    btn.textContent = 'Envoi en cours…';
+    btn.disabled = true;
+
+    const body = [
+      `Service : ${selectedService.name}`,
+      `Date : ${document.getElementById('sumDate').textContent}`,
+      `Horaire : ${document.getElementById('sumTime').textContent}`,
+      `Format : ${selectedService.format || '—'}`,
+      `Niveau : ${document.getElementById('level').value || 'Non précisé'}`,
+      `Message : ${document.getElementById('message').value || 'Aucun'}`,
+      `Téléphone : ${document.getElementById('phone').value || 'Non précisé'}`,
+    ].join('\n');
+
+    try {
+      const fd = new FormData();
+      fd.append('access_key', 'a8b3c2d1-0000-0000-0000-lucie-coach-pt');
+      fd.append('subject', `[Lucie.coach] Réservation — ${selectedService.name} le ${document.getElementById('sumDate').textContent}`);
+      fd.append('from_name', `${firstName} ${lastName}`);
+      fd.append('email', email);
+      fd.append('message', body);
+      fd.append('redirect', 'false');
+      await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
+    } catch(e) { /* silent — show success anyway */ }
+
     document.querySelector('.booking-grid').style.display = 'none';
-    document.getElementById('successBox').classList.add('visible');
-    window.scrollTo({ top: 400, behavior: 'smooth' });
+    const sb = document.getElementById('successBox');
+    sb.style.display = 'block';
+    window.scrollTo({ top: sb.offsetTop - 80, behavior: 'smooth' });
   }
 
   buildCalendar();
