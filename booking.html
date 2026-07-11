@@ -319,7 +319,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand">
-    <img src="img/lucie-logo.png" alt="Lucie Coach" style="height:50px; width:auto; margin-bottom:0.5rem;" />
+    <img src="img/lucie-logo.png" alt="Lucie Coach" style="height:100px; width:auto; margin-bottom:1rem;" />
     <p>Coach sportif à Wavre, Belgique. Je t'accompagne vers un corps plus fort, une posture alignée et un mental apaisé.</p>
   </div>
   <div class="footer-col">
@@ -471,7 +471,7 @@
     el.classList.add('selected');
     selectedService = { name: el.dataset.service, price: parseInt(el.dataset.price) || 0 };
     isCollectif = el.dataset.service.toLowerCase().includes('collectif');
-    document.getElementById('collectifNote').parentElement.style.display = isCollectif ? 'flex' : 'none';
+    document.getElementById('collectifNote').style.display = isCollectif ? 'flex' : 'none';
     document.getElementById('sumService').textContent = selectedService.name;
     document.getElementById('sumPrice').textContent = selectedService.price === 0 ? 'Offert / Sur devis' : `${selectedService.price}€`;
     selectedDay = null; selectedSlot = null;
