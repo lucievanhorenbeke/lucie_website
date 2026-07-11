@@ -117,7 +117,7 @@
 
 <!-- NAV -->
 <nav id="navbar">
-  <a href="index.html" class="logo"><img src="img/lucie-logo.png" alt="Lucie Coach" style="height:48px; width:auto; display:block;" /></a>
+  <a href="index.html" class="logo"><img src="img/lucie-logo.png" alt="Lucie Coach" style="height:70px; width:auto; display:block;" /></a>
   <ul class="nav-links">
     <li><a href="index.html">Accueil</a></li>
     <li><a href="about.html">À propos</a></li>
@@ -352,13 +352,36 @@
 <script src="main.js"></script>
 <script>
   /* ===== BOOKING LOGIC ===== */
-  let currentYear = 2025, currentMonth = 6; // July (0-indexed)
+  const now = new Date();
+  let currentYear = now.getFullYear(), currentMonth = now.getMonth();
   let selectedDay = null, selectedSlot = null, selectedService = { name: 'Séance Privée', price: 50 };
+  let isCollectif = false;
 
   const monthNames = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
   const dayNames = ['Lu','Ma','Me','Je','Ve','Sa','Di'];
-  const availableSlots = ['09:00','10:00','11:00','14:00','15:00','16:00','17:00','18:00','19:00'];
-  const availableDays = [2,3,4,7,8,9,10,14,15,16,17,21,22,23,24,28,29,30];
+
+  // Slots selon le type de service
+  const slotsPrivee = ['08:00','09:00','10:00','11:00','14:00','15:00','16:00','17:00','18:00','19:00'];
+  const slotsCollectif = { 2: ['18:00'], 4: ['18:00'], 6: ['10:00'] }; // 2=Ma,4=Je,6=Sa (getDay() 0=Di)
+
+  function getAvailableSlots(day) {
+    if (!isCollectif) return slotsPrivee;
+    const date = new Date(currentYear, currentMonth, day);
+    const dow = date.getDay(); // 0=Di,1=Lu,2=Ma,3=Me,4=Je,5=Ve,6=Sa
+    return slotsCollectif[dow] || [];
+  }
+
+  function isDayAvailable(d) {
+    const date = new Date(currentYear, currentMonth, d);
+    const today = new Date(); today.setHours(0,0,0,0);
+    if (date < today) return false;
+    if (isCollectif) {
+      const dow = date.getDay();
+      return dow === 2 || dow === 4 || dow === 6; // Ma, Je, Sa
+    }
+    const dow = date.getDay();
+    return dow !== 0; // Tous sauf dimanche
+  }
 
   function buildCalendar() {
     document.getElementById('calMonth').textContent = `${monthNames[currentMonth]} ${currentYear}`;
@@ -375,27 +398,22 @@
     const firstDay = new Date(currentYear, currentMonth, 1).getDay();
     const offset = (firstDay === 0 ? 6 : firstDay - 1);
     const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-    const today = new Date();
 
     for (let i = 0; i < offset; i++) {
-      const el = document.createElement('div');
-      el.className = 'cal-day empty';
-      grid.appendChild(el);
+      grid.appendChild(Object.assign(document.createElement('div'), { className: 'cal-day empty' }));
     }
 
     for (let d = 1; d <= daysInMonth; d++) {
       const el = document.createElement('div');
       const date = new Date(currentYear, currentMonth, d);
-      const isPast = date < new Date(today.getFullYear(), today.getMonth(), today.getDate());
-      const isAvailable = availableDays.includes(d) && !isPast;
+      const today = new Date(); today.setHours(0,0,0,0);
+      const isPast = date < today;
+      const isAvail = isDayAvailable(d);
 
-      el.className = 'cal-day' + (isPast ? ' past' : '') + (isAvailable ? ' available' : '');
-      if (selectedDay === d && !isPast) el.classList.add('selected');
+      el.className = 'cal-day' + (isPast ? ' past' : '') + (isAvail ? ' available' : '');
+      if (selectedDay === d) el.classList.add('selected');
       el.textContent = d;
-
-      if (isAvailable) {
-        el.onclick = () => selectDay(d);
-      }
+      if (isAvail) el.onclick = () => selectDay(d);
       grid.appendChild(el);
     }
   }
@@ -404,18 +422,23 @@
     selectedDay = day;
     selectedSlot = null;
     buildCalendar();
-    document.getElementById('timeSlots').style.display = 'block';
-    buildSlots();
+    const slots = getAvailableSlots(day);
+    if (slots.length > 0) {
+      document.getElementById('timeSlots').style.display = 'block';
+      buildSlots(slots);
+    } else {
+      document.getElementById('timeSlots').style.display = 'none';
+    }
     document.getElementById('bookingFormSection').style.display = 'block';
     document.getElementById('sumDate').textContent = `${day} ${monthNames[currentMonth]} ${currentYear}`;
     document.getElementById('sumTime').textContent = '—';
     updateConfirmBtn();
   }
 
-  function buildSlots() {
+  function buildSlots(slots) {
     const grid = document.getElementById('slotsGrid');
     grid.innerHTML = '';
-    availableSlots.forEach(s => {
+    slots.forEach(s => {
       const el = document.createElement('div');
       el.className = 'slot' + (selectedSlot === s ? ' selected' : '');
       el.textContent = s;
@@ -447,8 +470,14 @@
     document.querySelectorAll('.service-option').forEach(e => e.classList.remove('selected'));
     el.classList.add('selected');
     selectedService = { name: el.dataset.service, price: parseInt(el.dataset.price) || 0 };
+    isCollectif = el.dataset.service.toLowerCase().includes('collectif');
+    document.getElementById('collectifNote').parentElement.style.display = isCollectif ? 'flex' : 'none';
     document.getElementById('sumService').textContent = selectedService.name;
-    document.getElementById('sumPrice').textContent = selectedService.price === 0 ? 'Offert' : `${selectedService.price}€`;
+    document.getElementById('sumPrice').textContent = selectedService.price === 0 ? 'Offert / Sur devis' : `${selectedService.price}€`;
+    selectedDay = null; selectedSlot = null;
+    buildCalendar();
+    document.getElementById('timeSlots').style.display = 'none';
+    document.getElementById('bookingFormSection').style.display = 'none';
     updateConfirmBtn();
   }
 
