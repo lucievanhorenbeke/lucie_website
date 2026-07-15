@@ -36,7 +36,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 90px;
+  height: 120px;
   padding: 0 4rem;
   overflow: hidden;
   background: rgba(255,255,255,0.95);
@@ -63,8 +63,8 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.08); }
 }
 
 .nav-links a {
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 1.05rem;
+  font-weight: 600;
   color: var(--dark);
   transition: color 0.2s;
   letter-spacing: 0.01em;
@@ -75,15 +75,23 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.08); }
 .nav-cta {
   background: var(--orange);
   color: var(--white) !important;
-  padding: 0.65rem 1.4rem;
+  padding: 0.8rem 1.8rem;
   border-radius: 100px;
-  font-weight: 600 !important;
-  transition: background 0.2s, transform 0.2s !important;
+  font-size: 1.05rem;
+  font-weight: 700 !important;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s !important;
+  box-shadow: 0 4px 15px rgba(255,92,26,0.35);
 }
 
 .nav-cta:hover {
   background: var(--orange-dark) !important;
-  transform: translateY(-1px);
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(255,92,26,0.45) !important;
+}
+
+.nav-cta:active {
+  transform: translateY(0px) !important;
+  box-shadow: 0 2px 8px rgba(255,92,26,0.3) !important;
 }
 
 .hamburger {
