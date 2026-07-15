@@ -36,7 +36,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 120px;
+  height: 90px;
   padding: 0 4rem;
   overflow: hidden;
   background: rgba(255,255,255,0.95);
