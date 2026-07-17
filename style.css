@@ -165,7 +165,7 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.08); }
 .timeline::after {
   content: '';
   position: absolute;
-  left: -6px;
+  left: -2px;
   top: calc(100% - 8px);
   width: 14px; height: 14px;
   border-radius: 50%;
@@ -1049,7 +1049,7 @@ footer {
 }
 
 .faq-item.open .faq-answer {
-  max-height: 600px;
+  max-height: 900px;
   padding: 0 1.5rem 1.3rem;
 }
 

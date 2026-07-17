@@ -64,24 +64,24 @@
 
     .timeline {
       position: relative;
-      padding-left: 2rem;
+      padding-left: 30px;
     }
     .timeline::before {
       content: '';
       position: absolute;
-      left: 0; top: 8px; bottom: 8px;
+      left: 4px; top: 8px; bottom: 8px;
       width: 2px;
       background: linear-gradient(to bottom, var(--orange), rgba(255,92,26,0.1));
     }
     .timeline-item {
       position: relative;
       margin-bottom: 2rem;
-      padding-left: 1.5rem;
+      padding-left: 1rem;
     }
     .timeline-item::before {
       content: '';
       position: absolute;
-      left: calc(-2rem - 4px);
+      left: -30px;
       top: 50%;
       transform: translateY(-50%);
       width: 10px; height: 10px;
