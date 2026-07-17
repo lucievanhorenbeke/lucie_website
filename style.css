@@ -159,19 +159,19 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.08); }
 
 /* Dot voyageur — vertical (timeline) */
 @keyframes travel-v {
-  0%   { top: 8px; }
-  100% { top: calc(100% - 8px); }
+  0%   { top: calc(100% - 8px); }
+  100% { top: 8px; }
 }
 .timeline::after {
   content: '';
   position: absolute;
   left: -6px;
-  top: 8px;
+  top: calc(100% - 8px);
   width: 14px; height: 14px;
   border-radius: 50%;
   background: var(--orange);
   box-shadow: 0 0 0 4px rgba(255,92,26,0.25), 0 0 14px rgba(255,92,26,0.7);
-  animation: travel-v 4s ease-in-out infinite alternate;
+  animation: travel-v 10s ease-in-out 1 forwards;
   pointer-events: none;
 }
 

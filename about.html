@@ -81,8 +81,9 @@
     .timeline-item::before {
       content: '';
       position: absolute;
-      left: -2rem;
-      top: 6px;
+      left: calc(-2rem - 4px);
+      top: 50%;
+      transform: translateY(-50%);
       width: 10px; height: 10px;
       border-radius: 50%;
       background: var(--orange);
@@ -245,7 +246,7 @@
   <div style="max-width: 600px; margin: 0 auto;">
     <div class="fade-in" style="margin-bottom:3rem;">
       <span class="section-tag">Parcours</span>
-      <h2 class="section-title">Mon chemin<br/>jusqu'à toi.</h2>
+      <h2 class="section-title">Mon chemin<br/>jusqu'à toi</h2>
     </div>
     <div class="timeline fade-in">
       <div class="timeline-item">
@@ -276,7 +277,7 @@
 <section style="background: var(--black); padding: 6rem 4rem;">
   <div class="fade-in" style="text-align:center; margin-bottom:2rem;">
     <span class="section-tag">Mes valeurs</span>
-    <h2 class="section-title" style="color:var(--white);">Ce en quoi<br/><em>je crois.</em></h2>
+    <h2 class="section-title" style="color:var(--white);">Ce en quoi<br/><em>je crois</em></h2>
   </div>
   <div class="value-grid" style="max-width:1000px; margin:0 auto;">
     <div class="value-card fade-in">
@@ -304,7 +305,7 @@
 
 <!-- CTA -->
 <section class="cta-section">
-  <h2>Ta première séance<br/>est offerte.</h2>
+  <h2>Ta première séance<br/>est offerte</h2>
   <p>Pas d'engagement, pas de pression. Juste une rencontre pour qu'on se découvre et qu'on voie ensemble ce qu'on peut construire.</p>
   <a href="booking.html" class="btn btn-outline pulse-cta-btn">Réserver ma séance découverte →</a>
 </section>
