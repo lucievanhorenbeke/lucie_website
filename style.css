@@ -108,6 +108,16 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.08); }
   transform: translateY(-2px);
 }
 
+/* Pulse noir pour btn-dark */
+@keyframes pulse-btn-dark {
+  0%   { box-shadow: 0 0 0 0 rgba(13,13,13,0.6), 0 4px 15px rgba(13,13,13,0.35); }
+  70%  { box-shadow: 0 0 0 10px rgba(13,13,13,0), 0 4px 15px rgba(13,13,13,0.35); }
+  100% { box-shadow: 0 0 0 0 rgba(13,13,13,0), 0 4px 15px rgba(13,13,13,0.35); }
+}
+.btn-dark.pulse-cta-btn {
+  animation: pulse-btn-dark 2s ease-in-out infinite;
+}
+
 /* Hero tag glow */
 @keyframes glow-tag {
   0%, 100% { box-shadow: 0 0 0 0 rgba(255,92,26,0.35); }
