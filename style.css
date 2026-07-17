@@ -152,9 +152,13 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.08); }
   background: var(--orange);
   transform: translate(-50%, -50%);
   box-shadow: 0 0 0 4px rgba(255,92,26,0.25), 0 0 14px rgba(255,92,26,0.7);
-  animation: travel-h 9s ease-in-out infinite;
+  opacity: 0;
   z-index: 2;
   pointer-events: none;
+}
+.steps-travel-dot.start-anim {
+  opacity: 1;
+  animation: travel-h 7s ease-in-out infinite;
 }
 
 /* Dot voyageur — vertical (timeline) */
@@ -171,8 +175,12 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.08); }
   border-radius: 50%;
   background: var(--orange);
   box-shadow: 0 0 0 4px rgba(255,92,26,0.25), 0 0 14px rgba(255,92,26,0.7);
-  animation: travel-v 10s ease-in-out 1 forwards;
+  opacity: 0;
   pointer-events: none;
+}
+.timeline.start-anim::after {
+  opacity: 1;
+  animation: travel-v 10s ease-in-out 1 forwards;
 }
 
 .hamburger {
