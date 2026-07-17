@@ -61,7 +61,7 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.08); }
 }
 
 .nav-links a {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--dark);
   transition: color 0.2s;
