@@ -324,7 +324,7 @@
 <section class="cta-section">
   <h2>Une question avant<br/>de réserver ?</h2>
   <p>Je suis disponible pour répondre à toutes tes questions. Contacte-moi, c'est gratuit et sans engagement.</p>
-  <a href="contact.html" class="btn btn-outline">Me contacter →</a>
+  <a href="contact.html" class="btn btn-outline pulse-cta-btn">Me contacter →</a>
 </section>
 
 <!-- FOOTER -->
@@ -502,6 +502,7 @@
     btn.disabled = !ready;
     btn.style.opacity = ready ? '1' : '0.5';
     btn.style.cursor = ready ? 'pointer' : 'not-allowed';
+    btn.classList.toggle('pulse-cta-btn', ready);
   }
 
   async function confirmBooking() {
