@@ -56,8 +56,9 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.08); }
 
 .nav-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .nav-links a {
