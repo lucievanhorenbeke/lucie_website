@@ -164,37 +164,46 @@
     </div>
 
     <!-- SERVICE PICKER -->
-    <h3 style="font-size:1.1rem; font-weight:800; margin-bottom:1rem;">1. Choisis ton service</h3>
+    <h3 style="font-size:1.1rem; font-weight:800; margin-bottom:0.5rem;">1. Choisis ton service</h3>
+    <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1.2rem;">
+      Un <strong>call découverte gratuit</strong> est inclus pour chaque nouveau suivi — on définit ensemble tes objectifs avant de commencer.
+    </p>
     <div class="service-picker">
-      <div class="service-option" data-service="Séance Privée à domicile" onclick="selectService(this)">
+      <div class="service-option" data-service="Séance privée à domicile" onclick="selectService(this)">
         <div class="icon">🏠</div>
-        <div class="name">Séance Privée à domicile</div>
+        <div class="name">Séance privée à domicile</div>
+        <div class="desc" style="font-size:0.75rem;color:var(--text-muted);margin:0.3rem 0;">Pilâtes ou renforcement musculaire</div>
         <div class="price">50€ / séance</div>
       </div>
-      <div class="service-option" data-service="Séance Privée en salle" onclick="selectService(this)">
+      <div class="service-option" data-service="Séance privée en salle" onclick="selectService(this)">
         <div class="icon">🏋️</div>
-        <div class="name">Séance Privée en salle</div>
+        <div class="name">Séance privée en salle</div>
+        <div class="desc" style="font-size:0.75rem;color:var(--text-muted);margin:0.3rem 0;">Studio Wavre — Pilâtes ou coaching</div>
         <div class="price">40€ / séance</div>
       </div>
-      <div class="service-option" data-service="Cours de Pilâtes" onclick="selectService(this)">
+      <div class="service-option" data-service="Cours de Pilâtes collectif" onclick="selectService(this)">
         <div class="icon">👥</div>
-        <div class="name">Cours de Pilâtes</div>
+        <div class="name">Cours de Pilâtes collectif</div>
+        <div class="desc" style="font-size:0.75rem;color:var(--text-muted);margin:0.3rem 0;">Mar &amp; Jeu 18h · Sam 10h</div>
         <div class="price">1ère séance offerte</div>
       </div>
-      <div class="service-option" data-service="Coaching en Ligne" onclick="selectService(this)">
+      <div class="service-option" data-service="Small group training" onclick="selectService(this)">
+        <div class="icon">👯</div>
+        <div class="name">Small group training</div>
+        <div class="desc" style="font-size:0.75rem;color:var(--text-muted);margin:0.3rem 0;">Entre amies, tarif réduit</div>
+        <div class="price">À partir de 15€ / pers.</div>
+      </div>
+      <div class="service-option" data-service="Coaching en ligne" onclick="selectService(this)">
         <div class="icon">💻</div>
-        <div class="name">Coaching en Ligne</div>
+        <div class="name">Coaching en ligne</div>
+        <div class="desc" style="font-size:0.75rem;color:var(--text-muted);margin:0.3rem 0;">Programme personnalisé à distance</div>
         <div class="price">Selon objectif</div>
       </div>
-      <div class="service-option" data-service="Formule Mixte" onclick="selectService(this)">
+      <div class="service-option" data-service="Formule mixte" onclick="selectService(this)">
         <div class="icon">🔄</div>
-        <div class="name">Formule Mixte</div>
+        <div class="name">Formule mixte</div>
+        <div class="desc" style="font-size:0.75rem;color:var(--text-muted);margin:0.3rem 0;">Salle + suivi en ligne</div>
         <div class="price">239€ / mois</div>
-      </div>
-      <div class="service-option" data-service="Séance Découverte (offerte)" onclick="selectService(this)">
-        <div class="icon">🎁</div>
-        <div class="name">Séance Découverte</div>
-        <div class="price">Offert</div>
       </div>
     </div>
 
