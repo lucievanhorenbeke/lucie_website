@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js"></script>
   <style>
     .service-picker {
       display: grid;
@@ -202,7 +204,7 @@
         <h3 style="font-size:1.1rem; font-weight:800; margin:0;">2. Choisis ton créneau</h3>
         <span class="service-badge" id="selectedServiceBadge"></span>
       </div>
-      <div id="calendlyWidget" class="calendly-inline-widget"></div>
+      <div id="calendlyWidget" style="min-width:320px; height:700px;"></div>
     </div>
 
   </div>
@@ -274,10 +276,14 @@
     const section = document.getElementById('calendlySection');
     section.classList.add('visible');
 
-    // Load Calendly via iframe — fiable, sans dépendance JS externe
+    // Réinitialiser et charger le widget Calendly inline
     const widget = document.getElementById('calendlyWidget');
-    const url = 'https://calendly.com/lucie-coach-pt?hide_gdpr_banner=1&primary_color=FF5C1A&a1=' + encodeURIComponent(service);
-    widget.innerHTML = '<iframe src="' + url + '" width="100%" height="700" frameborder="0" style="border:none; border-radius:16px;"></iframe>';
+    widget.innerHTML = '';
+    Calendly.initInlineWidget({
+      url: 'https://calendly.com/lucie-coach-pt?hide_gdpr_banner=1&primary_color=FF5C1A',
+      parentElement: widget,
+      prefill: { customAnswers: { a1: service } }
+    });
 
     // Scroll to Calendly section
     setTimeout(() => {
