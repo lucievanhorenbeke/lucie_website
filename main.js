@@ -22,6 +22,22 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+/* ===== SCROLL-TRIGGERED DOT ANIMATIONS ===== */
+const dotObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('start-anim');
+      dotObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.4 });
+
+const stepsGrid = document.querySelector('.steps-grid');
+if (stepsGrid) dotObserver.observe(stepsGrid);
+
+const timeline = document.querySelector('.timeline');
+if (timeline) dotObserver.observe(timeline);
+
 /* ===== FAQ ACCORDION ===== */
 document.querySelectorAll('.faq-question').forEach(q => {
   q.addEventListener('click', () => {

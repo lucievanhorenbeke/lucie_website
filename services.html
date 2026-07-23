@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services — Lucie VH Coach Pilates</title>
-  <meta name="description" content="Découvrez tous mes services pilates : séances privées, cours collectifs, cours en ligne et programmes personnalisés." />
+  <title>Services — Lucie VH Coach Sportif</title>
+  <meta name="description" content="Découvrez tous mes services pilâtes : séances privées, cours collectifs, cours en ligne et programmes personnalisés." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -52,6 +52,8 @@
     .service-detail:last-child { border-bottom: none; }
     .service-detail.reverse .detail-text { order: 2; }
     .service-detail.reverse .detail-visual { order: 1; }
+    #prive { align-items: stretch; }
+    #prive .detail-visual { aspect-ratio: unset; min-height: 500px; }
 
     .detail-visual {
       border-radius: 24px;
@@ -123,9 +125,10 @@
 
 <!-- NAV -->
 <nav id="navbar">
-  <a href="index.html" class="logo">Lucie<span>.</span></a>
+  <a href="index.html" class="logo"><img src="img/lucie-logo.png" alt="Lucie Coach" style="height:100px; width:auto; display:block;" /></a>
   <ul class="nav-links">
     <li><a href="index.html">Accueil</a></li>
+    <li><a href="about.html">À propos</a></li>
     <li><a href="services.html" class="active">Services</a></li>
     <li><a href="booking.html">Réservation</a></li>
     <li><a href="contact.html">Contact</a></li>
@@ -140,88 +143,170 @@
 <div class="page-header">
   <div class="page-header-content">
     <span class="section-tag">Mes services</span>
-    <h1>Tout ce que je<br/>peux faire pour <em>toi.</em></h1>
+    <h1>Tout ce que je<br/>peux faire pour <em>toi</em></h1>
     <p>Des formats flexibles adaptés à tous les niveaux, tous les budgets, et tous les emplois du temps.</p>
   </div>
 </div>
 
 <!-- SERVICE DETAILS -->
-<section style="padding: 5rem 4rem;" id="prive">
-  <div class="service-detail fade-in">
-    <div class="detail-visual">🎯</div>
+<section style="padding: 5rem 4rem;" id="coaching">
+  <!-- COACHING REMISE EN FORME -->
+  <div class="service-detail fade-in" id="prive">
+    <div class="detail-visual" style="padding:0; overflow:hidden;"><img src="img/lucie-halteres.jpg" alt="Coaching remise en forme" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;border-radius:24px;" /></div>
+    <div class="detail-text">
+      <span class="detail-tag">Remise en forme</span>
+      <h2>Coaching Personnalisé</h2>
+      <p>Le format le plus complet : un suivi 100% individuel, en salle de sport ou à ton domicile, avec un programme construit autour de tes objectifs précis. On commence par un <strong>call découverte gratuit</strong> pour définir ensemble tes objectifs et créer un programme adapté.</p>
+      <ul class="detail-list">
+        <li>Bilan complet et fixation d'objectifs SMART</li>
+        <li>Séances de 60 min, 1 à 3 fois par semaine</li>
+        <li>Programme ajusté chaque mois selon ta progression</li>
+        <li>Suivi nutritionnel et conseils de récupération</li>
+        <li>Disponibilité WhatsApp pour tes questions</li>
+      </ul>
+      <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:1.2rem;">
+        <span style="background:rgba(255,92,26,0.1);color:var(--orange);padding:0.3rem 0.8rem;border-radius:100px;font-size:0.78rem;font-weight:600;">Perte de poids</span>
+        <span style="background:rgba(255,92,26,0.1);color:var(--orange);padding:0.3rem 0.8rem;border-radius:100px;font-size:0.78rem;font-weight:600;">Prise de muscle</span>
+        <span style="background:rgba(255,92,26,0.1);color:var(--orange);padding:0.3rem 0.8rem;border-radius:100px;font-size:0.78rem;font-weight:600;">Reprise sportive</span>
+        <span style="background:rgba(255,92,26,0.1);color:var(--orange);padding:0.3rem 0.8rem;border-radius:100px;font-size:0.78rem;font-weight:600;">Préparation physique</span>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:0.8rem; margin-bottom:0.8rem;">
+        <span class="price-badge"><em>50€</em> / séance à domicile</span>
+        <span class="price-badge"><em>40€</em> / séance en salle</span>
+      </div>
+      <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">Packs coaching en salle</div>
+      <div style="display:flex; flex-wrap:wrap; gap:0.8rem; margin-bottom:1rem;">
+        <span class="price-badge"><em>400€</em> / 6 semaines</span>
+        <span class="price-badge"><em>780€</em> / 12 semaines <span style="font-size:0.75rem;opacity:0.6;font-weight:400;">Pack Transformation</span></span>
+      </div>
+      <a href="booking.html" class="btn btn-primary pulse-cta-btn">Réserver →</a>
+    </div>
+  </div>
+
+  <!-- PILATES ONE-TO-ONE -->
+  <div class="service-detail reverse fade-in" id="pilates">
     <div class="detail-text">
       <span class="detail-tag">Le plus populaire</span>
-      <h2>Séance Privée</h2>
-      <p>Un accompagnement 100% personnalisé, en tête-à-tête. Je construis chaque séance autour de toi : ton niveau, tes douleurs, tes objectifs. C'est la voie la plus rapide pour des résultats concrets et durables.</p>
+      <h2>Pilâtes One-to-One</h2>
+      <p>Des séances de pilâtes privées, entièrement dédiées à toi. Je me déplace à domicile ou te reçois dans mon studio à Wavre (Chaussée de Louvain 328). Particulièrement recommandé pour les femmes ménopausées, les problèmes d'incontinence urinaire ou les personnes souhaitant commencer le pilâtes en toute sécurité.</p>
       <ul class="detail-list">
-        <li>Bilan posture offert à la 1ère séance</li>
-        <li>Programme évolutif et personnalisé</li>
-        <li>Disponible en studio, à domicile ou en ligne</li>
-        <li>Durée : 60 ou 90 minutes</li>
+        <li>Femmes ménopausées : renforcement du plancher pelvien</li>
+        <li>Incontinence urinaire : exercices ciblés et progressifs</li>
+        <li>Débutantes : apprentissage des bases en douceur</li>
+        <li>Rééducation post-partum ou post-opératoire</li>
+        <li>À domicile ou en studio à Wavre</li>
       </ul>
       <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
-        <span class="price-badge"><em>70€</em> / séance</span>
-        <a href="booking.html" class="btn btn-primary">Réserver →</a>
+        <span class="price-badge">À partir de <em>50€</em> / séance</span>
+        <a href="booking.html" class="btn btn-primary pulse-cta-btn">Réserver →</a>
       </div>
     </div>
+    <div class="detail-visual" style="padding:0; overflow:hidden;"><img src="img/lucie-gym.jpg" alt="Pilâtes one-to-one" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" /></div>
   </div>
 
-  <div class="service-detail reverse fade-in" id="collectif">
+  <!-- COURS COLLECTIFS -->
+  <div class="service-detail fade-in" id="collectif">
+    <div class="detail-visual" style="padding:0; overflow:hidden;"><img src="img/lucie-collectif.jpg" alt="Cours collectifs pilâtes" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;border-radius:24px;" /></div>
     <div class="detail-text">
       <span class="detail-tag">Esprit de groupe</span>
-      <h2>Cours Collectif</h2>
-      <p>Des séances en petit groupe de 6 à 8 personnes maximum, pour garder un suivi de qualité. Une ambiance motivante, bienveillante, où chacune progresse à son rythme.</p>
+      <h2>Cours Collectifs - Pilâtes</h2>
+      <p>Des cours de pilâtes en petit groupe dans mon studio à Wavre (Chaussée de Louvain 328). Une ambiance motivante et bienveillante, avec un suivi de qualité pour chaque participante.</p>
       <ul class="detail-list">
-        <li>Max 8 personnes par groupe</li>
-        <li>Niveaux débutant, intermédiaire, avancé</li>
-        <li>Cours récurrents chaque semaine</li>
-        <li>Durée : 55 minutes</li>
+        <li><strong>Mardi &amp; Jeudi</strong> : 18h00 – 19h00</li>
+        <li><strong>Samedi</strong> : 10h00 – 11h00</li>
+        <li>Petit groupe (max 8 personnes)</li>
+        <li>Tous niveaux acceptés</li>
+        <li>Studio équipé à Wavre · tout le matériel fourni</li>
       </ul>
+      <div style="background:rgba(255,92,26,0.08); border-radius:12px; padding:0.8rem 1.2rem; margin-bottom:1rem; font-size:0.85rem; color:var(--orange); font-weight:600;">
+        🎁 1ère séance d'essai OFFERTE
+      </div>
       <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
-        <span class="price-badge"><em>25€</em> / cours</span>
-        <span class="price-badge"><em>190€</em> / mois (x10)</span>
-        <a href="booking.html" class="btn btn-primary">S'inscrire →</a>
+        <span class="price-badge">À partir de <em>15€</em> / cours</span>
+        <a href="booking.html" class="btn btn-primary pulse-cta-btn">S'inscrire →</a>
       </div>
     </div>
-    <div class="detail-visual">👥</div>
   </div>
 
+  <!-- SMALL GROUP TRAINING -->
+  <div class="service-detail reverse fade-in" id="smallgroup">
+    <div class="detail-text">
+      <span class="detail-tag">Entre amies</span>
+      <h2>Small Group Training</h2>
+      <p>Tu viens avec tes amies, ta famille, tes collègues, et on s'entraîne ensemble ! Le small group training combine les avantages du coaching privé (suivi personnalisé, programme adapté) avec le fun et la motivation du groupe. Disponible à mon studio à Wavre avec accès aux machines ou à domicile.</p>
+      <ul class="detail-list">
+        <li>2 à 4 personnes maximum</li>
+        <li>Prix réduit par rapport à une séance privée</li>
+        <li>Accès aux machines en salle à Wavre</li>
+        <li>Programme adapté aux objectifs du groupe</li>
+        <li>Créneau horaire flexible</li>
+      </ul>
+      <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+        <span class="price-badge">Prix <em>réduit</em> / pers.</span>
+        <a href="contact.html" class="btn btn-primary pulse-cta-btn">Nous inscrire →</a>
+      </div>
+    </div>
+    <div class="detail-visual" style="padding:0; overflow:hidden;"><img src="img/lucie-machine.jpg" alt="Small group training" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" /></div>
+  </div>
+
+  <!-- PROGRAMMES EN LIGNE -->
   <div class="service-detail fade-in" id="ligne">
-    <div class="detail-visual">💻</div>
+    <div class="detail-visual" style="padding:0; overflow:hidden;"><img src="img/lucie-planche.jpg" alt="Coaching en ligne" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" /></div>
     <div class="detail-text">
       <span class="detail-tag">Depuis chez toi</span>
-      <h2>Cours en Ligne</h2>
-      <p>Pratique le pilates depuis n'importe où. Séances live en visio avec retour en temps réel, ou accès à mes replays pour t'entraîner à ton rythme. Aucun équipement nécessaire.</p>
+      <h2>Coaching en Ligne</h2>
+      <p>Disponible uniquement en pack, avec un <strong>engagement minimum de 3 mois</strong>. Je crée un programme sur mesure avec tout ce qu'il te faut pour progresser depuis n'importe où : programme détaillé, tableau de suivi, guide sportif, carnet de progression et un suivi hebdomadaire personnalisé.</p>
       <ul class="detail-list">
-        <li>Sessions live avec feedback en direct</li>
-        <li>Accès aux replays 48h après le cours</li>
-        <li>Aucun équipement requis (tapis suffit)</li>
-        <li>Durée : 45 à 60 minutes</li>
+        <li>Programme sur mesure + tableau Excel de suivi</li>
+        <li>Guide du programme sportif détaillé</li>
+        <li>Carnet de suivi pour noter tes performances</li>
+        <li>1 suivi hebdomadaire (call vidéo ou messages vocaux WhatsApp)</li>
+        <li>Corrections techniques via vidéos</li>
+        <li>Support illimité — réponse sous 24h</li>
       </ul>
-      <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
-        <span class="price-badge"><em>35€</em> / séance live</span>
-        <a href="booking.html" class="btn btn-primary">Essayer →</a>
+      <div style="background:rgba(255,92,26,0.06); border-radius:10px; padding:0.7rem 1rem; font-size:0.82rem; color:var(--text-muted); margin-bottom:0.8rem;">
+        ⚡ Engagement minimum 3 mois. Pack 3 mois = <strong>−60€</strong> · Pack 6 mois = <strong>−195€</strong>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:0.8rem; margin-bottom:0.5rem;">
+        <span class="price-badge"><em>199€</em> / mois</span>
+        <span class="price-badge"><em>537€</em> / 3 mois <span style="text-decoration:line-through;opacity:0.45;font-size:0.8rem;margin-left:0.3rem;">597€</span></span>
+        <span class="price-badge"><em>999€</em> / 6 mois <span style="text-decoration:line-through;opacity:0.45;font-size:0.8rem;margin-left:0.3rem;">1 194€</span></span>
+      </div>
+      <div style="margin-top:1rem;">
+        <a href="contact.html" class="btn btn-primary pulse-cta-btn">Me contacter →</a>
       </div>
     </div>
   </div>
 
-  <div class="service-detail reverse fade-in" id="programme">
+  <!-- FORMULE MIXTE -->
+  <div class="service-detail reverse fade-in" id="mixte">
     <div class="detail-text">
-      <span class="detail-tag">Transformation complète</span>
-      <h2>Programme Personnalisé</h2>
-      <p>Un programme sur 4, 8 ou 12 semaines conçu sur mesure pour atteindre un objectif précis : perte de poids, renforcement, post-partum, rééducation... Je t'accompagne de A à Z.</p>
+      <span class="detail-tag">Le meilleur des deux</span>
+      <h2>Formule Mixte</h2>
+      <p>La formule idéale pour apprendre la bonne technique et devenir autonome. <strong>1 séance en salle par semaine</strong> (4 séances/mois à Wavre) combinée à un suivi en ligne complet. Tu profites du meilleur des deux mondes : l'encadrement en présentiel et la flexibilité du coaching à distance. <strong>Engagement minimum 3 mois.</strong></p>
       <ul class="detail-list">
-        <li>Bilan initial complet (posture + objectifs)</li>
-        <li>Programme hebdomadaire personnalisé</li>
-        <li>Suivi régulier et ajustements en continu</li>
-        <li>Support WhatsApp entre les séances</li>
+        <li>1 séance/semaine en salle à Wavre avec machines (4 séances/mois — <em>140€</em>)</li>
+        <li>Programme sur mesure + tableau Excel de suivi (<em>99€</em>)</li>
+        <li>Guide du programme sportif détaillé</li>
+        <li>Carnet de suivi de progression</li>
+        <li>Suivi hebdomadaire (call vidéo ou WhatsApp)</li>
+        <li>Corrections techniques via vidéos envoyées</li>
+        <li>Support illimité — réponse sous 24h</li>
       </ul>
-      <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
-        <span class="price-badge">À partir de <em>280€</em></span>
-        <a href="contact.html" class="btn btn-primary">Me contacter →</a>
+      <div style="font-size:0.82rem; color:var(--text-muted); margin-bottom:0.8rem;">140€ séances + 99€ programme & suivi = <strong>239€/mois</strong> — soit <strong>~35€/séance</strong> tout inclus.</div>
+      <div style="background:rgba(255,92,26,0.06); border-radius:10px; padding:0.7rem 1rem; font-size:0.82rem; color:var(--text-muted); margin-bottom:0.8rem;">
+        ⚡ Engagement minimum 3 mois. Pack 3 mois = <strong>−100€</strong> · Pack 6 mois = économie <strong>−245€</strong>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:0.8rem;">
+        <span class="price-badge"><em>239€</em> / mois</span>
+        <span class="price-badge"><em>749€</em> / 3 mois <span style="text-decoration:line-through;opacity:0.45;font-size:0.8rem;margin-left:0.3rem;">717€</span></span>
+        <span class="price-badge"><em>1 499€</em> / 6 mois <span style="text-decoration:line-through;opacity:0.45;font-size:0.8rem;margin-left:0.3rem;">1 434€</span></span>
+      </div>
+      <div style="margin-top:1rem;">
+        <a href="contact.html" class="btn btn-primary pulse-cta-btn">Me contacter →</a>
       </div>
     </div>
-    <div class="detail-visual">📋</div>
+    <div class="detail-visual" style="padding:0; overflow:hidden;"><img src="img/lucie-machine2.jpg" alt="Formule mixte coaching" style="width:100%;height:100%;object-fit:cover;object-position:center;border-radius:24px;" /></div>
   </div>
 </section>
 
@@ -235,51 +320,63 @@
   <div class="pricing-table fade-in">
     <div class="pricing-row header">
       <div class="pricing-cell">Formule</div>
-      <div class="pricing-cell">Privée</div>
-      <div class="pricing-cell highlight">Collectif</div>
-      <div class="pricing-cell">En ligne</div>
+      <div class="pricing-cell">Coaching Privé</div>
+      <div class="pricing-cell highlight">Cours Collectifs</div>
+      <div class="pricing-cell">En Ligne</div>
     </div>
     <div class="pricing-row">
-      <div class="pricing-cell">Suivi personnalisé</div>
+      <div class="pricing-cell">Suivi 100% personnalisé</div>
       <div class="pricing-cell check">✓</div>
-      <div class="pricing-cell check">✓</div>
+      <div class="pricing-cell cross">—</div>
       <div class="pricing-cell check">✓</div>
     </div>
     <div class="pricing-row">
       <div class="pricing-cell">Programme sur mesure</div>
       <div class="pricing-cell check">✓</div>
       <div class="pricing-cell cross">—</div>
-      <div class="pricing-cell cross">—</div>
-    </div>
-    <div class="pricing-row">
-      <div class="pricing-cell">Accès aux replays</div>
-      <div class="pricing-cell cross">—</div>
-      <div class="pricing-cell cross">—</div>
       <div class="pricing-cell check">✓</div>
     </div>
     <div class="pricing-row">
-      <div class="pricing-cell">Bilan posture offert</div>
+      <div class="pricing-cell">Matériel fourni</div>
+      <div class="pricing-cell check">✓</div>
+      <div class="pricing-cell check">✓</div>
+      <div class="pricing-cell cross">—</div>
+    </div>
+    <div class="pricing-row">
+      <div class="pricing-cell">Bilan initial offert (1ère séance)</div>
       <div class="pricing-cell check">✓</div>
       <div class="pricing-cell cross">—</div>
       <div class="pricing-cell cross">—</div>
+    </div>
+    <div class="pricing-row">
+      <div class="pricing-cell">Suivi WhatsApp</div>
+      <div class="pricing-cell check">✓</div>
+      <div class="pricing-cell cross">—</div>
+      <div class="pricing-cell check">✓ illimité</div>
     </div>
     <div class="pricing-row">
       <div class="pricing-cell">Flexibilité horaire</div>
-      <div class="pricing-cell check">✓✓</div>
-      <div class="pricing-cell">Fixe</div>
-      <div class="pricing-cell check">✓✓</div>
+      <div class="pricing-cell check">✓ flexible</div>
+      <div class="pricing-cell">Mar/Jeu 18h · Sam 10h</div>
+      <div class="pricing-cell check">✓ flexible</div>
+    </div>
+    <div class="pricing-row">
+      <div class="pricing-cell">À domicile possible</div>
+      <div class="pricing-cell check">✓</div>
+      <div class="pricing-cell cross">—</div>
+      <div class="pricing-cell check">✓ (partout)</div>
     </div>
     <div class="pricing-row" style="background: var(--white);">
       <div class="pricing-cell" style="font-weight:800;">Prix</div>
-      <div class="pricing-cell" style="font-weight:800; color:var(--orange);">70€ / séance</div>
-      <div class="pricing-cell" style="font-weight:800; color:var(--orange);">25€ / cours</div>
-      <div class="pricing-cell" style="font-weight:800; color:var(--orange);">35€ / séance</div>
+      <div class="pricing-cell" style="font-weight:800; color:var(--orange);">50€ / séance (domicile)<br/>40€ / séance (salle)</div>
+      <div class="pricing-cell" style="font-weight:800; color:var(--orange);">À partir de 15€ / cours</div>
+      <div class="pricing-cell" style="font-weight:800; color:var(--orange);">199€ / mois</div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="faq-section" style="padding: 6rem 4rem;">
+<section id="faq" class="faq-section" style="padding: 6rem 4rem;">
   <div class="fade-in">
     <span class="section-tag">FAQ</span>
     <h2 class="section-title">Questions fréquentes</h2>
@@ -290,78 +387,113 @@
         Dois-je avoir un niveau particulier pour commencer ?
         <div class="faq-toggle">+</div>
       </div>
-      <div class="faq-answer">Absolument pas ! Le pilates s'adapte à tous les niveaux, même grand débutant. Je commence toujours par évaluer ton niveau et tes besoins pour construire une séance adaptée.</div>
+      <div class="faq-answer">Absolument pas ! Que ce soit pour le coaching sportif ou le pilâtes, je pars de là où tu en es. On commence toujours par un <strong>call découverte gratuit</strong> : on fait connaissance, je comprends ta situation, tes éventuelles blessures, et on définit tes objectifs ensemble avant de créer ton programme. Ensuite on s'entraîne — avec beaucoup de bienveillance.</div>
     </div>
     <div class="faq-item fade-in">
       <div class="faq-question">
         De quel équipement ai-je besoin ?
         <div class="faq-toggle">+</div>
       </div>
-      <div class="faq-answer">Un simple tapis de yoga suffit pour commencer, surtout pour les cours en ligne. En studio, tout le matériel est fourni (tapis, elastic bands, ballon, etc.).</div>
+      <div class="faq-answer">
+        <strong>Cours collectifs (studio Wavre) :</strong> rien du tout ! Tout le matériel est fourni. Une bouteille d'eau et la bonne humeur suffisent.<br/><br/>
+        <strong>Coaching à domicile :</strong> rien non plus. Je viens avec élastiques, haltères et tout le nécessaire.<br/><br/>
+        <strong>Coaching en ligne :</strong> cela dépend du programme établi ensemble. En général, quelques accessoires de base (tapis, élastiques) peuvent être utiles, mais on adapte selon ce que tu as.
+      </div>
     </div>
     <div class="faq-item fade-in">
       <div class="faq-question">
-        Puis-je faire du pilates si j'ai des douleurs ou une blessure ?
+        Puis-je faire du sport si j'ai des douleurs ou une blessure ?
         <div class="faq-toggle">+</div>
       </div>
-      <div class="faq-answer">Oui, c'est même souvent recommandé ! Le pilates est connu pour son approche douce et thérapeutique. Je travaille avec des personnes ayant des douleurs dorsales, des problèmes de genou ou en post-partum. Parle-moi de ta situation lors du premier contact.</div>
+      <div class="faq-answer">Oui, dans beaucoup de cas ! Le pilâtes en particulier est connu pour son approche douce et thérapeutique. Je travaille régulièrement avec des personnes ayant des douleurs dorsales, des problèmes de plancher pelvien, en post-partum ou post-opératoire. Dis-moi ta situation lors de notre premier contact — on trouve toujours une approche adaptée.</div>
     </div>
     <div class="faq-item fade-in">
       <div class="faq-question">
         Comment se déroule la première séance ?
         <div class="faq-toggle">+</div>
       </div>
-      <div class="faq-answer">On commence par un bilan posture de 10-15 minutes pour évaluer ton alignement, tes tensions et tes objectifs. Ensuite, on passe à la pratique, avec beaucoup d'explications et de corrections bienveillantes.</div>
+      <div class="faq-answer">On commence par un <strong>call découverte gratuit</strong> (en visio ou en présentiel si tu es dans la région). C'est le moment pour faire connaissance, comprendre tes objectifs, ton mode de vie, tes éventuelles douleurs. C'est à partir de cet échange que je construis un programme entièrement adapté à toi — avant même la première séance.</div>
+    </div>
+    <div class="faq-item fade-in">
+      <div class="faq-question">
+        Où se passent les séances ? Tu te déplaces ?
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-answer">
+        <strong>Coaching à domicile :</strong> je me déplace chez toi dans le Brabant Wallon et ses alentours (possible supplément si +15 min de route).<br/><br/>
+        <strong>Studio à Wavre :</strong> Chaussée de Louvain 328, 1300 Wavre — salle équipée avec machines.<br/><br/>
+        <strong>En ligne :</strong> partout dans le monde, via WhatsApp et appels vidéo.
+      </div>
     </div>
     <div class="faq-item fade-in">
       <div class="faq-question">
         Peut-on annuler ou reporter une séance ?
         <div class="faq-toggle">+</div>
       </div>
-      <div class="faq-answer">Oui, jusqu'à 24h avant la séance sans frais. En dessous de 24h, la séance est due. Je suis flexible et humaine — si quelque chose d'imprévu arrive, contacte-moi, on trouve une solution.</div>
+      <div class="faq-answer">Pour les séances privées, oui, jusqu'à 24h avant sans frais. En dessous de 24h, la séance est due.<br/><br/>Pour les <strong>cours collectifs</strong> : annulation moins de 4h avant le cours → séance comptabilisée quand même. Réservation via WhatsApp, confirmation demandée la veille.</div>
+    </div>
+    <div class="faq-item fade-in">
+      <div class="faq-question">
+        Le coaching en ligne, c'est comment exactement ?
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-answer">Le coaching en ligne est disponible uniquement en pack, avec un <strong>engagement minimum de 3 mois</strong>. Tu reçois un programme sur mesure avec tableau Excel de suivi, guide sportif détaillé et carnet de progression. Chaque semaine, on fait un point ensemble (call vidéo ou messages vocaux WhatsApp). Si tu as un doute sur l'exécution d'un exercice, tu m'envoies une vidéo et je te la corrige à distance. Support illimité avec réponse sous 24h.</div>
+    </div>
+    <div class="faq-item fade-in">
+      <div class="faq-question">
+        Conditions générales — Cours de Pilâtes
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-answer" style="padding: 1rem 1.5rem;">
+        <img src="img/conditions-generales-pilates.jpeg" alt="Conditions générales — Cours de Pilâtes" style="width:82%; margin:0 auto; border-radius:8px; display:block;" />
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section">
-  <h2>Convaincue ?<br/>Passons à l'action.</h2>
-  <p>Réserve ta séance découverte offerte dès maintenant. Pas d'engagement, juste une première expérience.</p>
-  <a href="booking.html" class="btn btn-outline">Réserver ma séance →</a>
+  <h2>Convaincue ?<br/>Passons à l'action</h2>
+  <p>Un call découverte gratuit pour définir tes objectifs, puis on démarre. Simple, rapide, sans engagement.</p>
+  <a href="booking.html" class="btn btn-outline pulse-cta-btn">Réserver ma séance →</a>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand">
-    <div class="logo">Lucie<span>.</span></div>
-    <p>Coach Pilates certifiée à Paris. Je t'accompagne vers un corps plus fort, une posture alignée et un mental apaisé.</p>
+    <img src="img/lucie-logo.png" alt="Lucie Coach" style="height:160px; width:auto; margin-bottom:1rem;" />
+    <p>Coach sportif à Wavre, Belgique. Je t'accompagne vers un corps plus fort, une posture alignée et un mental apaisé.</p>
   </div>
   <div class="footer-col">
     <h4>Navigation</h4>
     <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
     <a href="services.html">Services</a>
     <a href="booking.html">Réservation</a>
     <a href="contact.html">Contact</a>
   </div>
   <div class="footer-col">
     <h4>Services</h4>
-    <a href="#prive">Séance Privée</a>
-    <a href="#collectif">Cours Collectif</a>
-    <a href="#ligne">Cours en Ligne</a>
-    <a href="#programme">Programmes</a>
+    <a href="#coaching">Coaching Remise en Forme</a>
+    <a href="#pilates">Pilâtes One-to-One</a>
+    <a href="#collectif">Cours Collectifs</a>
+    <a href="#ligne">Programmes en Ligne</a>
   </div>
   <div class="footer-col">
     <h4>Contact</h4>
-    <a href="mailto:lucie@pilates.fr">lucie@pilates.fr</a>
-    <a href="tel:+33600000000">+33 6 00 00 00 00</a>
-    <a href="#">Instagram</a>
-    <a href="#">Paris, France</a>
+    <a href="mailto:lucie.coach.pt@gmail.com">lucie.coach.pt@gmail.com</a>
+    <a href="tel:+32475305861">0475/30.58.61</a>
+    <a href="https://www.instagram.com/lucie.coach" target="_blank">Instagram</a>
+    <a href="https://maps.google.com/?q=Chaussée+de+Louvain+328,+1300+Wavre" target="_blank">Wavre, Belgique</a>
   </div>
 </footer>
 <div class="footer-bottom">
   © 2025 Lucie VH · Tous droits réservés · <a href="mentions-legales.html" style="color:inherit;">Mentions légales</a>
 </div>
 
+<a href="https://wa.me/32475305861" target="_blank" class="whatsapp-float" aria-label="Contacter sur WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 <script src="main.js"></script>
 </body>
 </html>

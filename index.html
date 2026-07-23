@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lucie VH — Coach Pilates & Bien-être</title>
-  <meta name="description" content="Coach Pilates certifiée à Paris. Cours collectifs, séances privées et programmes personnalisés pour transformer votre corps et votre mental." />
+  <title>Lucie VH — Coach Sportif & Bien-être</title>
+  <meta name="description" content="Coach sportif en Belgique. Cours collectifs, séances privées et programmes personnalisés pour transformer votre corps et votre mental." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -14,9 +14,10 @@
 
 <!-- NAV -->
 <nav id="navbar">
-  <a href="index.html" class="logo">Lucie<span>.</span></a>
+  <a href="index.html" class="logo"><img src="img/lucie-logo.png" alt="Lucie Coach" style="height:100px; width:auto; display:block;" /></a>
   <ul class="nav-links">
     <li><a href="index.html" class="active">Accueil</a></li>
+    <li><a href="about.html">À propos</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="booking.html">Réservation</a></li>
     <li><a href="contact.html">Contact</a></li>
@@ -28,29 +29,18 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" style="position:relative; overflow:hidden; min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding-bottom:0;">
   <div class="hero-bg"></div>
-  <div class="hero-content">
-    <div class="hero-tag">Coach Pilates Certifiée · Paris</div>
-    <h1>Transforme ton<br/>corps &amp; ton<br/><em>énergie.</em></h1>
-    <p>Des séances de pilates sur mesure pour renforcer, allonger et libérer ton corps. En studio, en ligne ou chez toi.</p>
-    <div class="hero-btns">
-      <a href="booking.html" class="btn btn-primary">Réserver une séance →</a>
-      <a href="services.html" class="btn btn-outline">Découvrir les services</a>
-    </div>
+  <div style="position:absolute; inset:0; z-index:0;">
+    <img src="img/lucie-kettlebell.jpg" alt="Lucie Coach" style="width:100%; height:100%; object-fit:cover; object-position:center 20%; opacity:0.22;" />
   </div>
-  <div class="hero-stats">
-    <div class="stat">
-      <div class="stat-num">200+</div>
-      <div class="stat-label">Clientes</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">5 ans</div>
-      <div class="stat-label">Expérience</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">98%</div>
-      <div class="stat-label">Satisfaction</div>
+  <div class="hero-content" style="position:relative; z-index:1; padding-bottom:0;">
+    <div class="hero-tag">Coach Sportif · Wavre, Belgique</div>
+    <h1>Transforme ton<br/>corps &amp; ton<br/><em>énergie</em></h1>
+    <p>Coaching sportif personnalisé et pilâtes en one-to-one pour renforcer ton corps, retrouver ta forme et booster ton bien-être. À domicile, en studio ou en ligne.</p>
+    <div class="hero-btns">
+      <a href="booking.html" class="btn btn-primary pulse-cta-btn">Réserver une séance →</a>
+      <a href="services.html" class="btn btn-outline">Découvrir les services</a>
     </div>
   </div>
 </section>
@@ -58,22 +48,22 @@
 <!-- ABOUT -->
 <section class="about-strip">
   <div class="about-img fade-in">
-    <div class="about-img-placeholder">🧘‍♀️</div>
+    <img src="img/lucie-bench.jpg" alt="Lucie Van Horenbeke — Coach Sportif" style="width:100%; height:100%; object-fit:cover; object-position:top; border-radius:24px;" />
   </div>
   <div class="about-content fade-in">
     <span class="section-tag">À propos</span>
-    <h2 class="section-title">Une approche<br/>humaine &amp; précise.</h2>
+    <h2 class="section-title">Une approche<br/>humaine &amp; précise</h2>
     <p class="section-sub">
-      Je suis Lucie, coach pilates certifiée avec plus de 5 ans d'expérience. Mon approche ? Des séances pensées pour <em>toi</em>, qui tiennent compte de ton corps, de ton rythme et de tes objectifs.
+      Je suis Lucie, coach sportif basée à Wavre. Je propose deux expertises complémentaires : le coaching remise en forme (perte de poids, construction musculaire, bien-être) et le pilâtes en one-to-one. Mon approche ? Des séances pensées pour <em>toi</em>, adaptées à ton corps et tes objectifs.
     </p>
     <div class="about-features">
-      <div class="feature-item">Certification internationale en Pilates</div>
-      <div class="feature-item">Spécialiste posture & rééducation</div>
-      <div class="feature-item">Cours collectifs &amp; coaching privé</div>
-      <div class="feature-item">Suivi personnalisé &amp; programmes sur mesure</div>
+      <div class="feature-item">Coaching remise en forme à domicile</div>
+      <div class="feature-item">Pilâtes one-to-one (femmes ménopausées, post-partum…)</div>
+      <div class="feature-item">Cours collectifs &amp; small group training à Wavre</div>
+      <div class="feature-item">Programmes en ligne personnalisés</div>
     </div>
     <br/>
-    <a href="contact.html" class="btn btn-dark">Me contacter →</a>
+    <a href="contact.html" class="btn btn-dark pulse-cta-btn">Me contacter →</a>
   </div>
 </section>
 
@@ -85,27 +75,27 @@
     <p class="section-sub">Des formats variés pour s'adapter à ton emploi du temps et tes besoins.</p>
   </div>
   <div class="services-grid">
-    <div class="service-card fade-in">
-      <span class="service-icon">🎯</span>
-      <div class="service-title">Séance Privée</div>
-      <p class="service-desc">Un accompagnement 100% personnalisé. Je m'adapte à ton niveau, tes douleurs et tes objectifs pour des résultats rapides.</p>
-      <div class="service-price">70€ / séance</div>
-    </div>
-    <div class="service-card fade-in">
+    <a href="services.html#coaching" class="service-card fade-in" style="text-decoration:none; display:block; cursor:pointer;">
+      <span class="service-icon">💪</span>
+      <div class="service-title">Coaching Remise en Forme</div>
+      <p class="service-desc">Perte de poids, construction musculaire, cardio… Un coaching personnalisé à domicile ou en salle à Wavre, avec tout le matériel fourni.</p>
+      <div class="service-price">50€ à domicile<br/>40€ en salle (pack)</div>
+    </a>
+    <a href="services.html#pilates" class="service-card fade-in" style="text-decoration:none; display:block; cursor:pointer;">
+      <span class="service-icon">🧘‍♀️</span>
+      <div class="service-title">Pilâtes One-to-One</div>
+      <p class="service-desc">Séances privées à domicile ou en studio à Wavre. Idéal pour femmes ménopausées, incontinence, débutantes. 1ère séance offerte !</p>
+      <div class="service-price">50€ / séance</div>
+    </a>
+    <a href="services.html#collectif" class="service-card fade-in" style="text-decoration:none; display:block; cursor:pointer;">
       <span class="service-icon">👥</span>
-      <div class="service-title">Cours Collectif</div>
-      <p class="service-desc">Des séances en petit groupe (max 8 personnes) dans une ambiance motivante et bienveillante.</p>
-      <div class="service-price">25€ / cours</div>
-    </div>
-    <div class="service-card fade-in">
-      <span class="service-icon">💻</span>
-      <div class="service-title">Cours en Ligne</div>
-      <p class="service-desc">Pratique le pilates depuis chez toi avec un suivi live ou accède à mes replays à tout moment.</p>
-      <div class="service-price">35€ / séance</div>
-    </div>
+      <div class="service-title">Cours Collectifs & Small Group</div>
+      <p class="service-desc">Mar & Jeu 18h–19h · Sam 10h–11h à Wavre. Small group training avec tes amies à prix réduit. Tout le matériel est fourni !</p>
+      <div class="service-price">À partir de 15€ / cours</div>
+    </a>
   </div>
   <div style="text-align:center; margin-top: 3rem;">
-    <a href="services.html" class="btn btn-primary">Voir tous les services →</a>
+    <a href="services.html" class="btn btn-primary pulse-cta-btn">Voir tous les services →</a>
   </div>
 </section>
 
@@ -116,6 +106,7 @@
     <h2 class="section-title">4 étapes simples<br/>pour commencer</h2>
   </div>
   <div class="steps-grid">
+    <div class="steps-travel-dot"></div>
     <div class="step-card fade-in">
       <div class="step-num">1</div>
       <div class="step-title">Tu réserves</div>
@@ -139,65 +130,174 @@
   </div>
 </section>
 
+<!-- EXPERTISES -->
+<section style="background: var(--black); padding: 6rem 4rem;">
+  <div class="fade-in" style="text-align:center; margin-bottom: 3rem;">
+    <span class="section-tag">Formations & Expertises</span>
+    <h2 class="section-title" style="color:var(--white);">Qualifiée pour<br/><em>t'accompagner</em></h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.6); max-width:600px; margin:0 auto;">Mon parcours académique et mes certifications sont au service de ton bien-être et de ta progression.</p>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.5rem; max-width:1100px; margin:0 auto;">
+    <a href="about.html" class="fade-in" style="background:rgba(255,255,255,0.05); border-radius:20px; padding:2rem; border:1px solid rgba(255,255,255,0.08); text-decoration:none; display:block; transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(255,92,26,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
+      <div style="font-size:2rem; margin-bottom:1rem;">🎓</div>
+      <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--orange); margin-bottom:0.5rem;">Bachelier · 2022–2025</div>
+      <div style="font-weight:700; color:var(--white); font-size:1rem; margin-bottom:0.5rem;">Coaching Sportif, Wellness & APAD</div>
+      <div style="color:rgba(255,255,255,0.5); font-size:0.85rem;">Co-diplomation : HE Léonard de Vinci (Site Parnasse) · HE Francisco Ferrer · HE 2B (site de Nivelles).</div>
+      <div style="margin-top:0.8rem; font-size:0.78rem; color:var(--orange); font-weight:600;">En savoir plus →</div>
+    </a>
+    <a href="about.html" class="fade-in" style="background:rgba(255,255,255,0.05); border-radius:20px; padding:2rem; border:1px solid rgba(255,255,255,0.08); text-decoration:none; display:block; transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(255,92,26,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
+      <div style="font-size:2rem; margin-bottom:1rem;">📜</div>
+      <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--orange); margin-bottom:0.5rem;">Certification · Fév. 2025</div>
+      <div style="font-weight:700; color:var(--white); font-size:1rem; margin-bottom:0.5rem;">Coach Pilâtes Matwork 1 — Zenbox</div>
+      <div style="color:rgba(255,255,255,0.5); font-size:0.85rem;">28h de théorie et pratique. Certification Niveau d'Expertise — Zenbox Pilâtes & More.</div>
+      <div style="margin-top:0.8rem; font-size:0.78rem; color:var(--orange); font-weight:600;">En savoir plus →</div>
+    </a>
+    <a href="https://drive.google.com/file/d/11z5PPK_ES_emTQxmLnr3ItcbkCTGxZ-3/view?usp=drivesdk" target="_blank" class="fade-in" style="background:rgba(255,255,255,0.05); border-radius:20px; padding:2rem; border:1px solid rgba(255,255,255,0.08); text-decoration:none; display:block; transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(255,92,26,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
+      <div style="font-size:2rem; margin-bottom:1rem;">🔬</div>
+      <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--orange); margin-bottom:0.5rem;">Mémoire · 2022–2025</div>
+      <div style="font-weight:700; color:var(--white); font-size:1rem; margin-bottom:0.5rem;">Pilâtes & Incontinence Urinaire</div>
+      <div style="color:rgba(255,255,255,0.5); font-size:0.85rem;">Recherche sur les effets du pilâtes sur le plancher pelvien chez les femmes ménopausées.</div>
+      <div style="margin-top:0.8rem; font-size:0.78rem; color:var(--orange); font-weight:600;">Lire le mémoire →</div>
+    </a>
+    <a href="about.html" class="fade-in" style="background:rgba(255,255,255,0.05); border-radius:20px; padding:2rem; border:1px solid rgba(255,255,255,0.08); text-decoration:none; display:block; transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(255,92,26,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
+      <div style="font-size:2rem; margin-bottom:1rem;">💪</div>
+      <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--orange); margin-bottom:0.5rem;">Coach Sportif Certifié</div>
+      <div style="font-weight:700; color:var(--white); font-size:1rem; margin-bottom:0.5rem;">Personal Trainer</div>
+      <div style="color:rgba(255,255,255,0.5); font-size:0.85rem;">Spécialiste remise en forme, perte de poids, construction musculaire et coaching à domicile.</div>
+      <div style="margin-top:0.8rem; font-size:0.78rem; color:var(--orange); font-weight:600;">En savoir plus →</div>
+    </a>
+  </div>
+</section>
+
+<!-- PHOTO GALLERY -->
+<section style="padding: 0; background: var(--black);">
+  <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-template-rows: 320px 320px; gap:4px;">
+    <div style="overflow:hidden; grid-row: 1 / 3;">
+      <img src="img/lucie-kettlebell.jpg" alt="Lucie kettlebell" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+    </div>
+    <div style="overflow:hidden;">
+      <img src="img/lucie-halteres.jpg" alt="Lucie haltères" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+    </div>
+    <div style="overflow:hidden;">
+      <img src="img/lucie-planche.jpg" alt="Lucie planche" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+    </div>
+    <div style="overflow:hidden;">
+      <img src="img/lucie-machine.jpg" alt="Lucie machine" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+    </div>
+    <div style="overflow:hidden;">
+      <img src="img/lucie-bench.jpg" alt="Lucie bench" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+    </div>
+    <div style="overflow:hidden;">
+      <img src="img/lucie-gym.jpg" alt="Lucie gym" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+    </div>
+    <div style="overflow:hidden; position:relative;">
+      <img src="img/lucie-fente.jpg" alt="Lucie fente" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+      <div style="position:absolute;inset:0;background:rgba(0,0,0,0.45);display:flex;align-items:center;justify-content:center;">
+        <a href="https://www.instagram.com/lucie.coach" target="_blank" style="color:white;text-align:center;font-size:0.9rem;font-weight:600;letter-spacing:0.05em;">
+          📸 @lucie.coach<br/><span style="font-size:0.75rem;opacity:0.8;font-weight:400;">Voir sur Instagram</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- TESTIMONIALS -->
 <section class="testimonials">
   <div class="fade-in">
-    <span class="section-tag">Témoignages</span>
-    <h2 class="section-title">Ce qu'elles disent</h2>
+    <span class="section-tag">Avis Google ⭐⭐⭐⭐⭐</span>
+    <h2 class="section-title">Ce qu'ils disent</h2>
+    <p class="section-sub" style="margin-bottom:0;">Note moyenne 5/5</p>
   </div>
   <div class="testi-grid">
     <div class="testi-card fade-in">
       <div class="stars">★★★★★</div>
-      <p class="testi-text">« Lucie a complètement transformé ma relation à mon corps. Après 3 mois de coaching privé, mes douleurs de dos ont disparu et je me sens beaucoup plus forte. »</p>
+      <p class="testi-text">« Les séances sont bien organisées et adaptées aux besoins de chacun. Excellent coach !! »</p>
       <div class="testi-author">
-        <div class="testi-avatar">S</div>
+        <div class="testi-avatar">B</div>
         <div>
-          <div class="testi-name">Sophie M.</div>
-          <div class="testi-role">Cliente depuis 2023</div>
+          <div class="testi-name">Benchetroun Othmane</div>
+          <div class="testi-role">⭐⭐⭐⭐⭐</div>
         </div>
       </div>
     </div>
     <div class="testi-card fade-in">
       <div class="stars">★★★★★</div>
-      <p class="testi-text">« Les cours collectifs sont incroyables ! L'ambiance est super bienveillante et Lucie est très attentive à la technique de chacune. Je recommande à 100%. »</p>
+      <p class="testi-text">« Je suis absolument ravie de mes cours de Pilâtes ! L'ambiance est bienveillante et les cours sont de qualité. La professeure est aux petits soins, elle corrige les postures avec douceur et précision, ce qui fait vraiment la différence. »</p>
+      <div class="testi-author">
+        <div class="testi-avatar">N</div>
+        <div>
+          <div class="testi-name">Nathalie Iambillon</div>
+          <div class="testi-role">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card fade-in">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">« Prof motivante et toujours souriante. Exercices adaptés à la capacité de chacun en fonction des pathologies. Prix raisonnable et parking à proximité. Adresse à retenir ! »</p>
       <div class="testi-author">
         <div class="testi-avatar">A</div>
         <div>
-          <div class="testi-name">Amandine L.</div>
-          <div class="testi-role">Cliente depuis 2022</div>
+          <div class="testi-name">Anne Lambillon</div>
+          <div class="testi-role">⭐⭐⭐⭐⭐</div>
         </div>
       </div>
     </div>
     <div class="testi-card fade-in">
       <div class="stars">★★★★★</div>
-      <p class="testi-text">« J'ai commencé les cours en ligne pendant ma grossesse et c'était parfait. Lucie adapte vraiment chaque exercice. Je continue encore maintenant ! »</p>
+      <p class="testi-text">« Expérience au top ! Je recommande. »</p>
       <div class="testi-author">
-        <div class="testi-avatar">C</div>
+        <div class="testi-avatar">L</div>
         <div>
-          <div class="testi-name">Clara B.</div>
-          <div class="testi-role">Cliente depuis 2024</div>
+          <div class="testi-name">Luwiza Ahloumou</div>
+          <div class="testi-role">⭐⭐⭐⭐⭐</div>
         </div>
       </div>
     </div>
+    <div class="testi-card fade-in">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">« Les cours de pilâtes de Lucie sont super ! Sa pédagogie, sa bienveillance et sa capacité à adapter les exercices garantissent des séances sécurisées et efficaces pour renforcer le corps en profondeur. Je suis hyper satisfaite ! »</p>
+      <div class="testi-author">
+        <div class="testi-avatar">E</div>
+        <div>
+          <div class="testi-name">Eugénie Raison</div>
+          <div class="testi-role">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card fade-in">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">« Excellente expérience. Même sans être particulièrement sportif au départ, je me suis senti à l'aise dès les premières minutes. La coach est très professionnelle, attentive et prend le temps de corriger chacun avec précision. »</p>
+      <div class="testi-author">
+        <div class="testi-avatar">M</div>
+        <div>
+          <div class="testi-name">Mathéo Mertens</div>
+          <div class="testi-role">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:2.5rem;">
+    <a href="https://share.google/Q34PTdS56j8m9Qonz" target="_blank" class="btn btn-dark">Voir tous les avis Google →</a>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section">
   <h2>Prête à commencer<br/>l'aventure ?</h2>
-  <p>Réserve ta première séance découverte offerte et découvre ce que le pilates peut faire pour toi.</p>
-  <a href="booking.html" class="btn btn-outline">Réserver maintenant →</a>
+  <p>Parce que le premier pas mérite d'être sans pression ! Réserve ta première séance découverte — offerte.</p>
+  <a href="booking.html" class="btn btn-outline pulse-cta-btn">Réserver maintenant →</a>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand">
-    <div class="logo">Lucie<span>.</span></div>
-    <p>Coach Pilates certifiée à Paris. Je t'accompagne vers un corps plus fort, une posture alignée et un mental apaisé.</p>
+    <img src="img/lucie-logo.png" alt="Lucie Coach" style="height:160px; width:auto; margin-bottom:1rem;" />
+    <p>Coach sportif à Wavre, Belgique. Je t'accompagne vers un corps plus fort, une posture alignée et un mental apaisé.</p>
   </div>
   <div class="footer-col">
     <h4>Navigation</h4>
     <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
     <a href="services.html">Services</a>
     <a href="booking.html">Réservation</a>
     <a href="contact.html">Contact</a>
@@ -211,16 +311,19 @@
   </div>
   <div class="footer-col">
     <h4>Contact</h4>
-    <a href="mailto:lucie@pilates.fr">lucie@pilates.fr</a>
-    <a href="tel:+33600000000">+33 6 00 00 00 00</a>
-    <a href="#">Instagram</a>
-    <a href="#">Paris, France</a>
+    <a href="mailto:lucie.coach.pt@gmail.com">lucie.coach.pt@gmail.com</a>
+    <a href="tel:+32475305861">0475/30.58.61</a>
+    <a href="https://www.instagram.com/lucie.coach" target="_blank">Instagram</a>
+    <a href="https://maps.google.com/?q=Chaussée+de+Louvain+328,+1300+Wavre" target="_blank">Wavre, Belgique</a>
   </div>
 </footer>
 <div class="footer-bottom">
   © 2025 Lucie VH · Tous droits réservés · <a href="mentions-legales.html" style="color:inherit;">Mentions légales</a>
 </div>
 
+<a href="https://wa.me/32475305861" target="_blank" class="whatsapp-float" aria-label="Contacter sur WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 <script src="main.js"></script>
 </body>
 </html>

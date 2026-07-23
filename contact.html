@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — Lucie VH Coach Pilates</title>
-  <meta name="description" content="Contactez Lucie VH, coach pilates certifiée à Paris. Répondez à vos questions et commencez votre transformation." />
+  <title>Contact — Lucie VH Coach Sportif</title>
+  <meta name="description" content="Contactez Lucie VH, coach sportif en Belgique. Répondez à vos questions et commencez votre transformation." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -72,9 +72,10 @@
 
 <!-- NAV -->
 <nav id="navbar">
-  <a href="index.html" class="logo">Lucie<span>.</span></a>
+  <a href="index.html" class="logo"><img src="img/lucie-logo.png" alt="Lucie Coach" style="height:100px; width:auto; display:block;" /></a>
   <ul class="nav-links">
     <li><a href="index.html">Accueil</a></li>
+    <li><a href="about.html">À propos</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="booking.html">Réservation</a></li>
     <li><a href="contact.html" class="active">Contact</a></li>
@@ -89,7 +90,7 @@
 <div class="page-header">
   <div class="page-header-content">
     <span class="section-tag">Contact</span>
-    <h1>Parlons de<br/><em>toi.</em></h1>
+    <h1>Parlons de<br/><em>toi</em></h1>
     <p>Une question, une envie d'essayer ou juste savoir si on est un bon match ? Écris-moi, je réponds sous 24h.</p>
   </div>
 </div>
@@ -100,51 +101,61 @@
     <!-- FORM -->
     <div class="fade-in">
       <span class="section-tag">Envoie un message</span>
-      <h2 class="section-title">Je t'écoute.</h2>
+      <h2 class="section-title">Je t'écoute</h2>
       <p class="section-sub" style="margin-bottom: 2rem;">Que ce soit pour une question pratique ou pour démarrer, n'hésite pas.</p>
 
-      <div class="form-box">
+      <form class="form-box" id="contactForm" onsubmit="sendMessage(event)">
+        <!-- Web3Forms hidden fields -->
+        <input type="hidden" name="access_key" value="4d25a9b1-e3e0-4d91-ac39-57015a6980f6" />
+        <input type="hidden" name="subject" value="[Lucie.coach] Nouveau message depuis le site" />
+        <input type="hidden" name="from_name" value="Site Lucie Coach" />
+        <input type="hidden" name="redirect" value="false" />
         <div class="form-row">
           <div class="form-group">
             <label>Prénom *</label>
-            <input type="text" id="contactFirst" placeholder="Sophie" required />
+            <input type="text" name="first_name" id="contactFirst" placeholder="Sophie" required />
           </div>
           <div class="form-group">
             <label>Nom *</label>
-            <input type="text" id="contactLast" placeholder="Martin" required />
+            <input type="text" name="last_name" id="contactLast" placeholder="Martin" required />
           </div>
         </div>
         <div class="form-group">
           <label>Email *</label>
-          <input type="email" id="contactEmail" placeholder="sophie@email.fr" required />
+          <input type="email" name="email" id="contactEmail" placeholder="sophie@email.fr" required />
         </div>
         <div class="form-group">
           <label>Téléphone</label>
-          <input type="tel" id="contactPhone" placeholder="+33 6 12 34 56 78" />
+          <input type="tel" name="phone" id="contactPhone" placeholder="0475/30.58.61" />
         </div>
         <div class="form-group">
           <label>Sujet</label>
-          <select id="contactSubject">
+          <select name="subject_choice" id="contactSubject">
             <option value="">Sélectionne un sujet</option>
-            <option>Je veux essayer le pilates</option>
+            <option>Coaching remise en forme</option>
+            <option>Pilâtes one-to-one</option>
+            <option>Cours collectifs (Mar/Jeu/Sam)</option>
+            <option>Small group training</option>
+            <option>Programme en ligne</option>
             <option>Question sur les tarifs</option>
-            <option>Cours en ligne</option>
-            <option>Programme personnalisé</option>
             <option>Partenariat / Collaboration</option>
             <option>Autre</option>
           </select>
         </div>
         <div class="form-group">
           <label>Message *</label>
-          <textarea id="contactMessage" placeholder="Dis-moi ce que tu recherches, ton niveau, tes objectifs ou simplement dis bonjour !" style="min-height:150px;"></textarea>
+          <textarea name="message" id="contactMessage" placeholder="Dis-moi ce que tu recherches, ton niveau, tes objectifs ou simplement dis bonjour !" style="min-height:150px;" required></textarea>
         </div>
-        <button class="btn btn-primary" onclick="sendMessage()" style="width:100%; justify-content:center; font-size:1rem; padding:1rem;">
+        <button type="submit" class="btn btn-primary pulse-cta-btn" id="submitBtn" style="width:100%; justify-content:center; font-size:1rem; padding:1rem;">
           Envoyer le message →
         </button>
         <div class="contact-success" id="contactSuccess">
-          ✓ Message envoyé ! Je te réponds dans les 24h.
+          ✓ Ton message a bien été envoyé ! Je te réponds dans les 24h. Tu peux aussi me joindre au <a href="tel:+32475305861" style="color:var(--orange);">0475/30.58.61</a>.
         </div>
-      </div>
+        <div id="contactError" style="display:none; background:rgba(255,0,0,0.08); border:1px solid rgba(255,0,0,0.3); border-radius:12px; padding:1rem; margin-top:1rem; color:#c00; font-size:0.88rem;">
+          ⚠️ Une erreur s'est produite. Contacte-moi directement à <a href="mailto:lucie.coach.pt@gmail.com" style="color:#c00;">lucie.coach.pt@gmail.com</a>
+        </div>
+      </form>
     </div>
 
     <!-- INFO -->
@@ -156,38 +167,45 @@
           <div class="info-icon">📍</div>
           <div>
             <div class="info-label">Adresse studio</div>
-            <div class="info-value">12 rue des Arts<br/>75011 Paris, France</div>
+            <div class="info-value"><a href="https://maps.google.com/?q=Chaussée+de+Louvain+328,+1300+Wavre" target="_blank" style="color:inherit;">Chaussée de Louvain 328, 1300 Wavre</a></div>
+          </div>
+        </div>
+        <div class="info-card" style="background: rgba(255,255,255,0.05); border-radius:14px; margin-bottom:1rem;">
+          <div class="info-icon">🏠</div>
+          <div>
+            <div class="info-label">Coaching à domicile</div>
+            <div class="info-value">Wavre et alentours</div>
           </div>
         </div>
         <div class="info-card" style="background: rgba(255,255,255,0.05); border-radius:14px; margin-bottom:1rem;">
           <div class="info-icon">📞</div>
           <div>
             <div class="info-label">Téléphone</div>
-            <div class="info-value"><a href="tel:+33600000000" style="color:inherit;">+33 6 00 00 00 00</a></div>
+            <div class="info-value"><a href="tel:+32475305861" style="color:inherit;">0475/30.58.61</a></div>
           </div>
         </div>
         <div class="info-card" style="background: rgba(255,255,255,0.05); border-radius:14px; margin-bottom:1rem;">
           <div class="info-icon">✉️</div>
           <div>
             <div class="info-label">Email</div>
-            <div class="info-value"><a href="mailto:lucie@pilates.fr" style="color:inherit;">lucie@pilates.fr</a></div>
+            <div class="info-value"><a href="mailto:lucie.coach.pt@gmail.com" style="color:inherit;">lucie.coach.pt@gmail.com</a></div>
           </div>
         </div>
 
-        <div style="font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--orange); margin: 1.5rem 0 1rem;">Horaires</div>
+        <div style="font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--orange); margin: 1.5rem 0 1rem;">Cours collectifs (studio Wavre)</div>
         <div class="hours-grid">
           <div class="hours-row">
-            <span class="hours-day">Lundi – Vendredi</span>
-            <span class="hours-time">07:00 – 20:00</span>
+            <span class="hours-day">Mardi &amp; Jeudi</span>
+            <span class="hours-time">18:00 – 19:00</span>
           </div>
           <div class="hours-row">
             <span class="hours-day">Samedi</span>
-            <span class="hours-time">08:00 – 14:00</span>
+            <span class="hours-time">10:00 – 11:00</span>
           </div>
-          <div class="hours-row">
-            <span class="hours-day">Dimanche</span>
-            <span class="hours-time closed">Fermé</span>
-          </div>
+        </div>
+        <div style="font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--orange); margin: 1.5rem 0 1rem;">Coaching privé &amp; domicile</div>
+        <div style="font-size:0.88rem; color:rgba(255,255,255,0.6); line-height:1.6; padding: 0.5rem 0;">
+          Selon nos disponibilités communes — contacte-moi pour convenir d'un créneau.
         </div>
       </div>
 
@@ -195,24 +213,40 @@
       <div style="background: var(--black); border-radius: 24px; padding: 2rem; color: var(--white);">
         <div style="font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--orange); margin-bottom:1.2rem;">Réseaux sociaux</div>
         <div class="social-links">
-          <a href="#" class="social-link">
-            <div class="social-icon">📸</div>
-            Instagram — @lucie.pilates
+          <a href="https://www.instagram.com/lucie.coach" target="_blank" class="social-link">
+            <div class="social-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+            Instagram — @lucie.coach
           </a>
-          <a href="#" class="social-link">
-            <div class="social-icon">🎵</div>
-            TikTok — @lucie.pilates
+          <a href="https://www.tiktok.com/@lucie.coach" target="_blank" class="social-link">
+            <div class="social-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+            </div>
+            TikTok — @lucie.coach
           </a>
-          <a href="#" class="social-link">
-            <div class="social-icon">🔗</div>
+          <a href="https://www.linkedin.com/in/lucie-vanhorenbeke" target="_blank" class="social-link">
+            <div class="social-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
             LinkedIn — Lucie VH
+          </a>
+          <a href="https://share.google/Q34PTdS56j8m9Qonz" target="_blank" class="social-link">
+            <div class="social-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 11h8.533c.044.385.067.78.067 1.184 0 2.734-.98 5.036-2.678 6.6C16.188 20.348 14.265 21 12 21c-5.025 0-9-3.975-9-9s3.975-9 9-9c2.43 0 4.467.89 6.03 2.348L16.245 7.13C15.123 6.08 13.642 5.4 12 5.4 8.355 5.4 5.4 8.355 5.4 12s2.955 6.6 6.6 6.6c3.33 0 5.7-1.98 6.12-4.6H12V11z" fill="#EA4335"/><path d="M12 11h8.533c.044.385.067.78.067 1.184 0 2.734-.98 5.036-2.678 6.6C16.188 20.348 14.265 21 12 21c-5.025 0-9-3.975-9-9s3.975-9 9-9c2.43 0 4.467.89 6.03 2.348L16.245 7.13C15.123 6.08 13.642 5.4 12 5.4 8.355 5.4 5.4 8.355 5.4 12s2.955 6.6 6.6 6.6c3.33 0 5.7-1.98 6.12-4.6H12V11z" fill="none"/><path d="M5.4 12c0-1.08.204-2.106.558-3.06L3.042 6.528A9.027 9.027 0 0 0 3 9c0 1.038.168 2.034.48 2.97L5.4 12z" fill="#FBBC05"/><path d="M12 5.4c1.56 0 2.97.54 4.08 1.44l1.8-1.8C16.2 3.618 14.244 3 12 3 8.46 3 5.4 4.95 3.042 7.8l2.916 2.412C7.086 7.8 9.3 5.4 12 5.4z" fill="#EA4335"/><path d="M20.533 12.184c0-.404-.023-.8-.067-1.184H12v2.4h4.8c-.24 1.236-.996 2.34-2.016 3.048l2.916 2.412C19.356 17.376 20.533 14.98 20.533 12.184z" fill="#4285F4"/><path d="M5.958 13.97A6.63 6.63 0 0 1 5.4 12l-1.92.942A9.016 9.016 0 0 0 3 15c.528 1.77 1.542 3.336 2.916 4.536L8.76 17.1C7.38 16.2 6.36 15.21 5.958 13.97z" fill="#34A853"/></svg>
+            </div>
+            Avis Google
           </a>
         </div>
       </div>
 
       <!-- MAP -->
-      <div class="map-box fade-in" style="margin-top: 1.5rem;">
-        📍
+      <div class="fade-in" style="margin-top: 1.5rem; border-radius: 24px; overflow: hidden; height: 250px;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2530.1!2d4.6!3d50.72!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c17f3a5b4e4e4e%3A0x0!2sChaussée+de+Louvain+328%2C+1300+Wavre!5e0!3m2!1sfr!2sbe!4v1"
+          width="100%" height="250" style="border:0; display:block;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
   </div>
@@ -223,9 +257,9 @@
   <div class="fade-in" style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
     <div>
       <span class="section-tag">Avant de m'écrire</span>
-      <h2 class="section-title">Peut-être que<br/>j'ai déjà répondu.</h2>
+      <h2 class="section-title">Peut-être que<br/>j'ai déjà répondu</h2>
       <p class="section-sub" style="margin-bottom:2rem;">Consulte ma FAQ sur la page Services pour les questions les plus fréquentes : niveaux, matériel, annulations...</p>
-      <a href="services.html#faq" class="btn btn-dark">Voir la FAQ →</a>
+      <a href="services.html#faq" class="btn btn-dark pulse-cta-btn">Voir la FAQ →</a>
     </div>
     <div style="background:var(--light-grey); border-radius:24px; padding:2.5rem;">
       <div style="font-size:0.85rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-muted); margin-bottom:1.5rem;">Questions rapides</div>
@@ -254,57 +288,73 @@
 <section class="cta-section">
   <h2>Prête à te lancer ?</h2>
   <p>Réserve ta première séance découverte offerte. Aucun engagement, juste une expérience.</p>
-  <a href="booking.html" class="btn btn-outline">Réserver maintenant →</a>
+  <a href="booking.html" class="btn btn-outline pulse-cta-btn">Réserver maintenant →</a>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand">
-    <div class="logo">Lucie<span>.</span></div>
-    <p>Coach Pilates certifiée à Paris. Je t'accompagne vers un corps plus fort, une posture alignée et un mental apaisé.</p>
+    <img src="img/lucie-logo.png" alt="Lucie Coach" style="height:160px; width:auto; margin-bottom:1rem;" />
+    <p>Coach sportif à Wavre, Belgique. Je t'accompagne vers un corps plus fort, une posture alignée et un mental apaisé.</p>
   </div>
   <div class="footer-col">
     <h4>Navigation</h4>
     <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
     <a href="services.html">Services</a>
     <a href="booking.html">Réservation</a>
     <a href="contact.html">Contact</a>
   </div>
   <div class="footer-col">
     <h4>Services</h4>
-    <a href="services.html#prive">Séance Privée</a>
-    <a href="services.html#collectif">Cours Collectif</a>
-    <a href="services.html#ligne">Cours en Ligne</a>
-    <a href="services.html#programme">Programmes</a>
+    <a href="services.html#coaching">Coaching Remise en Forme</a>
+    <a href="services.html#pilates">Pilâtes One-to-One</a>
+    <a href="services.html#collectif">Cours Collectifs</a>
+    <a href="services.html#ligne">Programmes en Ligne</a>
   </div>
   <div class="footer-col">
     <h4>Contact</h4>
-    <a href="mailto:lucie@pilates.fr">lucie@pilates.fr</a>
-    <a href="tel:+33600000000">+33 6 00 00 00 00</a>
-    <a href="#">Instagram</a>
-    <a href="#">Paris, France</a>
+    <a href="mailto:lucie.coach.pt@gmail.com">lucie.coach.pt@gmail.com</a>
+    <a href="tel:+32475305861">0475/30.58.61</a>
+    <a href="https://www.instagram.com/lucie.coach" target="_blank">Instagram</a>
+    <a href="https://maps.google.com/?q=Chaussée+de+Louvain+328,+1300+Wavre" target="_blank">Wavre, Belgique</a>
   </div>
 </footer>
 <div class="footer-bottom">
   © 2025 Lucie VH · Tous droits réservés · <a href="mentions-legales.html" style="color:inherit;">Mentions légales</a>
 </div>
 
+<a href="https://wa.me/32475305861" target="_blank" class="whatsapp-float" aria-label="Contacter sur WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 <script src="main.js"></script>
 <script>
-  function sendMessage() {
-    const first = document.getElementById('contactFirst').value.trim();
-    const email = document.getElementById('contactEmail').value.trim();
-    const msg = document.getElementById('contactMessage').value.trim();
-    if (!first || !email || !msg) {
-      alert('Merci de remplir les champs obligatoires (*).');
-      return;
+  async function sendMessage(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Envoi en cours…';
+    btn.disabled = true;
+
+    const form = document.getElementById('contactForm');
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      });
+      const json = await res.json();
+      if (json.success) {
+        document.getElementById('contactSuccess').classList.add('visible');
+        form.reset();
+      } else {
+        document.getElementById('contactError').style.display = 'block';
+      }
+    } catch (err) {
+      document.getElementById('contactError').style.display = 'block';
     }
-    document.getElementById('contactSuccess').classList.add('visible');
-    document.getElementById('contactFirst').value = '';
-    document.getElementById('contactLast').value = '';
-    document.getElementById('contactEmail').value = '';
-    document.getElementById('contactPhone').value = '';
-    document.getElementById('contactMessage').value = '';
+    btn.textContent = 'Envoyer le message →';
+    btn.disabled = false;
   }
 </script>
 </body>
