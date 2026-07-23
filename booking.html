@@ -19,31 +19,74 @@
       margin-bottom: 2rem;
     }
     .service-option {
-      border: 2px solid #E8E8E8;
+      border: 2.5px solid #E8E8E8;
       border-radius: 16px;
-      padding: 1.5rem 1rem;
+      padding: 0;
       text-align: center;
       cursor: pointer;
       transition: all 0.2s;
+      overflow: hidden;
+      background: #fff;
+      position: relative;
     }
     .service-option:hover {
-      border-color: var(--orange-light);
-      background: rgba(255,92,26,0.03);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.10);
     }
     .service-option.selected {
-      border-color: var(--orange);
-      background: rgba(255,92,26,0.07);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+      transform: translateY(-3px);
     }
-    .service-option .icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .service-option.selected::after {
+      content: '✓';
+      position: absolute;
+      top: 8px; right: 10px;
+      font-size: 0.8rem;
+      font-weight: 900;
+      color: #fff;
+      background: rgba(0,0,0,0.25);
+      border-radius: 50%;
+      width: 20px; height: 20px;
+      display: flex; align-items: center; justify-content: center;
+      line-height: 1;
+    }
+    .card-top {
+      padding: 1.2rem 1rem 0.8rem;
+    }
+    .card-bottom {
+      padding: 0.7rem 1rem 1rem;
+      background: #fff;
+    }
+    .service-option .badge-top {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.25rem 0.6rem;
+      border-radius: 50px;
+      margin-bottom: 0.6rem;
+      background: rgba(0,0,0,0.12);
+      color: #fff;
+    }
+    .service-option .icon { font-size: 1.6rem; display: block; margin-bottom: 0.4rem; }
     .service-option .name {
-      font-size: 0.85rem;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
+      font-size: 0.88rem;
+      font-weight: 800;
+      margin-bottom: 0;
+      color: #1a1a1a;
+      line-height: 1.3;
+    }
+    .service-option .sub {
+      font-size: 0.75rem;
+      color: #888;
+      margin: 0.3rem 0 0.5rem;
+      line-height: 1.4;
     }
     .service-option .price {
-      font-size: 0.8rem;
-      color: var(--orange);
-      font-weight: 600;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-top: 0.1rem;
     }
 
     .step-indicator {
@@ -169,42 +212,80 @@
       Un <strong>call découverte gratuit</strong> est inclus pour chaque nouveau suivi — on définit ensemble tes objectifs avant de commencer.
     </p>
     <div class="service-picker">
-      <div class="service-option" data-service="Séance privée à domicile" onclick="selectService(this)">
-        <div class="icon">🏠</div>
-        <div class="name">Séance privée à domicile</div>
-        <div class="desc" style="font-size:0.75rem;color:var(--text-muted);margin:0.3rem 0;">Pilâtes ou renforcement musculaire</div>
-        <div class="price">50€ / séance</div>
+
+      <!-- 1. Coaching en salle — JAUNE -->
+      <div class="service-option" data-service="Coaching en salle" onclick="selectService(this)" style="border-color:#F5C842;">
+        <div class="card-top" style="background:#F5C842;">
+          <span class="icon">🏋️</span>
+          <div class="name" style="color:#1a1a1a;">Coaching en salle</div>
+        </div>
+        <div class="card-bottom">
+          <div class="sub">Studio Wavre · Pilâtes ou renforcement</div>
+          <div class="price" style="color:#c9a000;">40€ / séance</div>
+        </div>
       </div>
-      <div class="service-option" data-service="Séance privée en salle" onclick="selectService(this)">
-        <div class="icon">🏋️</div>
-        <div class="name">Séance privée en salle</div>
-        <div class="desc" style="font-size:0.75rem;color:var(--text-muted);margin:0.3rem 0;">Studio Wavre — Pilâtes ou coaching</div>
-        <div class="price">40€ / séance</div>
+
+      <!-- 2. Coaching à domicile — ORANGE -->
+      <div class="service-option" data-service="Coaching à domicile" onclick="selectService(this)" style="border-color:#FF5C1A;">
+        <div class="card-top" style="background:#FF5C1A;">
+          <span class="icon">🏠</span>
+          <div class="name" style="color:#fff;">Coaching à domicile</div>
+        </div>
+        <div class="card-bottom">
+          <div class="sub">Pilâtes ou renforcement musculaire</div>
+          <div class="price" style="color:#FF5C1A;">50€ / séance</div>
+        </div>
       </div>
-      <div class="service-option" data-service="Cours de Pilâtes collectif" onclick="selectService(this)">
-        <div class="icon">👥</div>
-        <div class="name">Cours de Pilâtes collectif</div>
-        <div class="desc" style="font-size:0.75rem;color:var(--text-muted);margin:0.3rem 0;">Mar &amp; Jeu 18h · Sam 10h</div>
-        <div class="price">1ère séance offerte</div>
+
+      <!-- 3. Cours de Pilâtes — ROUGE -->
+      <div class="service-option" data-service="Cours de Pilâtes" onclick="selectService(this)" style="border-color:#E8394A;">
+        <div class="card-top" style="background:#E8394A;">
+          <span class="icon">🧘‍♀️</span>
+          <div class="name" style="color:#fff;">Cours de Pilâtes</div>
+        </div>
+        <div class="card-bottom">
+          <div class="sub">Mar &amp; Jeu 18h · Sam 10h · Wavre</div>
+          <div class="price" style="color:#E8394A;">1ère séance offerte</div>
+        </div>
       </div>
-      <div class="service-option" data-service="Small group training" onclick="selectService(this)">
-        <div class="icon">👯</div>
-        <div class="name">Small group training</div>
-        <div class="desc" style="font-size:0.75rem;color:var(--text-muted);margin:0.3rem 0;">Entre amies, tarif réduit</div>
-        <div class="price">À partir de 15€ / pers.</div>
+
+      <!-- 4. Small group training — ROSE -->
+      <div class="service-option" data-service="Small group training" onclick="selectService(this)" style="border-color:#E8638C;">
+        <div class="card-top" style="background:#E8638C;">
+          <span class="icon">👯</span>
+          <div class="name" style="color:#fff;">Small group training</div>
+        </div>
+        <div class="card-bottom">
+          <div class="sub">Entre amies, en salle ou à domicile</div>
+          <div class="price" style="color:#E8638C;">Prix réduit / personne</div>
+        </div>
       </div>
-      <div class="service-option" data-service="Coaching en ligne" onclick="selectService(this)">
-        <div class="icon">💻</div>
-        <div class="name">Coaching en ligne</div>
-        <div class="desc" style="font-size:0.75rem;color:var(--text-muted);margin:0.3rem 0;">Programme personnalisé à distance</div>
-        <div class="price">Selon objectif</div>
+
+      <!-- 5. Coaching en ligne — MAUVE -->
+      <div class="service-option" data-service="Coaching en ligne" onclick="selectService(this)" style="border-color:#A855C8;">
+        <div class="card-top" style="background:#A855C8;">
+          <span class="icon">💻</span>
+          <div class="name" style="color:#fff;">Coaching en ligne</div>
+        </div>
+        <div class="card-bottom">
+          <div class="sub">Programme personnalisé à distance</div>
+          <div class="price" style="color:#A855C8;">Selon objectif</div>
+        </div>
       </div>
-      <div class="service-option" data-service="Formule mixte" onclick="selectService(this)">
-        <div class="icon">🔄</div>
-        <div class="name">Formule mixte</div>
-        <div class="desc" style="font-size:0.75rem;color:var(--text-muted);margin:0.3rem 0;">Salle + suivi en ligne</div>
-        <div class="price">239€ / mois</div>
+
+      <!-- 6. Formule mixte — TURQUOISE -->
+      <div class="service-option" data-service="Formule mixte" onclick="selectService(this)" style="border-color:#00B4B4;">
+        <div class="card-top" style="background:#00B4B4;">
+          <span class="badge-top">⭐ Le + complet</span>
+          <span class="icon">🔄</span>
+          <div class="name" style="color:#fff;">Formule mixte</div>
+        </div>
+        <div class="card-bottom">
+          <div class="sub">Séances en salle + suivi en ligne</div>
+          <div class="price" style="color:#00B4B4;">239€ / mois</div>
+        </div>
       </div>
+
     </div>
 
     <!-- CALENDLY SECTION -->
