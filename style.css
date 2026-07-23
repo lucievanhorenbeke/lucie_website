@@ -156,7 +156,7 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.08); }
   z-index: 2;
   pointer-events: none;
 }
-.steps-travel-dot.start-anim {
+.steps-grid.start-anim .steps-travel-dot {
   opacity: 1;
   animation: travel-h 7s ease-in-out infinite;
 }
