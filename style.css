@@ -1187,6 +1187,10 @@ footer {
   .nav-links { display: none; }
   .hamburger { display: flex; }
 
+  nav.open {
+    z-index: 9999;
+  }
+
   nav.open .nav-links {
     display: flex;
     flex-direction: column;
@@ -1197,12 +1201,14 @@ footer {
     align-items: center;
     gap: 2rem;
     font-size: 1.2rem;
-    z-index: 200;
+    z-index: 1;
   }
 
   nav.open .hamburger {
-    z-index: 201;
-    position: relative;
+    position: fixed;
+    top: 1rem;
+    right: 1.5rem;
+    z-index: 2;
   }
 
   .hero { padding: 7rem 1.5rem 3rem; }

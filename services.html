@@ -64,6 +64,25 @@
       justify-content: center;
       font-size: 5rem;
     }
+
+    @media (max-width: 768px) {
+      .service-detail {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 3rem 0;
+      }
+      .service-detail.reverse .detail-text { order: unset; }
+      .service-detail.reverse .detail-visual { order: unset; }
+      .detail-visual {
+        min-height: 260px;
+        aspect-ratio: 4/3;
+      }
+      #prive .detail-visual { min-height: 280px; }
+      .price-badge {
+        white-space: nowrap;
+        font-size: 0.85rem;
+      }
+    }
     .detail-tag {
       display: inline-block;
       background: rgba(255,92,26,0.1);
