@@ -1183,7 +1183,8 @@ footer {
 }
 
 @media (max-width: 768px) {
-  nav { padding: 1rem 1.5rem; }
+  nav { padding: 0.5rem 1.5rem; }
+  nav .logo img { height: 55px !important; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
 
