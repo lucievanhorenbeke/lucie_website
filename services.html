@@ -71,8 +71,9 @@
         gap: 2rem;
         padding: 3rem 0;
       }
-      .service-detail.reverse .detail-text { order: unset; }
-      .service-detail.reverse .detail-visual { order: unset; }
+      /* Image toujours en premier sur mobile */
+      .service-detail .detail-visual { order: -1 !important; }
+      .service-detail .detail-text { order: 1 !important; }
       .detail-visual {
         min-height: 260px;
         aspect-ratio: 4/3;
@@ -82,6 +83,8 @@
         white-space: nowrap;
         font-size: 0.85rem;
       }
+      .pricing-table { overflow-x: auto; }
+      .pricing-row { min-width: 500px; }
     }
     .detail-tag {
       display: inline-block;
