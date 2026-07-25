@@ -349,7 +349,7 @@
   </div>
 </footer>
 <div class="footer-bottom">
-  © 2026 Lucie VH · Tous droits réservés
+  © 2026 Lucie VH · Tous droits réservés · <a href="mentions-legales.html" style="color:inherit;">Mentions légales</a>
 </div>
 
 <a href="https://wa.me/32475305861" target="_blank" class="whatsapp-float" aria-label="Contacter sur WhatsApp">
@@ -379,12 +379,20 @@
     section.classList.add('visible');
 
     // Réinitialiser et charger le widget Calendly inline
+    const calendlyUrls = {
+      'Coaching en salle':    'https://calendly.com/lucie-coach-pt/call-en-salle-a-wavre',
+      'Coaching à domicile':  'https://calendly.com/lucie-coach-pt/30min',
+      'Cours de Pilâtes':     'https://calendly.com/lucie-coach-pt/seance-d-essai-pilates',
+      'Small group training': 'https://calendly.com/lucie-coach-pt/small-groupe-training',
+      'Coaching en ligne':    'https://calendly.com/lucie-coach-pt/coaching-en-ligne',
+      'Formule mixte':        'https://calendly.com/lucie-coach-pt/formules-mixte'
+    };
     const widget = document.getElementById('calendlyWidget');
     widget.innerHTML = '';
     Calendly.initInlineWidget({
-      url: 'https://calendly.com/lucie-coach-pt?hide_gdpr_banner=1&primary_color=FF5C1A',
+      url: (calendlyUrls[service] || 'https://calendly.com/lucie-coach-pt') + '?hide_gdpr_banner=1&primary_color=FF5C1A',
       parentElement: widget,
-      prefill: { customAnswers: { a1: service } }
+      prefill: {}
     });
 
     // Scroll to Calendly section
