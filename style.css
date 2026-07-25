@@ -1197,7 +1197,12 @@ footer {
     align-items: center;
     gap: 2rem;
     font-size: 1.2rem;
-    z-index: 99;
+    z-index: 200;
+  }
+
+  nav.open .hamburger {
+    z-index: 201;
+    position: relative;
   }
 
   .hero { padding: 7rem 1.5rem 3rem; }
