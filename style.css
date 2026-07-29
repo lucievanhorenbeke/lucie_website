@@ -1229,6 +1229,7 @@ footer {
   .page-header { padding: 8rem 1.5rem 3rem; }
   .slots-grid { grid-template-columns: repeat(2, 1fr); }
   .cta-section { padding: 4rem 1.5rem; }
-  .form-section { padding-left: 1.5rem !important; padding-right: 1.5rem !important; padding-top: 3rem !important; }
+  .form-section { padding-left: 1rem !important; padding-right: 1rem !important; padding-top: 3rem !important; }
+  .form-section > div, .form-grid { max-width: 100%; box-sizing: border-box; }
   body { overflow-x: hidden; }
 }
