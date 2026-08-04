@@ -388,10 +388,10 @@ section { padding: 6rem 4rem; }
 /* ===== ABOUT STRIP ===== */
 .about-strip {
   background: var(--light-grey);
-  padding: 5rem 4rem;
+  padding: 3.5rem 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+  gap: 3.5rem;
   align-items: center;
 }
 
@@ -449,13 +449,13 @@ section { padding: 6rem 4rem; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 }
 
 .service-card {
   background: var(--light-grey);
   border-radius: 20px;
-  padding: 2.5rem;
+  padding: 2rem;
   transition: all 0.3s;
   position: relative;
   overflow: hidden;
@@ -523,7 +523,7 @@ section { padding: 6rem 4rem; }
 .service-card:hover .service-price { color: var(--white); }
 
 /* ===== TESTIMONIALS ===== */
-.testimonials { background: var(--black); }
+.testimonials { background: var(--black); padding: 3.5rem 4rem; }
 
 .testimonials .section-title { color: var(--white); }
 .testimonials .section-tag { color: var(--orange-light); }
@@ -652,7 +652,7 @@ section { padding: 6rem 4rem; }
 .cta-section {
   background: var(--orange);
   text-align: center;
-  padding: 6rem 4rem;
+  padding: 3.5rem 4rem;
 }
 
 .cta-section h2 {
@@ -689,10 +689,10 @@ section { padding: 6rem 4rem; }
 /* ===== FOOTER ===== */
 footer {
   background: var(--black);
-  padding: 4rem;
+  padding: 2.5rem 4rem;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 3rem;
+  gap: 2rem;
   border-top: 1px solid rgba(255,255,255,0.06);
 }
 
@@ -1167,7 +1167,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   position: relative;
 }
 
