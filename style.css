@@ -1235,6 +1235,7 @@ footer {
   footer { grid-template-columns: 1fr 1fr; }
   .booking-grid { grid-template-columns: 1fr; }
   .booking-summary { position: static; }
+  .expertises-grid { grid-template-columns: repeat(2, 1fr) !important; }
 }
 
 @media (max-width: 768px) {
@@ -1277,6 +1278,7 @@ footer {
   .services-grid { grid-template-columns: 1fr; }
   .testi-card { flex: 0 0 85%; }
   .testi-arrow { width: 36px; height: 36px; font-size: 1.2rem; }
+  .expertises-grid { grid-template-columns: repeat(2, 1fr) !important; }
   .steps-grid { grid-template-columns: 1fr; }
   footer { grid-template-columns: 1fr; padding: 3rem 1.5rem; gap: 2rem; }
   .footer-bottom { padding: 1.5rem; }
