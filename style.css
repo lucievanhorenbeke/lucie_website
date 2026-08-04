@@ -528,14 +528,69 @@ section { padding: 6rem 4rem; }
 .testimonials .section-title { color: var(--white); }
 .testimonials .section-tag { color: var(--orange-light); }
 
-.testi-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 3rem;
+.testi-slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
 }
 
+.testi-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  flex: 1;
+}
+
+.testi-track::-webkit-scrollbar { display: none; }
+
+.testi-arrow {
+  background: rgba(255,255,255,0.08);
+  border: 2px solid rgba(255,255,255,0.15);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  color: var(--white);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testi-arrow:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+.testi-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.testi-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.testi-dot.active { background: var(--orange); }
+
 .testi-card {
+  flex: 0 0 calc(33.333% - 1rem);
+  scroll-snap-align: start;
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 20px;
@@ -1174,7 +1229,7 @@ footer {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .testi-grid { grid-template-columns: repeat(2, 1fr); }
+  .testi-card { flex: 0 0 calc(50% - 0.75rem); }
   .steps-grid { grid-template-columns: repeat(2, 1fr); }
   .steps-grid::before { display: none; }
   footer { grid-template-columns: 1fr 1fr; }
@@ -1220,7 +1275,8 @@ footer {
   section { padding: 4rem 1.5rem; }
   .about-strip { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 1.5rem; }
   .services-grid { grid-template-columns: 1fr; }
-  .testi-grid { grid-template-columns: 1fr; }
+  .testi-card { flex: 0 0 85%; }
+  .testi-arrow { width: 36px; height: 36px; font-size: 1.2rem; }
   .steps-grid { grid-template-columns: 1fr; }
   footer { grid-template-columns: 1fr; padding: 3rem 1.5rem; gap: 2rem; }
   .footer-bottom { padding: 1.5rem; }
