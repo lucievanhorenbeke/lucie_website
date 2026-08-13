@@ -171,40 +171,26 @@
     50% { transform: scale(1.18); opacity: 1; }
   }
   .envelope {
-    width: 190px;
-    height: 134px;
+    width: 200px;
+    height: auto;
     position: relative;
     z-index: 1;
     cursor: pointer;
     filter: drop-shadow(0 0 20px rgba(255, 78, 203, 0.65));
     animation: floaty 3s ease-in-out infinite;
+    transition: transform .25s ease;
+    overflow: visible;
+  }
+  .envelope:hover { transform: scale(1.04); }
+  .envelope .seal {
+    animation: sealPulse 2.4s ease-in-out infinite;
+    transform-origin: 100px 78px;
+  }
+  @keyframes sealPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
   }
   @keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-  .envelope .body {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(145deg, #2a1148, #1a0b30);
-    border: 2px solid var(--pink);
-    border-radius: 12px;
-  }
-  .envelope .flap {
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 0;
-    border-left: 95px solid transparent;
-    border-right: 95px solid transparent;
-    border-top: 72px solid #3a1a5c;
-    filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.7));
-  }
-  .envelope .heart {
-    position: absolute;
-    top: 62%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.9rem;
-    color: var(--pink);
-    text-shadow: 0 0 14px var(--pink);
-  }
 
   .tap-hint {
     font-size: 0.9rem;
@@ -342,6 +328,24 @@
   .photo-frame.no-photo img { display: none; }
   .photo-frame.no-photo .photo-placeholder { display: flex; }
 
+  .photo-dots {
+    display: flex;
+    gap: 0.4rem;
+    justify-content: center;
+  }
+  .photo-dots span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: background .2s, transform .2s;
+  }
+  .photo-dots span.active {
+    background: var(--pink);
+    transform: scale(1.3);
+    box-shadow: 0 0 8px var(--pink);
+  }
+
   /* DATE / TIME CARDS */
   .cards-row {
     display: flex;
@@ -434,11 +438,33 @@
     <p class="subtitle">Une lettre à ouvrir, rien que pour toi 💌</p>
     <div class="envelope-wrap">
       <div class="glow-ring"></div>
-      <div class="envelope" id="envelope">
-        <div class="flap"></div>
-        <div class="body"></div>
-        <div class="heart">💌</div>
-      </div>
+      <svg class="envelope" id="envelope" viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="envBody" x1="0" y1="0" x2="0.3" y2="1">
+            <stop offset="0%" stop-color="#301453"/>
+            <stop offset="100%" stop-color="#170a2c"/>
+          </linearGradient>
+          <linearGradient id="envFlap" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#4a1f78"/>
+            <stop offset="100%" stop-color="#2a1148"/>
+          </linearGradient>
+          <radialGradient id="envSeal" cx="35%" cy="30%" r="75%">
+            <stop offset="0%" stop-color="#ff9fe6"/>
+            <stop offset="100%" stop-color="#ff2fb0"/>
+          </radialGradient>
+        </defs>
+        <!-- corps de l'enveloppe -->
+        <rect x="4" y="4" width="192" height="132" rx="14" fill="url(#envBody)" stroke="#ff4ecb" stroke-width="2.5"/>
+        <!-- coutures du fond, en dessous du rabat -->
+        <path d="M6,132 L100,76 L194,132" fill="none" stroke="#ff8fe0" stroke-width="1.2" opacity="0.45" stroke-linecap="round"/>
+        <!-- rabat replié -->
+        <path d="M4,18 Q4,4 18,4 L182,4 Q196,4 196,18 L100,80 Z" fill="url(#envFlap)" stroke="#ff4ecb" stroke-width="2.2" stroke-linejoin="round"/>
+        <!-- cachet de cire -->
+        <g class="seal">
+          <circle cx="100" cy="78" r="18" fill="url(#envSeal)" stroke="#fff" stroke-width="1.2"/>
+          <path d="M100,87 C91,79 87,72 91,67 C94,64 100,66 100,71 C100,66 106,64 109,67 C113,72 109,79 100,87 Z" fill="#fff"/>
+        </g>
+      </svg>
     </div>
     <div class="tap-hint">touche l'enveloppe pour l'ouvrir</div>
   </section>
@@ -471,11 +497,13 @@
   <section class="screen" id="screen-non">
     <div class="neon-title" style="font-size:2.1rem;">Dommage...</div>
     <p class="small">J'avais déjà hâte de passer ce moment avec toi. Ce n'est pas grave, on se le fera un autre jour — sans se prendre la tête 💛</p>
-    <p class="subtitle">Regarde plutôt ce que tu loupes 👀</p>
+    <p class="subtitle" id="photo-tease">Regarde plutôt ce que tu loupes 👀</p>
     <div class="photo-frame" id="photo-frame">
-      <img src="img/surprise-photo.jpg" alt="Surprise" onerror="document.getElementById('photo-frame').classList.add('no-photo')" />
+      <img id="photo-img" src="img/surprise-photo-1.jpg" alt="Surprise" />
       <div class="photo-placeholder"><span>📸</span>photo à venir...</div>
     </div>
+    <div class="photo-dots" id="photo-dots"></div>
+    <button class="btn ghost" id="more-photo-btn">T'en veux encore ? 👀</button>
     <a class="btn" id="mailto-non" href="#">Lui écrire un petit mot 💌</a>
   </section>
 
@@ -603,6 +631,46 @@
       return;
     }
     goTo('screen-non');
+  });
+
+  // ---------- carrousel de photos "ce que tu loupes" ----------
+  // Dépose tes propres photos dans img/surprise-photo-1.jpg, -2.jpg, -3.jpg
+  // (elles ne sont pas fournies ici : un joli placeholder s'affiche tant qu'elles n'existent pas)
+  const photoPaths = ['img/surprise-photo-1.jpg', 'img/surprise-photo-2.jpg', 'img/surprise-photo-3.jpg'];
+  const photoTeases = [
+    'Regarde plutôt ce que tu loupes 👀',
+    "T'en veux encore ? Ça ne te suffit pas 😏",
+    'Bon, allez, une dernière... 😘'
+  ];
+  const photoImg = document.getElementById('photo-img');
+  const photoFrame = document.getElementById('photo-frame');
+  const photoTeaseEl = document.getElementById('photo-tease');
+  const photoDots = document.getElementById('photo-dots');
+  const moreBtn = document.getElementById('more-photo-btn');
+  let photoIndex = 0;
+
+  photoPaths.forEach(() => {
+    const dot = document.createElement('span');
+    photoDots.appendChild(dot);
+  });
+
+  function loadPhoto(i) {
+    photoFrame.classList.remove('no-photo');
+    photoImg.src = photoPaths[i];
+    photoTeaseEl.textContent = photoTeases[i] || photoTeases[photoTeases.length - 1];
+    [...photoDots.children].forEach((dot, idx) => dot.classList.toggle('active', idx === i));
+    moreBtn.textContent = i >= photoPaths.length - 1 ? 'Dernière 😏' : "T'en veux encore ? 👀";
+  }
+  photoImg.addEventListener('error', () => photoFrame.classList.add('no-photo'));
+  loadPhoto(0);
+
+  moreBtn.addEventListener('click', () => {
+    if (photoIndex >= photoPaths.length - 1) {
+      moreBtn.style.display = 'none';
+      return;
+    }
+    photoIndex++;
+    loadPhoto(photoIndex);
   });
 
   // ---------- mailto liens ----------
