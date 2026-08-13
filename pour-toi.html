@@ -302,14 +302,32 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: blur(18px) grayscale(1);
+    cursor: pointer;
+    filter: blur(26px) grayscale(0.4);
     transform: scale(1.15);
-    animation: revealPhoto 2.2s ease forwards;
-    animation-delay: .3s;
+    transition: filter .6s ease, transform .6s ease;
   }
-  @keyframes revealPhoto {
-    to { filter: blur(0) grayscale(0); transform: scale(1); }
+  .photo-frame.revealed img {
+    filter: blur(0) grayscale(0);
+    transform: scale(1);
   }
+  .photo-tap-hint {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .3rem;
+    color: var(--text);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    pointer-events: none;
+    transition: opacity .4s ease;
+  }
+  .photo-tap-hint span { font-size: 1.6rem; }
+  .photo-frame.revealed .photo-tap-hint { opacity: 0; }
   .photo-placeholder {
     display: none;
     width: 100%;
@@ -327,6 +345,7 @@
   .photo-placeholder span { font-size: 2rem; }
   .photo-frame.no-photo img { display: none; }
   .photo-frame.no-photo .photo-placeholder { display: flex; }
+  .photo-frame.no-photo .photo-tap-hint { display: none; }
 
   .photo-dots {
     display: flex;
@@ -500,6 +519,7 @@
     <p class="subtitle" id="photo-tease">Regarde plutôt ce que tu loupes 👀</p>
     <div class="photo-frame" id="photo-frame">
       <img id="photo-img" src="img/surprise-photo-1.jpg" alt="Surprise" />
+      <div class="photo-tap-hint"><span>👆</span>touche pour voir</div>
       <div class="photo-placeholder"><span>📸</span>photo à venir...</div>
     </div>
     <div class="photo-dots" id="photo-dots"></div>
@@ -655,13 +675,16 @@
   });
 
   function loadPhoto(i) {
-    photoFrame.classList.remove('no-photo');
+    photoFrame.classList.remove('no-photo', 'revealed');
     photoImg.src = photoPaths[i];
     photoTeaseEl.textContent = photoTeases[i] || photoTeases[photoTeases.length - 1];
     [...photoDots.children].forEach((dot, idx) => dot.classList.toggle('active', idx === i));
     moreBtn.textContent = i >= photoPaths.length - 1 ? 'Dernière 😏' : "T'en veux encore ? 👀";
   }
   photoImg.addEventListener('error', () => photoFrame.classList.add('no-photo'));
+  photoFrame.addEventListener('click', () => {
+    if (!photoFrame.classList.contains('no-photo')) photoFrame.classList.add('revealed');
+  });
   loadPhoto(0);
 
   moreBtn.addEventListener('click', () => {
