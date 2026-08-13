@@ -138,7 +138,7 @@
   }
   @keyframes flicker {
     0%, 19%, 21%, 23%, 100% { opacity: 1; }
-    20%, 22% { opacity: .55; }
+    20%, 22% { opacity: .85; }
   }
 
   .subtitle {
@@ -148,43 +148,66 @@
   }
 
   /* ENVELOPE */
-  .envelope {
-    width: 150px;
-    height: 105px;
+  .envelope-wrap {
     position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .glow-ring {
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 78, 203, 0.4), transparent 70%);
+    filter: blur(4px);
+    animation: ringPulse 3s ease-in-out infinite;
+    z-index: 0;
+  }
+  @keyframes ringPulse {
+    0%, 100% { transform: scale(1); opacity: .55; }
+    50% { transform: scale(1.18); opacity: 1; }
+  }
+  .envelope {
+    width: 190px;
+    height: 134px;
+    position: relative;
+    z-index: 1;
     cursor: pointer;
-    filter: drop-shadow(0 0 14px rgba(255, 78, 203, 0.55));
+    filter: drop-shadow(0 0 20px rgba(255, 78, 203, 0.65));
     animation: floaty 3s ease-in-out infinite;
   }
-  @keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  @keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
   .envelope .body {
     position: absolute;
     inset: 0;
     background: linear-gradient(145deg, #2a1148, #1a0b30);
-    border: 1.5px solid var(--pink);
-    border-radius: 10px;
+    border: 2px solid var(--pink);
+    border-radius: 12px;
   }
   .envelope .flap {
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 0;
-    border-left: 75px solid transparent;
-    border-right: 75px solid transparent;
-    border-top: 58px solid #3a1a5c;
-    filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.6));
+    border-left: 95px solid transparent;
+    border-right: 95px solid transparent;
+    border-top: 72px solid #3a1a5c;
+    filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.7));
   }
   .envelope .heart {
     position: absolute;
-    top: 60%;
+    top: 62%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     color: var(--pink);
-    text-shadow: 0 0 10px var(--pink);
+    text-shadow: 0 0 14px var(--pink);
   }
 
   .tap-hint {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--text-muted);
     animation: pulseOpacity 1.8s ease-in-out infinite;
   }
@@ -205,9 +228,10 @@
     animation: fadeUp .8s ease forwards;
   }
   .letter-body p:nth-of-type(1) { animation-delay: .2s; }
-  .letter-body p:nth-of-type(2) { animation-delay: 1.3s; }
-  .letter-body p:nth-of-type(3) { animation-delay: 2.4s; }
-  .letter-body p:nth-of-type(4) { animation-delay: 3.5s; }
+  .letter-body p:nth-of-type(2) { animation-delay: 1.2s; }
+  .letter-body p:nth-of-type(3) { animation-delay: 2.2s; }
+  .letter-body p:nth-of-type(4) { animation-delay: 3.7s; }
+  .letter-body p:nth-of-type(5) { animation-delay: 5.1s; }
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -219,7 +243,7 @@
     align-self: flex-end;
     opacity: 0;
     animation: fadeUp .8s ease forwards;
-    animation-delay: 4.4s;
+    animation-delay: 6.1s;
   }
 
   /* BUTTONS */
@@ -247,7 +271,7 @@
     box-shadow: 0 0 14px rgba(168, 85, 247, 0.4);
   }
 
-  #continue-btn { animation-delay: 5s; }
+  #continue-btn { animation-delay: 6.8s; }
 
   /* QUESTION SCREEN */
   .stage {
@@ -406,11 +430,15 @@
 
   <!-- SCREEN 0 : ENVELOPPE -->
   <section class="screen active" id="screen-envelope">
-    <div class="neon-title">Pour toi</div>
-    <div class="envelope" id="envelope">
-      <div class="flap"></div>
-      <div class="body"></div>
-      <div class="heart">💌</div>
+    <div class="neon-title" style="font-size:3.4rem;">Pour toi</div>
+    <p class="subtitle">Une lettre à ouvrir, rien que pour toi 💌</p>
+    <div class="envelope-wrap">
+      <div class="glow-ring"></div>
+      <div class="envelope" id="envelope">
+        <div class="flap"></div>
+        <div class="body"></div>
+        <div class="heart">💌</div>
+      </div>
     </div>
     <div class="tap-hint">touche l'enveloppe pour l'ouvrir</div>
   </section>
@@ -418,10 +446,11 @@
   <!-- SCREEN 1 : LA LETTRE -->
   <section class="screen" id="screen-letter">
     <div class="letter-body" style="width:100%;">
-      <p>À toi,</p>
+      <p>Juste pour toi,</p>
       <p>Je suis vraiment désolée pour toutes les prises de tête qu'on a eues ces derniers temps.</p>
-      <p>Je ne sais pas ce que nous réserve la suite, mais j'aimerais surtout que tu sois apaisé — avec toi-même, et avec moi. Et si un jour tu as besoin de prendre un peu de distance, je le comprendrai, même si ça me pèserait.</p>
-      <p>En attendant, j'avais envie de te construire un petit quelque chose, rien que pour toi. Alors avant tout... j'ai une question à te poser.</p>
+      <p>Je comprends tout à fait que ce que j'ai fait n'est pas pardonnable, et qu'il faudra sûrement énormément de temps — tu n'es peut-être même pas sûr de pouvoir me pardonner un jour. Je le comprends, et je l'entends.</p>
+      <p>Je ne sais pas ce que nous réserve la suite, mais j'aimerais surtout que tu sois apaisé, avec toi-même et avec moi. Si un jour tu as besoin de prendre un peu de distance, je le comprendrai, même si ça me pèse.</p>
+      <p>En attendant, j'aimerais bien rattraper ce rendez-vous loupé. Alors j'ai préparé un petit quelque chose, rien que pour toi.</p>
       <div class="signature">Lucie</div>
     </div>
     <button class="btn" id="continue-btn">Continuer →</button>
@@ -450,10 +479,18 @@
     <a class="btn" id="mailto-non" href="#">Lui écrire un petit mot 💌</a>
   </section>
 
-  <!-- SCREEN 3B : REPONSE OUI -->
+  <!-- SCREEN 4 : REPONSE OUI, INTRODUCTION -->
   <section class="screen" id="screen-oui">
-    <div class="neon-title" style="font-size:2.1rem;">Alors...</div>
-    <p class="small">Ça te dit une soirée à Bruxelles 🌸 ? Le Tapis de Fleurs est sur la Grand-Place, avec une animation son et lumière à partir de 22h. On pourrait passer la soirée ensemble avant ça, tranquillement, à deux — sans se prendre la tête. Et pas de souci, je te redépose chez toi après.</p>
+    <div class="neon-title" style="font-size:2.6rem;">Alors...</div>
+    <div style="font-size:2.6rem; line-height:1;">🌸✨</div>
+    <p class="small" style="font-size:0.98rem;">Ça te dit une soirée à Bruxelles ? Le Tapis de Fleurs est sur la Grand-Place, avec une animation son et lumière à partir de 22h. On pourrait passer la soirée ensemble avant ça, tranquillement, à deux — sans se prendre la tête. Et pas de souci, je te redépose chez toi après.</p>
+    <button class="btn" id="oui-continue-btn">Continuer →</button>
+  </section>
+
+  <!-- SCREEN 5 : CHOIX DE LA DATE PUIS DE L'HEURE -->
+  <section class="screen" id="screen-date">
+    <div class="neon-title" style="font-size:2.1rem;">On se voit quand ?</div>
+    <p class="subtitle">Samedi 15 août ou dimanche 16 août ?</p>
 
     <div class="cards-row">
       <div class="date-card" data-day="Samedi" data-date="15 août">
@@ -482,7 +519,7 @@
     <button class="btn" id="confirm-btn" style="display:none;">Confirmer →</button>
   </section>
 
-  <!-- SCREEN 4 : CONFIRMATION -->
+  <!-- SCREEN 6 : CONFIRMATION -->
   <section class="screen" id="screen-final">
     <div class="neon-title" style="font-size:2.1rem;">C'est noté 💫</div>
     <p class="small" id="final-summary"></p>
@@ -520,6 +557,7 @@
 
   // ---------- OUI ----------
   document.getElementById('oui-btn').addEventListener('click', () => goTo('screen-oui'));
+  document.getElementById('oui-continue-btn').addEventListener('click', () => goTo('screen-date'));
 
   // ---------- NON : le bouton fuit 10 fois ----------
   const nonBtn = document.getElementById('non-btn');
