@@ -95,6 +95,7 @@
     width: 100%;
     max-width: 440px;
     min-height: min(780px, 92vh);
+    max-height: 92vh;
     background: linear-gradient(160deg, #170a2e 0%, #0f0620 60%, #0a0114 100%);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 32px;
@@ -105,7 +106,9 @@
     padding: 2.25rem 1.75rem;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
   }
 
   .screen {
