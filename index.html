@@ -1,329 +1,805 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lucie VH — Coach Sportif & Bien-être</title>
-  <meta name="description" content="Coach sportif en Belgique. Cours collectifs, séances privées et programmes personnalisés pour transformer votre corps et votre mental." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title data-i18n="home.title">Lucie Van Horenbeke — Coach sportif &amp; Pilâtes à Wavre</title>
+<meta name="description" data-i18n-attr="content:home.desc" content="Coach sportif diplômée et instructrice pilâtes certifiée à Wavre. Coaching à domicile, en studio ou en ligne. Première séance découverte offerte." />
+<meta name="theme-color" content="#FFFFFF" />
+<meta name="author" content="Lucie Van Horenbeke" />
+<link rel="canonical" href="https://www.lucievanhorenbeke.be/index.html" />
+
+<link rel="alternate" hreflang="fr" href="https://www.lucievanhorenbeke.be/index.html" />
+<link rel="alternate" hreflang="nl" href="https://www.lucievanhorenbeke.be/index.html?lang=nl" />
+<link rel="alternate" hreflang="de" href="https://www.lucievanhorenbeke.be/index.html?lang=de" />
+<link rel="alternate" hreflang="en" href="https://www.lucievanhorenbeke.be/index.html?lang=en" />
+<link rel="alternate" hreflang="es" href="https://www.lucievanhorenbeke.be/index.html?lang=es" />
+<link rel="alternate" hreflang="it" href="https://www.lucievanhorenbeke.be/index.html?lang=it" />
+<link rel="alternate" hreflang="x-default" href="https://www.lucievanhorenbeke.be/index.html" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Lucie Van Horenbeke" />
+<meta property="og:title" content="Lucie Van Horenbeke — Coach sportif &amp; Pilâtes à Wavre" />
+<meta property="og:description" content="Coaching sportif personnalisé et pilâtes one-to-one. À domicile, au studio de Wavre ou en ligne. Première séance découverte offerte." />
+<meta property="og:url" content="https://www.lucievanhorenbeke.be/index.html" />
+<meta property="og:locale" content="fr_BE" />
+<meta property="og:image" content="https://www.lucievanhorenbeke.be/img/opt/lucie-kettlebell-1600.jpg" />
+<meta property="og:image:alt" content="Lucie Van Horenbeke en séance de renforcement avec kettlebell" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Lucie Van Horenbeke — Coach sportif &amp; Pilâtes à Wavre" />
+<meta name="twitter:description" content="Coaching sportif personnalisé et pilâtes one-to-one à Wavre. Première séance découverte offerte." />
+<meta name="twitter:image" content="https://www.lucievanhorenbeke.be/img/opt/lucie-kettlebell-1600.jpg" />
+
+<link rel="icon" href="img/lucie-icon.png" sizes="any" />
+<link rel="apple-touch-icon" href="img/lucie-icon.png" />
+<link rel="manifest" href="site.webmanifest" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="image" fetchpriority="high" href="img/opt/lucie-kettlebell-1600.jpg" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+
+<script>try{var m=JSON.parse(localStorage.getItem("lvh.theme")||'"system"');if(m!=="system")document.documentElement.setAttribute("data-theme",m);}catch(e){}</script>
+<script type="speculationrules">
+{"prerender":[{"where":{"and":[{"href_matches":"/*.html"},{"not":{"selector_matches":"[rel~=nofollow]"}}]},"eagerness":"moderate"}]}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
+      "@id": "https://www.lucievanhorenbeke.be/#business",
+      "name": "Lucie Van Horenbeke — Coach sportif & Pilâtes",
+      "description": "Coaching sportif personnalisé et pilâtes one-to-one à Wavre : à domicile, en studio ou en ligne.",
+      "url": "https://www.lucievanhorenbeke.be/",
+      "telephone": "+32475305861",
+      "email": "lucie.coach.pt@gmail.com",
+      "image": "https://www.lucievanhorenbeke.be/img/opt/lucie-kettlebell-1600.jpg",
+      "priceRange": "€€",
+      "vatID": "BE1016001952",
+      "currenciesAccepted": "EUR",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Chaussée de Louvain 328",
+        "postalCode": "1300",
+        "addressLocality": "Wavre",
+        "addressCountry": "BE"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 50.7166, "longitude": 4.6122 },
+      "areaServed": [
+        { "@type": "City", "name": "Wavre" },
+        { "@type": "AdministrativeArea", "name": "Brabant wallon" }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/lucie.coach",
+        "https://www.tiktok.com/@lucie.coach",
+        "https://www.linkedin.com/in/lucie-vanhorenbeke"
+      ],
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Thursday"], "opens": "18:00", "closes": "19:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "11:00" }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "reviewCount": "6"
+      },
+      "founder": { "@id": "https://www.lucievanhorenbeke.be/#lucie" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Formules de coaching",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Coaching remise en forme" }, "price": "50", "priceCurrency": "EUR" },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pilâtes one-to-one" }, "price": "50", "priceCurrency": "EUR" },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cours collectifs de pilâtes" }, "price": "15", "priceCurrency": "EUR" },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Coaching en ligne" }, "price": "199", "priceCurrency": "EUR" },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Formule mixte" }, "price": "239", "priceCurrency": "EUR" }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.lucievanhorenbeke.be/#lucie",
+      "name": "Lucie Van Horenbeke",
+      "jobTitle": "Coach sportif & instructrice pilâtes",
+      "worksFor": { "@id": "https://www.lucievanhorenbeke.be/#business" },
+      "alumniOf": "Haute École Léonard de Vinci",
+      "knowsAbout": ["Pilâtes", "Coaching sportif", "Plancher pelvien", "Post-partum", "Ménopause"],
+      "url": "https://www.lucievanhorenbeke.be/about.html"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.lucievanhorenbeke.be/#website",
+      "url": "https://www.lucievanhorenbeke.be/",
+      "name": "Lucie Van Horenbeke",
+      "inLanguage": ["fr", "nl", "de", "en", "es", "it"],
+      "publisher": { "@id": "https://www.lucievanhorenbeke.be/#business" }
+    }
+  ]
+}
+</script>
 </head>
-<body>
 
-<!-- NAV -->
-<nav id="navbar">
-  <a href="index.html" class="logo"><img src="img/lucie-logo.png" alt="Lucie Coach" style="height:100px; width:auto; display:block;" /></a>
-  <ul class="nav-links">
-    <li><a href="index.html" class="active">Accueil</a></li>
-    <li><a href="about.html">À propos</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="booking.html">Réservation</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="booking.html" class="nav-cta">Réserver →</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+<body data-page="home">
 
-<!-- HERO -->
-<section class="hero" style="position:relative; overflow:hidden; min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding-bottom:0;">
-  <div class="hero-bg"></div>
-  <div style="position:absolute; inset:0; z-index:0;">
-    <img src="img/lucie-kettlebell.jpg" alt="Lucie Coach" style="width:100%; height:100%; object-fit:cover; object-position:center 20%; opacity:0.22;" />
-  </div>
-  <div class="hero-content" style="position:relative; z-index:1; padding-bottom:0;">
-    <div class="hero-tag">Coach Sportif · Wavre, Belgique</div>
-    <h1>Transforme ton<br/>corps &amp; ton<br/><em>énergie</em></h1>
-    <p>Coaching sportif personnalisé et pilâtes en one-to-one pour renforcer ton corps, retrouver ta forme et booster ton bien-être. À domicile, en studio ou en ligne.</p>
-    <div class="hero-btns">
-      <a href="booking.html" class="btn btn-primary pulse-cta-btn">Réserver une séance →</a>
-      <a href="services.html" class="btn btn-outline">Découvrir les services</a>
-    </div>
-  </div>
-</section>
+<a class="skip-link" href="#main" data-i18n="nav.skip">Aller au contenu principal</a>
 
-<!-- ABOUT -->
-<section class="about-strip">
-  <div class="about-img fade-in">
-    <img src="img/lucie-bench.jpg" alt="Lucie Van Horenbeke — Coach Sportif" style="width:100%; height:100%; object-fit:cover; object-position:top; border-radius:24px;" />
-  </div>
-  <div class="about-content fade-in">
-    <span class="section-tag">À propos</span>
-    <h2 class="section-title">Une approche<br/>humaine &amp; précise</h2>
-    <p class="section-sub">
-      Je suis Lucie, coach sportif basée à Wavre. Je propose deux expertises complémentaires : le coaching remise en forme (perte de poids, construction musculaire, bien-être) et le pilâtes en one-to-one. Mon approche ? Des séances pensées pour <em>toi</em>, adaptées à ton corps et tes objectifs.
-    </p>
-    <div class="about-features">
-      <div class="feature-item">Coaching remise en forme à domicile</div>
-      <div class="feature-item">Pilâtes one-to-one (femmes ménopausées, post-partum…)</div>
-      <div class="feature-item">Cours collectifs &amp; small group training à Wavre</div>
-      <div class="feature-item">Programmes en ligne personnalisés</div>
-    </div>
-    <br/>
-    <a href="contact.html" class="btn btn-dark pulse-cta-btn">Me contacter →</a>
-  </div>
-</section>
+<!-- ══════════════════════════════════════ HEADER ══════════════════════════════════════ -->
+<header class="site-header is-onDark" id="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Lucie Van Horenbeke — accueil">
+      <img src="img/lucie-logo.png" alt="" width="42" height="42" />
+      <span class="brand-text">
+        <span class="brand-name">Lucie Van Horenbeke</span>
+        <span class="brand-role" data-i18n="nav.brandRole">Coach sportif · Pilâtes</span>
+      </span>
+    </a>
 
-<!-- SERVICES -->
-<section class="services-section" style="padding: 6rem 4rem;">
-  <div class="fade-in">
-    <span class="section-tag">Mes services</span>
-    <h2 class="section-title">Ce que je propose</h2>
-    <p class="section-sub">Des formats variés pour s'adapter à ton emploi du temps et tes besoins.</p>
-  </div>
-  <div class="services-grid">
-    <a href="services.html#coaching" class="service-card fade-in" style="text-decoration:none; display:block; cursor:pointer;">
-      <span class="service-icon">💪</span>
-      <div class="service-title">Coaching Remise en Forme</div>
-      <p class="service-desc">Perte de poids, construction musculaire, cardio… Un coaching personnalisé à domicile ou en salle à Wavre, avec tout le matériel fourni.</p>
-      <div class="service-price">50€ à domicile<br/>40€ en salle (pack)</div>
-    </a>
-    <a href="services.html#pilates" class="service-card fade-in" style="text-decoration:none; display:block; cursor:pointer;">
-      <span class="service-icon">🧘‍♀️</span>
-      <div class="service-title">Pilâtes One-to-One</div>
-      <p class="service-desc">Séances privées à domicile ou en studio à Wavre. Idéal pour femmes ménopausées, incontinence, débutantes. 1ère séance offerte !</p>
-      <div class="service-price">50€ / séance</div>
-    </a>
-    <a href="services.html#collectif" class="service-card fade-in" style="text-decoration:none; display:block; cursor:pointer;">
-      <span class="service-icon">👥</span>
-      <div class="service-title">Cours Collectifs & Small Group</div>
-      <p class="service-desc">Mar & Jeu 18h–19h · Sam 10h–11h à Wavre. Small group training avec tes amies à prix réduit. Tout le matériel est fourni !</p>
-      <div class="service-price">À partir de 15€ / cours</div>
-    </a>
-  </div>
-  <div style="text-align:center; margin-top: 3rem;">
-    <a href="services.html" class="btn btn-primary pulse-cta-btn">Voir tous les services →</a>
-  </div>
-</section>
+    <nav class="nav-primary" aria-label="Navigation principale">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="index.html" aria-current="page" data-i18n="nav.home">Accueil</a></li>
+        <li class="nav-item has-mega">
+          <button type="button" class="nav-link" aria-expanded="false">
+            <span data-i18n="nav.services">Services</span>
+            <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="mega">
+            <div class="mega-grid">
+              <a class="mega-link" href="services.html#coaching">
+                <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6v12M18 6v12M2 9v6M22 9v6M6 12h12"/></svg></span>
+                <span><span class="mega-title" data-i18n="svc.coaching.name">Coaching remise en forme</span><span class="mega-desc" data-i18n="svc.coaching.desc">Suivi 100 % individuel, à domicile ou en salle.</span></span>
+              </a>
+              <a class="mega-link" href="services.html#pilates">
+                <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.4"/><path d="M5 20c1.6-4 4-6 7-6s5.4 2 7 6M8 11h8"/></svg></span>
+                <span><span class="mega-title" data-i18n="svc.pilates.name">Pilâtes one-to-one</span><span class="mega-desc" data-i18n="svc.pilates.desc">Séances privées en studio ou chez toi.</span></span>
+              </a>
+              <a class="mega-link" href="services.html#collectif">
+                <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span>
+                <span><span class="mega-title" data-i18n="svc.collectif.name">Cours collectifs</span><span class="mega-desc" data-i18n="svc.collectif.desc">Mardi &amp; jeudi 18 h, samedi 10 h à Wavre.</span></span>
+              </a>
+              <a class="mega-link" href="services.html#smallgroup">
+                <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20a6 6 0 0 1 12 0M15 20a5 5 0 0 1 6-4.9"/></svg></span>
+                <span><span class="mega-title" data-i18n="svc.smallgroup.name">Small group training</span><span class="mega-desc" data-i18n="svc.smallgroup.desc">2 à 4 personnes, à prix réduit.</span></span>
+              </a>
+              <a class="mega-link" href="services.html#online">
+                <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></span>
+                <span><span class="mega-title" data-i18n="svc.online.name">Coaching en ligne</span><span class="mega-desc" data-i18n="svc.online.desc">Programme sur mesure et suivi hebdomadaire.</span></span>
+              </a>
+              <a class="mega-link" href="services.html#mixte">
+                <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></svg></span>
+                <span><span class="mega-title" data-i18n="svc.mixte.name">Formule mixte</span><span class="mega-desc" data-i18n="svc.mixte.desc">Séances en salle + suivi en ligne.</span></span>
+              </a>
+            </div>
+            <div class="mega-foot">
+              <span data-i18n="mm.foot">Première séance découverte offerte, sans engagement.</span>
+              <a class="btn btn--secondary btn--sm" href="services.html"><span data-i18n="mm.footCta">Comparer les formules</span></a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html" data-i18n="nav.about">À propos</a></li>
+        <li><a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
 
-<!-- PROCESS -->
-<section class="process-section" style="background: var(--light-grey); padding: 6rem 4rem;">
-  <div class="fade-in">
-    <span class="section-tag">Comment ça marche</span>
-    <h2 class="section-title">4 étapes simples<br/>pour commencer</h2>
-  </div>
-  <div class="steps-grid">
-    <div class="steps-travel-dot"></div>
-    <div class="step-card fade-in">
-      <div class="step-num">1</div>
-      <div class="step-title">Tu réserves</div>
-      <p class="step-desc">Choisis ton créneau en ligne en quelques clics, 24h/24.</p>
-    </div>
-    <div class="step-card fade-in">
-      <div class="step-num">2</div>
-      <div class="step-title">On discute</div>
-      <p class="step-desc">Un appel découverte gratuit pour définir tes objectifs ensemble.</p>
-    </div>
-    <div class="step-card fade-in">
-      <div class="step-num">3</div>
-      <div class="step-title">On s'entraîne</div>
-      <p class="step-desc">Séance sur mesure, focus sur ta posture et tes sensations.</p>
-    </div>
-    <div class="step-card fade-in">
-      <div class="step-num">4</div>
-      <div class="step-title">Tu progresses</div>
-      <p class="step-desc">Suivi régulier, adaptation du programme, résultats visibles.</p>
-    </div>
-  </div>
-</section>
+    <div class="header-actions">
+      <button type="button" class="search-trigger" data-cmdk-open>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m21 21-4.34-4.34M17 11a6 6 0 1 1-12 0 6 6 0 0 1 12 0Z"/></svg>
+        <span data-i18n="nav.search">Rechercher</span>
+        <kbd><span data-kbd-mod>Ctrl</span>K</kbd>
+      </button>
 
-<!-- EXPERTISES -->
-<section style="background: var(--black); padding: 6rem 4rem;">
-  <div class="fade-in" style="text-align:center; margin-bottom: 3rem;">
-    <span class="section-tag">Formations & Expertises</span>
-    <h2 class="section-title" style="color:var(--white);">Qualifiée pour<br/><em>t'accompagner</em></h2>
-    <p class="section-sub" style="color:rgba(255,255,255,0.6); max-width:600px; margin:0 auto;">Mon parcours académique et mes certifications sont au service de ton bien-être et de ta progression.</p>
-  </div>
-  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.5rem; max-width:1100px; margin:0 auto;">
-    <a href="about.html" class="fade-in" style="background:rgba(255,255,255,0.05); border-radius:20px; padding:2rem; border:1px solid rgba(255,255,255,0.08); text-decoration:none; display:block; transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(255,92,26,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
-      <div style="font-size:2rem; margin-bottom:1rem;">🎓</div>
-      <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--orange); margin-bottom:0.5rem;">Bachelier · 2022–2025</div>
-      <div style="font-weight:700; color:var(--white); font-size:1rem; margin-bottom:0.5rem;">Coaching Sportif, Wellness & APAD</div>
-      <div style="color:rgba(255,255,255,0.5); font-size:0.85rem;">Co-diplomation : HE Léonard de Vinci (Site Parnasse) · HE Francisco Ferrer · HE 2B (site de Nivelles).</div>
-      <div style="margin-top:0.8rem; font-size:0.78rem; color:var(--orange); font-weight:600;">En savoir plus →</div>
-    </a>
-    <a href="about.html" class="fade-in" style="background:rgba(255,255,255,0.05); border-radius:20px; padding:2rem; border:1px solid rgba(255,255,255,0.08); text-decoration:none; display:block; transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(255,92,26,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
-      <div style="font-size:2rem; margin-bottom:1rem;">📜</div>
-      <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--orange); margin-bottom:0.5rem;">Certification · Fév. 2025</div>
-      <div style="font-weight:700; color:var(--white); font-size:1rem; margin-bottom:0.5rem;">Coach Pilâtes Matwork 1 — Zenbox</div>
-      <div style="color:rgba(255,255,255,0.5); font-size:0.85rem;">28h de théorie et pratique. Certification Niveau d'Expertise — Zenbox Pilâtes & More.</div>
-      <div style="margin-top:0.8rem; font-size:0.78rem; color:var(--orange); font-weight:600;">En savoir plus →</div>
-    </a>
-    <a href="https://drive.google.com/file/d/11z5PPK_ES_emTQxmLnr3ItcbkCTGxZ-3/view?usp=drivesdk" target="_blank" class="fade-in" style="background:rgba(255,255,255,0.05); border-radius:20px; padding:2rem; border:1px solid rgba(255,255,255,0.08); text-decoration:none; display:block; transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(255,92,26,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
-      <div style="font-size:2rem; margin-bottom:1rem;">🔬</div>
-      <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--orange); margin-bottom:0.5rem;">Mémoire · 2022–2025</div>
-      <div style="font-weight:700; color:var(--white); font-size:1rem; margin-bottom:0.5rem;">Pilâtes & Incontinence Urinaire</div>
-      <div style="color:rgba(255,255,255,0.5); font-size:0.85rem;">Recherche sur les effets du pilâtes sur le plancher pelvien chez les femmes ménopausées.</div>
-      <div style="margin-top:0.8rem; font-size:0.78rem; color:var(--orange); font-weight:600;">Lire le mémoire →</div>
-    </a>
-    <a href="about.html" class="fade-in" style="background:rgba(255,255,255,0.05); border-radius:20px; padding:2rem; border:1px solid rgba(255,255,255,0.08); text-decoration:none; display:block; transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(255,92,26,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
-      <div style="font-size:2rem; margin-bottom:1rem;">💪</div>
-      <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--orange); margin-bottom:0.5rem;">Coach Sportif Certifié</div>
-      <div style="font-weight:700; color:var(--white); font-size:1rem; margin-bottom:0.5rem;">Personal Trainer</div>
-      <div style="color:rgba(255,255,255,0.5); font-size:0.85rem;">Spécialiste remise en forme, perte de poids, construction musculaire et coaching à domicile.</div>
-      <div style="margin-top:0.8rem; font-size:0.78rem; color:var(--orange); font-weight:600;">En savoir plus →</div>
-    </a>
-  </div>
-</section>
+      <button type="button" class="btn btn--icon mobile-only" data-cmdk-open data-i18n-attr="aria-label:nav.searchLabel" aria-label="Rechercher sur le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m21 21-4.34-4.34M17 11a6 6 0 1 1-12 0 6 6 0 0 1 12 0Z"/></svg>
+      </button>
 
-<!-- PHOTO GALLERY -->
-<section style="padding: 0; background: var(--black);">
-  <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-template-rows: 320px 320px; gap:4px;">
-    <div style="overflow:hidden; grid-row: 1 / 3;">
-      <img src="img/lucie-kettlebell.jpg" alt="Lucie kettlebell" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+      <div class="switcher desktop-only" data-lang-switcher>
+        <button type="button" class="lang-trigger" data-lang-trigger aria-expanded="false" aria-haspopup="menu" data-i18n-attr="aria-label:nav.language">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18Z"/></svg>
+          <span data-lang-code>FR</span>
+        </button>
+        <div class="switcher-menu" role="menu" data-lang-menu></div>
+      </div>
+
+      <button type="button" class="btn btn--icon theme-toggle" data-theme-toggle aria-pressed="false" data-i18n-attr="aria-label:nav.theme" aria-label="Changer de thème">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      </button>
+
+      <a class="btn btn--primary btn--sm desktop-only" href="booking.html">
+        <span data-i18n="nav.book">Réserver</span>
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+      </a>
+
+      <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="drawer" data-i18n-attr="aria-label:nav.openMenu" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <div style="overflow:hidden;">
-      <img src="img/lucie-halteres.jpg" alt="Lucie haltères" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
+  </div>
+  <div class="progress-bar" aria-hidden="true"></div>
+</header>
+
+<!-- ══════════════════════════════════════ DRAWER ══════════════════════════════════════ -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-hidden="true" aria-label="Menu">
+  <div class="drawer-head">
+    <span class="brand-name">Lucie Van Horenbeke</span>
+    <button type="button" class="btn btn--icon" data-drawer-close data-i18n-attr="aria-label:nav.closeMenu" aria-label="Fermer le menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body">
+    <nav class="drawer-nav" aria-label="Navigation mobile">
+      <a href="index.html" aria-current="page"><span data-i18n="nav.home">Accueil</span></a>
+      <a href="services.html"><span data-i18n="nav.services">Services</span></a>
+      <a href="about.html"><span data-i18n="nav.about">À propos</span></a>
+      <a href="booking.html"><span data-i18n="nav.booking">Réservation</span></a>
+      <a href="contact.html"><span data-i18n="nav.contact">Contact</span></a>
+    </nav>
+
+    <div class="drawer-label" data-i18n="mm.label">Toutes les formules</div>
+    <nav class="drawer-nav" aria-label="Services">
+      <a href="services.html#coaching"><span data-i18n="svc.coaching.name">Coaching remise en forme</span></a>
+      <a href="services.html#pilates"><span data-i18n="svc.pilates.name">Pilâtes one-to-one</span></a>
+      <a href="services.html#collectif"><span data-i18n="svc.collectif.name">Cours collectifs</span></a>
+      <a href="services.html#smallgroup"><span data-i18n="svc.smallgroup.name">Small group training</span></a>
+      <a href="services.html#online"><span data-i18n="svc.online.name">Coaching en ligne</span></a>
+      <a href="services.html#mixte"><span data-i18n="svc.mixte.name">Formule mixte</span></a>
+    </nav>
+
+    <div class="drawer-label" data-i18n="nav.language">Langue</div>
+    <div class="switcher" data-lang-switcher style="display:block">
+      <button type="button" class="btn btn--secondary btn--block" data-lang-trigger aria-expanded="false" aria-haspopup="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" style="width:16px;height:16px"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18Z"/></svg>
+        <span data-lang-code>FR</span>
+      </button>
+      <div class="switcher-menu" role="menu" data-lang-menu style="left:0;right:0"></div>
     </div>
-    <div style="overflow:hidden;">
-      <img src="img/lucie-planche.jpg" alt="Lucie planche" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
-    </div>
-    <div style="overflow:hidden;">
-      <img src="img/lucie-machine.jpg" alt="Lucie machine" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
-    </div>
-    <div style="overflow:hidden;">
-      <img src="img/lucie-bench.jpg" alt="Lucie bench" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
-    </div>
-    <div style="overflow:hidden;">
-      <img src="img/lucie-gym.jpg" alt="Lucie gym" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
-    </div>
-    <div style="overflow:hidden; position:relative;">
-      <img src="img/lucie-fente.jpg" alt="Lucie fente" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" />
-      <div style="position:absolute;inset:0;background:rgba(0,0,0,0.45);display:flex;align-items:center;justify-content:center;">
-        <a href="https://www.instagram.com/lucie.coach" target="_blank" style="color:white;text-align:center;font-size:0.9rem;font-weight:600;letter-spacing:0.05em;">
-          📸 @lucie.coach<br/><span style="font-size:0.75rem;opacity:0.8;font-weight:400;">Voir sur Instagram</span>
+  </div>
+  <div class="drawer-foot">
+    <a class="btn btn--primary btn--block" href="booking.html"><span data-i18n="nav.bookLong">Réserver une séance</span></a>
+    <a class="btn btn--secondary btn--block" href="tel:+32475305861">0475 30 58 61</a>
+  </div>
+</aside>
+
+<main id="main">
+
+<!-- ══════════════════════════════════════ HERO ══════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-media">
+    <img src="img/opt/lucie-kettlebell-1600.jpg"
+         srcset="img/opt/lucie-kettlebell-800.jpg 800w, img/opt/lucie-kettlebell-1600.jpg 1600w"
+         sizes="100vw" width="1600" height="2240"
+         alt="Lucie Van Horenbeke en séance de renforcement avec kettlebell" fetchpriority="high" decoding="async" />
+  </div>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="hero-grid-lines" aria-hidden="true"></div>
+
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="hero-tag animate-up">
+        <span class="pill" data-i18n="hero.badgeNew">Nouveau</span>
+        <span data-i18n="hero.badge">1ʳᵉ séance découverte offerte</span>
+      </p>
+      <h1 class="display-1 animate-up" style="animation-delay:.06s">
+        <span data-i18n="hero.titleA">Transforme ton corps</span><br />
+        <em class="accent" data-i18n="hero.titleB">et ton énergie</em>
+      </h1>
+      <p class="lead animate-up" style="animation-delay:.12s" data-i18n="hero.lead">
+        Coaching sportif personnalisé et pilâtes en one-to-one pour renforcer ton corps, retrouver ta forme et apaiser ton mental. À domicile, au studio de Wavre ou en ligne.
+      </p>
+      <div class="hero-cta animate-up" style="animation-delay:.18s">
+        <a class="btn btn--primary btn--lg" href="booking.html">
+          <span data-i18n="hero.ctaPrimary">Réserver ma séance</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--onDark btn--lg" href="services.html">
+          <span data-i18n="hero.ctaSecondary">Découvrir les formules</span>
         </a>
       </div>
+
+      <dl class="hero-trust animate-up" style="animation-delay:.24s">
+        <div class="trust-item">
+          <dd class="num"><span data-count-key="hero.trust1n" data-count-to="5,0">5,0</span></dd>
+          <dt class="lbl" data-i18n="hero.trust1l">Note Google · 6 avis</dt>
+        </div>
+        <div class="trust-item">
+          <dd class="num"><span data-count-key="hero.trust2n" data-count-to="6">6</span></dd>
+          <dt class="lbl" data-i18n="hero.trust2l">formules sur mesure</dt>
+        </div>
+        <div class="trust-item">
+          <dd class="num"><span data-count-key="hero.trust3n" data-count-to="100">100</span><span class="suffix">%</span></dd>
+          <dt class="lbl" data-i18n="hero.trust3l">séances personnalisées</dt>
+        </div>
+        <div class="trust-item">
+          <dd class="num"><span data-count-key="hero.trust4n" data-count-to="24">24</span><span class="suffix">h</span></dd>
+          <dt class="lbl" data-i18n="hero.trust4l">délai de réponse</dt>
+        </div>
+      </dl>
     </div>
+
+    <div class="hero-aside animate-up" style="animation-delay:.3s">
+      <div class="hero-card">
+        <div class="hero-card-head">
+          <img class="avatar" src="img/opt/lucie-bench-400.jpg" alt="" width="44" height="44" loading="lazy" decoding="async" />
+          <div>
+            <div class="hero-card-name">Lucie Van Horenbeke</div>
+            <div class="hero-card-role" data-i18n="hero.cardRole">Coach sportif · Wavre, Belgique</div>
+          </div>
+        </div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="hero.cardP1">Bachelier en coaching sportif &amp; wellness</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="hero.cardP2">Certifiée pilâtes Matwork 1 — Zenbox</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="hero.cardP3">Mémoire : pilâtes &amp; plancher pelvien</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="hero.cardP4">Studio à Wavre, à domicile ou en ligne</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-card">
+        <div class="row" style="justify-content:space-between">
+          <div>
+            <div class="stars" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg>
+            </div>
+            <div class="hero-card-role" style="margin-top:.35rem" data-i18n="testi.meta">6 avis Google vérifiés</div>
+          </div>
+          <div style="font-size:1.9rem;font-weight:660;letter-spacing:-.04em" data-i18n="testi.score">5,0</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true">
+    <span data-i18n="hero.scroll">Défiler</span>
+    <span class="line"></span>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <div class="fade-in">
-    <span class="section-tag">Avis Google ⭐⭐⭐⭐⭐</span>
-    <h2 class="section-title">Ce qu'ils disent</h2>
-    <p class="section-sub" style="margin-bottom:0;">Note moyenne 5/5</p>
+<!-- ══════════════════════════════════════ TRUST STRIP ══════════════════════════════════════ -->
+<div class="strip" aria-label="Points clés">
+  <div class="strip-track">
+    <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="strip.1">Tout le matériel est fourni</span></span>
+    <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="strip.2">À domicile, en studio ou en ligne</span></span>
+    <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="strip.3">Call découverte gratuit</span></span>
+    <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="strip.4">Petits groupes — 8 personnes max</span></span>
+    <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="strip.5">Spécialiste santé féminine</span></span>
+    <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="strip.6">Studio à Wavre, parking facile</span></span>
+    <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="strip.7">Réponse sous 24 h</span></span>
+    <span class="strip-item" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="strip.1">Tout le matériel est fourni</span></span>
+    <span class="strip-item" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="strip.2">À domicile, en studio ou en ligne</span></span>
+    <span class="strip-item" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="strip.3">Call découverte gratuit</span></span>
+    <span class="strip-item" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="strip.4">Petits groupes — 8 personnes max</span></span>
+    <span class="strip-item" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="strip.5">Spécialiste santé féminine</span></span>
+    <span class="strip-item" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="strip.6">Studio à Wavre, parking facile</span></span>
+    <span class="strip-item" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m20 6-11 11-5-5"/></svg><span data-i18n="strip.7">Réponse sous 24 h</span></span>
   </div>
-  <div class="testi-grid">
-    <div class="testi-card fade-in">
-      <div class="stars">★★★★★</div>
-      <p class="testi-text">« Les séances sont bien organisées et adaptées aux besoins de chacun. Excellent coach !! »</p>
-      <div class="testi-author">
-        <div class="testi-avatar">B</div>
-        <div>
-          <div class="testi-name">Benchetroun Othmane</div>
-          <div class="testi-role">⭐⭐⭐⭐⭐</div>
-        </div>
-      </div>
-    </div>
-    <div class="testi-card fade-in">
-      <div class="stars">★★★★★</div>
-      <p class="testi-text">« Je suis absolument ravie de mes cours de Pilâtes ! L'ambiance est bienveillante et les cours sont de qualité. La professeure est aux petits soins, elle corrige les postures avec douceur et précision, ce qui fait vraiment la différence. »</p>
-      <div class="testi-author">
-        <div class="testi-avatar">N</div>
-        <div>
-          <div class="testi-name">Nathalie Iambillon</div>
-          <div class="testi-role">⭐⭐⭐⭐⭐</div>
-        </div>
-      </div>
-    </div>
-    <div class="testi-card fade-in">
-      <div class="stars">★★★★★</div>
-      <p class="testi-text">« Prof motivante et toujours souriante. Exercices adaptés à la capacité de chacun en fonction des pathologies. Prix raisonnable et parking à proximité. Adresse à retenir ! »</p>
-      <div class="testi-author">
-        <div class="testi-avatar">A</div>
-        <div>
-          <div class="testi-name">Anne Lambillon</div>
-          <div class="testi-role">⭐⭐⭐⭐⭐</div>
-        </div>
-      </div>
-    </div>
-    <div class="testi-card fade-in">
-      <div class="stars">★★★★★</div>
-      <p class="testi-text">« Expérience au top ! Je recommande. »</p>
-      <div class="testi-author">
-        <div class="testi-avatar">L</div>
-        <div>
-          <div class="testi-name">Luwiza Ahloumou</div>
-          <div class="testi-role">⭐⭐⭐⭐⭐</div>
-        </div>
-      </div>
-    </div>
-    <div class="testi-card fade-in">
-      <div class="stars">★★★★★</div>
-      <p class="testi-text">« Les cours de pilâtes de Lucie sont super ! Sa pédagogie, sa bienveillance et sa capacité à adapter les exercices garantissent des séances sécurisées et efficaces pour renforcer le corps en profondeur. Je suis hyper satisfaite ! »</p>
-      <div class="testi-author">
-        <div class="testi-avatar">E</div>
-        <div>
-          <div class="testi-name">Eugénie Raison</div>
-          <div class="testi-role">⭐⭐⭐⭐⭐</div>
-        </div>
-      </div>
-    </div>
-    <div class="testi-card fade-in">
-      <div class="stars">★★★★★</div>
-      <p class="testi-text">« Excellente expérience. Même sans être particulièrement sportif au départ, je me suis senti à l'aise dès les premières minutes. La coach est très professionnelle, attentive et prend le temps de corriger chacun avec précision. »</p>
-      <div class="testi-author">
-        <div class="testi-avatar">M</div>
-        <div>
-          <div class="testi-name">Mathéo Mertens</div>
-          <div class="testi-role">⭐⭐⭐⭐⭐</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div style="text-align:center; margin-top:2.5rem;">
-    <a href="https://share.google/Q34PTdS56j8m9Qonz" target="_blank" class="btn btn-dark">Voir tous les avis Google →</a>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <h2>Prête à commencer<br/>l'aventure ?</h2>
-  <p>Parce que le premier pas mérite d'être sans pression ! Réserve ta première séance découverte — offerte.</p>
-  <a href="booking.html" class="btn btn-outline pulse-cta-btn">Réserver maintenant →</a>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-brand">
-    <img src="img/lucie-logo.png" alt="Lucie Coach" style="height:160px; width:auto; margin-bottom:1rem;" />
-    <p>Coach sportif à Wavre, Belgique. Je t'accompagne vers un corps plus fort, une posture alignée et un mental apaisé.</p>
-  </div>
-  <div class="footer-col">
-    <h4>Navigation</h4>
-    <a href="index.html">Accueil</a>
-    <a href="about.html">À propos</a>
-    <a href="services.html">Services</a>
-    <a href="booking.html">Réservation</a>
-    <a href="contact.html">Contact</a>
-  </div>
-  <div class="footer-col">
-    <h4>Services</h4>
-    <a href="services.html#prive">Séance Privée</a>
-    <a href="services.html#collectif">Cours Collectif</a>
-    <a href="services.html#ligne">Cours en Ligne</a>
-    <a href="services.html#programme">Programmes</a>
-  </div>
-  <div class="footer-col">
-    <h4>Contact</h4>
-    <a href="mailto:lucie.coach.pt@gmail.com">lucie.coach.pt@gmail.com</a>
-    <a href="tel:+32475305861">0475/30.58.61</a>
-    <a href="https://www.instagram.com/lucie.coach" target="_blank">Instagram</a>
-    <a href="https://maps.google.com/?q=Chaussée+de+Louvain+328,+1300+Wavre" target="_blank">Wavre, Belgique</a>
-  </div>
-</footer>
-<div class="footer-bottom">
-  © 2026 Lucie VH · Tous droits réservés · <a href="mentions-legales.html" style="color:inherit;">Mentions légales</a>
 </div>
 
-<a href="https://wa.me/32475305861" target="_blank" class="whatsapp-float" aria-label="Contacter sur WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
-<script src="main.js"></script>
+<!-- ══════════════════════════════════════ ABOUT ══════════════════════════════════════ -->
+<section class="section section--subtle" aria-labelledby="about-h">
+  <div class="container split">
+    <div class="media-frame" data-reveal="left">
+      <img src="img/opt/lucie-bench-800.jpg"
+           srcset="img/opt/lucie-bench-400.jpg 400w, img/opt/lucie-bench-800.jpg 800w, img/opt/lucie-bench-1600.jpg 1600w"
+           sizes="(max-width: 760px) 92vw, 45vw" width="800" height="1223"
+           alt="Lucie Van Horenbeke pendant une séance de renforcement au banc" loading="lazy" decoding="async" />
+      <div class="media-badge">
+        <div>
+          <div class="t" data-i18n="home.about.badgeT">Lucie Van Horenbeke</div>
+          <div class="s" data-i18n="home.about.badgeS">Coach sportif &amp; pilâtes · Wavre</div>
+        </div>
+      </div>
+    </div>
+
+    <div data-reveal="right">
+      <p class="eyebrow" data-i18n="home.about.eyebrow">À propos</p>
+      <h2 class="display-3" id="about-h">
+        <span data-i18n="home.about.titleA">Une approche</span><br />
+        <em class="accent" data-i18n="home.about.titleB">humaine &amp; précise</em>
+      </h2>
+      <p class="lead mt-4" data-i18n="home.about.p1">
+        Je suis Lucie, coach sportif diplômée et instructrice pilâtes certifiée, basée à Wavre. Je réunis deux expertises complémentaires : le coaching remise en forme (perte de poids, renforcement, bien-être) et le pilâtes en one-to-one.
+      </p>
+      <p class="lead mt-4" data-i18n="home.about.p2">
+        Mon approche ? Des séances construites pour toi, adaptées à ton corps, ton rythme et tes objectifs — jamais l’inverse.
+      </p>
+
+      <ul class="check-list mt-6">
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="home.about.f1">Coaching remise en forme à domicile</span></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="home.about.f2">Pilâtes one-to-one : ménopause, post-partum, incontinence</span></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="home.about.f3">Cours collectifs &amp; small group training à Wavre</span></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="home.about.f4">Programmes en ligne entièrement personnalisés</span></li>
+      </ul>
+
+      <div class="row mt-8">
+        <a class="btn btn--dark" href="about.html">
+          <span data-i18n="home.about.cta">Découvrir mon parcours</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--secondary" href="contact.html"><span data-i18n="home.about.cta2">Me contacter</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ SERVICES ══════════════════════════════════════ -->
+<section class="section" aria-labelledby="svc-h">
+  <div class="container">
+    <div class="section-head section-head--split" data-reveal>
+      <div>
+        <p class="eyebrow" data-i18n="home.services.eyebrow">Mes services</p>
+        <h2 class="display-3" id="svc-h">
+          <span data-i18n="home.services.titleA">Trouve le format</span>
+          <em class="accent" data-i18n="home.services.titleB">qui te ressemble</em>
+        </h2>
+        <p class="lead" data-i18n="home.services.lead">Six formules pensées pour s’adapter à ton emploi du temps, ton budget et ton niveau de départ.</p>
+      </div>
+      <a class="btn btn--secondary" href="services.html">
+        <span data-i18n="home.services.all">Voir tous les services &amp; tarifs</span>
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="grid grid--3" data-reveal-group>
+      <a class="card card--interactive card--spotlight service-card" href="services.html#coaching" data-reveal="scale">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6v12M18 6v12M2 9v6M22 9v6M6 12h12"/></svg></span>
+        <h3 class="card-title" data-i18n="svc.coaching.name">Coaching remise en forme</h3>
+        <p class="card-text" data-i18n="svc.coaching.desc">Perte de poids, renforcement, cardio. Suivi 100 % individuel à domicile ou en salle à Wavre, matériel fourni.</p>
+        <div class="price-line">
+          <span class="price"><span data-i18n="svc.coaching.price">50 €</span> <small data-i18n="svc.coaching.unit">à domicile · 40 € en salle</small></span>
+          <span class="go"><span data-i18n="home.services.detail">Voir le détail</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="card card--interactive card--spotlight service-card" href="services.html#pilates" data-reveal="scale">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.4"/><path d="M5 20c1.6-4 4-6 7-6s5.4 2 7 6M8 11h8"/></svg></span>
+        <h3 class="card-title" data-i18n="svc.pilates.name">Pilâtes one-to-one</h3>
+        <p class="card-text" data-i18n="svc.pilates.desc">Séances privées en studio ou chez toi. Idéal ménopause, post-partum, incontinence et grandes débutantes.</p>
+        <div class="price-line">
+          <span class="price"><span data-i18n="svc.pilates.price">50 €</span> <small data-i18n="svc.pilates.unit">la séance</small></span>
+          <span class="go"><span data-i18n="home.services.detail">Voir le détail</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="card card--interactive card--spotlight service-card" href="services.html#collectif" data-reveal="scale">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span>
+        <h3 class="card-title" data-i18n="svc.collectif.name">Cours collectifs</h3>
+        <p class="card-text" data-i18n="svc.collectif.desc">Mardi &amp; jeudi 18 h, samedi 10 h au studio de Wavre. Groupe de 8 maximum, tout le matériel est fourni.</p>
+        <div class="price-line">
+          <span class="price"><span data-i18n="svc.collectif.price">15 €</span> <small data-i18n="svc.collectif.unit">à partir de / cours</small></span>
+          <span class="go"><span data-i18n="home.services.detail">Voir le détail</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="card card--interactive card--spotlight service-card" href="services.html#smallgroup" data-reveal="scale">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20a6 6 0 0 1 12 0M15 20a5 5 0 0 1 6-4.9"/></svg></span>
+        <h3 class="card-title" data-i18n="svc.smallgroup.name">Small group training</h3>
+        <p class="card-text" data-i18n="svc.smallgroup.desc">Entre amies, en famille ou entre collègues : 2 à 4 personnes, suivi personnalisé à prix réduit.</p>
+        <div class="price-line">
+          <span class="price"><span data-i18n="svc.smallgroup.price">Prix réduit</span> <small data-i18n="svc.smallgroup.unit">par personne</small></span>
+          <span class="go"><span data-i18n="home.services.detail">Voir le détail</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="card card--interactive card--spotlight service-card" href="services.html#online" data-reveal="scale">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></span>
+        <h3 class="card-title" data-i18n="svc.online.name">Coaching en ligne</h3>
+        <p class="card-text" data-i18n="svc.online.desc">Programme sur mesure, tableau de suivi et point hebdomadaire. Engagement minimum de 3 mois.</p>
+        <div class="price-line">
+          <span class="price"><span data-i18n="svc.online.price">199 €</span> <small data-i18n="svc.online.unit">par mois</small></span>
+          <span class="go"><span data-i18n="home.services.detail">Voir le détail</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="card card--interactive card--spotlight service-card" href="services.html#mixte" data-reveal="scale">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></svg></span>
+        <h3 class="card-title">
+          <span data-i18n="svc.mixte.name">Formule mixte</span>
+          <span class="badge badge--brand" style="margin-left:.4rem;vertical-align:middle">★</span>
+        </h3>
+        <p class="card-text" data-i18n="svc.mixte.desc">Une séance en salle par semaine + le suivi en ligne complet. Le meilleur des deux mondes.</p>
+        <div class="price-line">
+          <span class="price"><span data-i18n="svc.mixte.price">239 €</span> <small data-i18n="svc.mixte.unit">par mois</small></span>
+          <span class="go"><span data-i18n="home.services.detail">Voir le détail</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ PROCESS ══════════════════════════════════════ -->
+<section class="section section--subtle" aria-labelledby="proc-h">
+  <div class="container">
+    <div class="section-head section-head--center" data-reveal>
+      <p class="eyebrow" data-i18n="home.process.eyebrow">Comment ça marche</p>
+      <h2 class="display-3" id="proc-h">
+        <span data-i18n="home.process.titleA">Quatre étapes,</span>
+        <em class="accent" data-i18n="home.process.titleB">zéro pression</em>
+      </h2>
+      <p class="lead" data-i18n="home.process.lead">Du premier clic à ta première progression visible, le chemin est simple et balisé.</p>
+    </div>
+
+    <ol class="steps" data-reveal-group>
+      <li class="step" data-reveal>
+        <div class="step-num">1</div>
+        <h3 data-i18n="step1.t">Tu réserves</h3>
+        <p data-i18n="step1.d">Choisis ton format et ton créneau en ligne, 24 h/24, en moins de deux minutes.</p>
+      </li>
+      <li class="step" data-reveal>
+        <div class="step-num">2</div>
+        <h3 data-i18n="step2.t">On discute</h3>
+        <p data-i18n="step2.d">Un call découverte gratuit pour comprendre ton histoire, tes douleurs et tes objectifs.</p>
+      </li>
+      <li class="step" data-reveal>
+        <div class="step-num">3</div>
+        <h3 data-i18n="step3.t">On s’entraîne</h3>
+        <p data-i18n="step3.d">Séance sur mesure, focus sur la posture, la technique et tes sensations.</p>
+      </li>
+      <li class="step" data-reveal>
+        <div class="step-num">4</div>
+        <h3 data-i18n="step4.t">Tu progresses</h3>
+        <p data-i18n="step4.d">Suivi régulier, programme ajusté chaque mois, résultats concrets et durables.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ CREDENTIALS ══════════════════════════════════════ -->
+<section class="section section--dark" aria-labelledby="cred-h">
+  <div class="container">
+    <div class="section-head section-head--center" data-reveal>
+      <p class="eyebrow" data-i18n="home.cred.eyebrow">Formations &amp; expertises</p>
+      <h2 class="display-3" id="cred-h">
+        <span data-i18n="home.cred.titleA">Qualifiée pour</span>
+        <em class="accent" data-i18n="home.cred.titleB">t’accompagner</em>
+      </h2>
+      <p class="lead" data-i18n="home.cred.lead">Mon parcours académique et mes certifications sont au service de ta sécurité et de ta progression.</p>
+    </div>
+
+    <div class="grid grid--4" data-reveal-group>
+      <a class="card card--interactive card--spotlight" href="about.html#formations" data-reveal="scale">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 9 12 4 2 9l10 5 10-5Z"/><path d="M6 11.5V17c0 1.7 2.7 3 6 3s6-1.3 6-3v-5.5"/></svg></span>
+        <p class="eyebrow" style="margin-bottom:.4rem" data-i18n="cred.bachelor.tag">Bachelier · 2022–2025</p>
+        <h3 class="card-title" data-i18n="cred.bachelor.t">Coaching sportif, wellness &amp; APAD</h3>
+        <p class="card-text" data-i18n="cred.bachelor.d">Co-diplomation : HE Léonard de Vinci (site Parnasse), HE Francisco Ferrer et HE2B (site de Nivelles).</p>
+        <span class="go mt-4"><span data-i18n="cred.more">En savoir plus</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+      </a>
+
+      <a class="card card--interactive card--spotlight" href="about.html#formations" data-reveal="scale">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="m8.5 13.5-1 7.5 4.5-2.5 4.5 2.5-1-7.5"/></svg></span>
+        <p class="eyebrow" style="margin-bottom:.4rem" data-i18n="cred.pilates.tag">Certification · février 2025</p>
+        <h3 class="card-title" data-i18n="cred.pilates.t">Coach pilâtes Matwork 1 — Zenbox</h3>
+        <p class="card-text" data-i18n="cred.pilates.d">28 heures de théorie et de pratique. Certification niveau d’expertise, Zenbox Pilâtes &amp; More.</p>
+        <span class="go mt-4"><span data-i18n="cred.more">En savoir plus</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+      </a>
+
+      <a class="card card--interactive card--spotlight" href="https://drive.google.com/file/d/11z5PPK_ES_emTQxmLnr3ItcbkCTGxZ-3/view?usp=drivesdk" target="_blank" rel="noopener" data-reveal="scale">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2v6l-5.5 9A3 3 0 0 0 6 21h12a3 3 0 0 0 2.5-4L15 8V2M8 2h8M7.5 14h9"/></svg></span>
+        <p class="eyebrow" style="margin-bottom:.4rem" data-i18n="cred.memoir.tag">Mémoire · 2022–2025</p>
+        <h3 class="card-title" data-i18n="cred.memoir.t">Pilâtes &amp; incontinence urinaire</h3>
+        <p class="card-text" data-i18n="cred.memoir.d">Recherche sur les effets du pilâtes sur le plancher pelvien chez les femmes ménopausées.</p>
+        <span class="go mt-4"><span data-i18n="cred.read">Lire le mémoire</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+      </a>
+
+      <a class="card card--interactive card--spotlight" href="about.html" data-reveal="scale">
+        <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6v12M18 6v12M2 9v6M22 9v6M6 12h12"/></svg></span>
+        <p class="eyebrow" style="margin-bottom:.4rem" data-i18n="cred.pt.tag">Expertise terrain</p>
+        <h3 class="card-title" data-i18n="cred.pt.t">Personal trainer certifiée</h3>
+        <p class="card-text" data-i18n="cred.pt.d">Remise en forme, perte de poids, renforcement musculaire et coaching à domicile en Brabant wallon.</p>
+        <span class="go mt-4"><span data-i18n="cred.more">En savoir plus</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ GALLERY ══════════════════════════════════════ -->
+<section class="section" aria-labelledby="gal-h">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow" data-i18n="home.gallery.eyebrow">En séance</p>
+      <h2 class="display-3" id="gal-h">
+        <span data-i18n="home.gallery.titleA">Le travail,</span>
+        <em class="accent" data-i18n="home.gallery.titleB">en vrai</em>
+      </h2>
+      <p class="lead" data-i18n="home.gallery.lead">Studio, domicile, salle : des séances concrètes, sans filtre et sans mise en scène.</p>
+    </div>
+
+    <div class="gallery" data-reveal>
+      <figure class="tall">
+        <img src="img/opt/lucie-kettlebell-800.jpg" width="800" height="1120" alt="Lucie en travail de gainage avec kettlebell" loading="lazy" decoding="async" />
+      </figure>
+      <figure><img src="img/opt/lucie-halteres-800.jpg" width="800" height="1024" alt="Séance de renforcement avec haltères" loading="lazy" decoding="async" /></figure>
+      <figure><img src="img/opt/lucie-planche-800.jpg" width="800" height="1200" alt="Exercice de planche au sol" loading="lazy" decoding="async" /></figure>
+      <figure><img src="img/opt/lucie-machine-800.jpg" width="800" height="1056" alt="Travail guidé sur machine en salle" loading="lazy" decoding="async" /></figure>
+      <figure><img src="img/opt/lucie-gym-800.jpg" width="800" height="533" alt="Séance de pilâtes au sol dans le studio" loading="lazy" decoding="async" /></figure>
+      <figure><img src="img/opt/lucie-collectif-800.jpg" width="800" height="450" alt="Cours collectif de pilâtes au studio de Wavre" loading="lazy" decoding="async" /></figure>
+      <a href="https://www.instagram.com/lucie.coach" target="_blank" rel="noopener">
+        <img src="img/opt/lucie-fente-800.jpg" width="800" height="1200" alt="Exercice de fente avant" loading="lazy" decoding="async" />
+        <span class="gallery-cta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          @lucie.coach
+          <small data-i18n="gallery.follow">Voir sur Instagram</small>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ TESTIMONIALS ══════════════════════════════════════ -->
+<section class="section section--subtle" aria-labelledby="testi-h">
+  <div class="container">
+    <div class="section-head section-head--split" data-reveal>
+      <div>
+        <p class="eyebrow" data-i18n="home.testi.eyebrow">Avis vérifiés</p>
+        <h2 class="display-3" id="testi-h">
+          <span data-i18n="home.testi.titleA">Ce qu’elles</span>
+          <em class="accent" data-i18n="home.testi.titleB">en disent</em>
+        </h2>
+        <p class="lead" data-i18n="home.testi.lead">Des avis Google authentiques, laissés par les personnes que j’accompagne chaque semaine.</p>
+      </div>
+      <div class="rating-summary">
+        <span class="score" data-i18n="testi.score">5,0</span>
+        <span>
+          <span class="stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg>
+          </span>
+          <span class="meta" style="display:block" data-i18n="testi.meta">6 avis Google vérifiés</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="testi-grid" data-reveal>
+      <figure class="testi">
+        <div class="stars" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg></div>
+        <blockquote data-i18n="testi.2.q">« Je suis absolument ravie de mes cours de pilâtes ! L’ambiance est bienveillante et les cours sont de qualité. La professeure est aux petits soins, elle corrige les postures avec douceur et précision, ce qui fait vraiment la différence. »</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true">N</span><span><span class="who" data-i18n="testi.2.n">Nathalie Iambillon</span><span class="when" data-i18n="testi.verified">Avis Google vérifié</span></span></figcaption>
+      </figure>
+
+      <figure class="testi">
+        <div class="stars" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg></div>
+        <blockquote data-i18n="testi.3.q">« Prof motivante et toujours souriante. Exercices adaptés à la capacité de chacun en fonction des pathologies. Prix raisonnable et parking à proximité. Adresse à retenir ! »</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true">A</span><span><span class="who" data-i18n="testi.3.n">Anne Lambillon</span><span class="when" data-i18n="testi.verified">Avis Google vérifié</span></span></figcaption>
+      </figure>
+
+      <figure class="testi">
+        <div class="stars" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg></div>
+        <blockquote data-i18n="testi.5.q">« Les cours de pilâtes de Lucie sont super ! Sa pédagogie, sa bienveillance et sa capacité à adapter les exercices garantissent des séances sécurisées et efficaces pour renforcer le corps en profondeur. Je suis hyper satisfaite ! »</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true">E</span><span><span class="who" data-i18n="testi.5.n">Eugénie Raison</span><span class="when" data-i18n="testi.verified">Avis Google vérifié</span></span></figcaption>
+      </figure>
+
+      <figure class="testi">
+        <div class="stars" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg></div>
+        <blockquote data-i18n="testi.6.q">« Excellente expérience. Même sans être particulièrement sportif au départ, je me suis senti à l’aise dès les premières minutes. La coach est très professionnelle, attentive et prend le temps de corriger chacun avec précision. »</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true">M</span><span><span class="who" data-i18n="testi.6.n">Mathéo Mertens</span><span class="when" data-i18n="testi.verified">Avis Google vérifié</span></span></figcaption>
+      </figure>
+
+      <figure class="testi">
+        <div class="stars" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg></div>
+        <blockquote data-i18n="testi.1.q">« Les séances sont bien organisées et adaptées aux besoins de chacun. Excellent coach ! »</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true">B</span><span><span class="who" data-i18n="testi.1.n">Benchetroun Othmane</span><span class="when" data-i18n="testi.verified">Avis Google vérifié</span></span></figcaption>
+      </figure>
+
+      <figure class="testi">
+        <div class="stars" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg></div>
+        <blockquote data-i18n="testi.4.q">« Expérience au top ! Je recommande. »</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true">L</span><span><span class="who" data-i18n="testi.4.n">Luwiza Ahloumou</span><span class="when" data-i18n="testi.verified">Avis Google vérifié</span></span></figcaption>
+      </figure>
+    </div>
+
+    <div class="text-center mt-8" data-reveal>
+      <a class="btn btn--secondary" href="https://share.google/Q34PTdS56j8m9Qonz" target="_blank" rel="noopener">
+        <span data-i18n="testi.all">Lire tous les avis Google</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ CTA ══════════════════════════════════════ -->
+<section class="cta-band">
+  <div class="container">
+    <h2 class="display-2" data-reveal>
+      <span data-i18n="home.cta.titleA">Prête à commencer</span><br />
+      <span data-i18n="home.cta.titleB">l’aventure ?</span>
+    </h2>
+    <p data-reveal data-i18n="home.cta.text">Le premier pas mérite d’être sans pression. Réserve ta séance découverte — elle est offerte.</p>
+    <div class="row" data-reveal>
+      <a class="btn btn--onBrand btn--lg" href="booking.html">
+        <span data-i18n="home.cta.primary">Réserver ma séance offerte</span>
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn--onDark btn--lg" href="contact.html"><span data-i18n="home.cta.secondary">Poser une question</span></a>
+    </div>
+    <p class="fineprint" data-i18n="home.cta.fine">Sans engagement · Annulation gratuite jusqu’à 24 h avant la séance</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════════════════════ FOOTER ══════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="img/lucie-logo.png" alt="Lucie Van Horenbeke" width="56" height="56" loading="lazy" />
+        <p data-i18n="footer.tagline">Coach sportif et instructrice pilâtes à Wavre. Je t’accompagne vers un corps plus fort, une posture alignée et un mental apaisé.</p>
+        <h3 class="sr-only" id="f-social" data-i18n="footer.followTitle">Suivre</h3>
+        <div class="social-row" role="list" aria-labelledby="f-social">
+          <a class="social-btn" href="https://www.instagram.com/lucie.coach" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a class="social-btn" href="https://www.tiktok.com/@lucie.coach" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.3V2h-3.4v13.7a2.9 2.9 0 1 1-2.9-2.9c.3 0 .5 0 .8.1V9a6.3 6.3 0 1 0 5.5 6.3V8.7a8.2 8.2 0 0 0 4.8 1.5V6.8a4.9 4.9 0 0 1-1-.1Z"/></svg></a>
+          <a class="social-btn" href="https://www.linkedin.com/in/lucie-vanhorenbeke" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.9 20.5H3.6V9h3.3v11.5ZM5.2 7.4a1.9 1.9 0 1 1 0-3.9 1.9 1.9 0 0 1 0 3.9Zm15.3 13.1h-3.3v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.9V9h3.1v1.6h.1a3.5 3.5 0 0 1 3.1-1.7c3.3 0 3.9 2.2 3.9 5v6.6Z"/></svg></a>
+          <a class="social-btn" href="https://wa.me/32475305861" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.8 7.2L3 21l2-4.9A8.4 8.4 0 1 1 21 11.5Z"/></svg></a>
+        </div>
+      </div>
+
+      <nav class="footer-col" aria-labelledby="f-nav">
+        <h3 id="f-nav" data-i18n="footer.nav">Navigation</h3>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+          <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="booking.html" data-i18n="nav.booking">Réservation</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-labelledby="f-svc">
+        <h3 id="f-svc" data-i18n="footer.services">Services</h3>
+        <ul>
+          <li><a href="services.html#coaching" data-i18n="svc.coaching.name">Coaching remise en forme</a></li>
+          <li><a href="services.html#pilates" data-i18n="svc.pilates.name">Pilâtes one-to-one</a></li>
+          <li><a href="services.html#collectif" data-i18n="svc.collectif.name">Cours collectifs</a></li>
+          <li><a href="services.html#online" data-i18n="svc.online.name">Coaching en ligne</a></li>
+          <li><a href="services.html#mixte" data-i18n="svc.mixte.name">Formule mixte</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h3 data-i18n="footer.contact">Contact</h3>
+        <ul>
+          <li><a href="mailto:lucie.coach.pt@gmail.com">lucie.coach.pt@gmail.com</a></li>
+          <li><a href="tel:+32475305861">0475 30 58 61</a></li>
+          <li><a href="https://maps.google.com/?q=Chauss%C3%A9e+de+Louvain+328,+1300+Wavre" target="_blank" rel="noopener" data-i18n="footer.studio">Chaussée de Louvain 328, 1300 Wavre</a></li>
+          <li><a href="https://share.google/Q34PTdS56j8m9Qonz" target="_blank" rel="noopener">Google · 5,0 ★</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Lucie Van Horenbeke · <span data-i18n="footer.rights">Tous droits réservés.</span></span>
+      <span class="footer-legal">
+        <a href="mentions-legales.html" data-i18n="nav.legal">Mentions légales</a>
+        <a href="mentions-legales.html#rgpd" data-i18n="footer.privacy">Confidentialité &amp; RGPD</a>
+        <span data-i18n="footer.company">BCE BE1016001952 · Franchise de base, non assujettie à la TVA</span>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════ FLOATING ══════════════════════════════════════ -->
+<div class="fab-stack">
+  <a class="fab fab--wa" href="https://wa.me/32475305861" target="_blank" rel="noopener" data-i18n-attr="aria-label:common.whatsapp" aria-label="Écrire sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.53.15-.17.2-.3.3-.5.1-.19.05-.37-.02-.51-.08-.15-.67-1.62-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.28.18-1.41-.08-.12-.28-.2-.57-.34M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.89-9.89 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.43 9.89-9.88 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42Z"/></svg>
+  </a>
+  <button type="button" class="fab fab--top" id="backTop" data-i18n-attr="aria-label:common.backTop" aria-label="Revenir en haut">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5m-7 7 7-7 7 7"/></svg>
+  </button>
+</div>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="i18n.js" defer></script>
+<script src="main.js" defer></script>
+<script src="ui.js" defer></script>
 </body>
 </html>

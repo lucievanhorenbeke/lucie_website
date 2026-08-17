@@ -1,0 +1,22 @@
+{
+  "name": "Lucie Van Horenbeke — Coach sportif & Pilâtes",
+  "short_name": "Lucie Coach",
+  "description": "Coaching sportif personnalisé et pilâtes one-to-one à Wavre : à domicile, en studio ou en ligne.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFFFFF",
+  "theme_color": "#D4400A",
+  "lang": "fr-BE",
+  "categories": ["health", "fitness", "lifestyle"],
+  "icons": [
+    { "src": "img/lucie-icon.png", "sizes": "500x500", "type": "image/png", "purpose": "any" },
+    { "src": "img/lucie-icon.png", "sizes": "500x500", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Réserver une séance", "url": "/booking.html" },
+    { "name": "Services & tarifs", "url": "/services.html" },
+    { "name": "Contact", "url": "/contact.html" }
+  ]
+}

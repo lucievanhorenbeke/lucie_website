@@ -1,499 +1,714 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services — Lucie VH Coach Sportif</title>
-  <meta name="description" content="Découvrez tous mes services pilâtes : séances privées, cours collectifs, cours en ligne et programmes personnalisés." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .pricing-table {
-      background: var(--light-grey);
-      border-radius: 24px;
-      overflow: hidden;
-      margin-top: 3rem;
-    }
-    .pricing-row {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 0;
-    }
-    .pricing-row:not(:first-child) { border-top: 1px solid rgba(0,0,0,0.07); }
-    .pricing-cell {
-      padding: 1.2rem 1.5rem;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-    }
-    .pricing-row.header .pricing-cell {
-      background: var(--black);
-      color: var(--white);
-      font-weight: 700;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-    .pricing-row.header .pricing-cell.highlight { background: var(--orange); }
-    .pricing-row:not(.header):hover { background: rgba(255,92,26,0.04); }
-    .check { color: var(--orange); font-size: 1.1rem; }
-    .cross { color: #CCC; }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title data-i18n="services.title">Services &amp; tarifs — Lucie Van Horenbeke, coach sportif à Wavre</title>
+<meta name="description" data-i18n-attr="content:services.desc" content="Coaching remise en forme, pilâtes one-to-one, cours collectifs, small group, coaching en ligne et formule mixte. Tarifs transparents et FAQ complète." />
+<meta name="theme-color" content="#FFFFFF" />
+<link rel="canonical" href="https://www.lucievanhorenbeke.be/services.html" />
+<link rel="alternate" hreflang="fr" href="https://www.lucievanhorenbeke.be/services.html" />
+<link rel="alternate" hreflang="nl" href="https://www.lucievanhorenbeke.be/services.html?lang=nl" />
+<link rel="alternate" hreflang="de" href="https://www.lucievanhorenbeke.be/services.html?lang=de" />
+<link rel="alternate" hreflang="en" href="https://www.lucievanhorenbeke.be/services.html?lang=en" />
+<link rel="alternate" hreflang="es" href="https://www.lucievanhorenbeke.be/services.html?lang=es" />
+<link rel="alternate" hreflang="it" href="https://www.lucievanhorenbeke.be/services.html?lang=it" />
+<link rel="alternate" hreflang="x-default" href="https://www.lucievanhorenbeke.be/services.html" />
 
-    .service-detail {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-      padding: 4rem 0;
-      border-bottom: 1px solid #F0F0F0;
-    }
-    .service-detail:last-child { border-bottom: none; }
-    .service-detail.reverse .detail-text { order: 2; }
-    .service-detail.reverse .detail-visual { order: 1; }
-    #prive { align-items: stretch; }
-    #prive .detail-visual { aspect-ratio: unset; min-height: 500px; }
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Services &amp; tarifs — Lucie Van Horenbeke" />
+<meta property="og:description" content="Six formules de coaching : privé, pilâtes one-to-one, cours collectifs, small group, en ligne et mixte. Tarifs transparents." />
+<meta property="og:url" content="https://www.lucievanhorenbeke.be/services.html" />
+<meta property="og:image" content="https://www.lucievanhorenbeke.be/img/opt/lucie-halteres-1600.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
 
-    .detail-visual {
-      border-radius: 24px;
-      background: var(--light-grey);
-      aspect-ratio: 4/3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 5rem;
+<link rel="icon" href="img/lucie-icon.png" sizes="any" />
+<link rel="apple-touch-icon" href="img/lucie-icon.png" />
+<link rel="manifest" href="site.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+
+<script>try{var m=JSON.parse(localStorage.getItem("lvh.theme")||'"system"');if(m!=="system")document.documentElement.setAttribute("data-theme",m);}catch(e){}</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.lucievanhorenbeke.be/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.lucievanhorenbeke.be/services.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Dois-je avoir un niveau particulier pour commencer ?", "acceptedAnswer": { "@type": "Answer", "text": "Absolument pas. Que ce soit pour le coaching sportif ou le pilâtes, je pars de là où tu en es. On commence toujours par un call découverte gratuit pour définir tes objectifs avant de créer ton programme." } },
+        { "@type": "Question", "name": "De quel équipement ai-je besoin ?", "acceptedAnswer": { "@type": "Answer", "text": "Pour les cours collectifs au studio et le coaching à domicile : rien, tout le matériel est fourni. Pour le coaching en ligne, quelques accessoires de base peuvent aider, mais on adapte à ce que tu as." } },
+        { "@type": "Question", "name": "Puis-je faire du sport si j'ai des douleurs ou une blessure ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, dans beaucoup de cas. Le pilâtes est reconnu pour son approche douce et thérapeutique. Je travaille régulièrement avec des personnes ayant des douleurs dorsales, des problèmes de plancher pelvien, en post-partum ou post-opératoire." } },
+        { "@type": "Question", "name": "Comment se déroule la première séance ?", "acceptedAnswer": { "@type": "Answer", "text": "On commence par un call découverte gratuit, en visio ou en présentiel. C'est à partir de cet échange que je construis un programme entièrement adapté à toi." } },
+        { "@type": "Question", "name": "Où se passent les séances ?", "acceptedAnswer": { "@type": "Answer", "text": "À domicile dans le Brabant wallon, au studio Chaussée de Louvain 328 à 1300 Wavre, ou en ligne partout dans le monde." } },
+        { "@type": "Question", "name": "Peut-on annuler ou reporter une séance ?", "acceptedAnswer": { "@type": "Answer", "text": "Pour les séances privées : jusqu'à 24 h avant, sans frais. Pour les cours collectifs : une annulation à moins de 4 h du cours entraîne la comptabilisation de la séance." } },
+        { "@type": "Question", "name": "Le coaching en ligne, ça se passe comment ?", "acceptedAnswer": { "@type": "Answer", "text": "Uniquement en pack avec un engagement minimum de 3 mois. Programme sur mesure, tableau Excel de suivi, guide sportif, carnet de progression, point hebdomadaire et support illimité sous 24 h." } }
+      ]
     }
-    .detail-tag {
-      display: inline-block;
-      background: rgba(255,92,26,0.1);
-      color: var(--orange);
-      padding: 0.3rem 0.8rem;
-      border-radius: 100px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 1rem;
-    }
-    .detail-text h2 {
-      font-size: 2rem;
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      margin-bottom: 1rem;
-      line-height: 1.1;
-    }
-    .detail-text p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-    }
-    .detail-list { margin-bottom: 1.5rem; }
-    .detail-list li {
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      font-size: 0.9rem;
-      font-weight: 500;
-      margin-bottom: 0.6rem;
-    }
-    .detail-list li::before {
-      content: '→';
-      color: var(--orange);
-      font-weight: 700;
-    }
-    .price-badge {
-      display: inline-flex;
-      align-items: baseline;
-      gap: 0.3rem;
-      background: var(--black);
-      color: var(--white);
-      padding: 0.5rem 1.2rem;
-      border-radius: 100px;
-      font-weight: 800;
-      font-size: 1rem;
-    }
-    .price-badge em {
-      font-style: normal;
-      color: var(--orange);
-      font-size: 1.3rem;
-    }
-  </style>
+  ]
+}
+</script>
 </head>
-<body>
 
-<!-- NAV -->
-<nav id="navbar">
-  <a href="index.html" class="logo"><img src="img/lucie-logo.png" alt="Lucie Coach" style="height:100px; width:auto; display:block;" /></a>
-  <ul class="nav-links">
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="about.html">À propos</a></li>
-    <li><a href="services.html" class="active">Services</a></li>
-    <li><a href="booking.html">Réservation</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="booking.html" class="nav-cta">Réserver →</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+<body data-page="services">
 
-<!-- PAGE HEADER -->
-<div class="page-header">
-  <div class="page-header-content">
-    <span class="section-tag">Mes services</span>
-    <h1>Tout ce que je<br/>peux faire pour <em>toi</em></h1>
-    <p>Des formats flexibles adaptés à tous les niveaux, tous les budgets, et tous les emplois du temps.</p>
+<a class="skip-link" href="#main" data-i18n="nav.skip">Aller au contenu principal</a>
+
+<!--#HEADER-->
+<header class="site-header is-onDark" id="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Lucie Van Horenbeke — accueil">
+      <img src="img/lucie-logo.png" alt="" width="42" height="42" />
+      <span class="brand-text">
+        <span class="brand-name">Lucie Van Horenbeke</span>
+        <span class="brand-role" data-i18n="nav.brandRole">Coach sportif · Pilâtes</span>
+      </span>
+    </a>
+
+    <nav class="nav-primary" aria-label="Navigation principale">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="index.html" data-i18n="nav.home">Accueil</a></li>
+        <li class="nav-item has-mega">
+          <button type="button" class="nav-link" aria-expanded="false" aria-current="page">
+            <span data-i18n="nav.services">Services</span>
+            <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="mega">
+            <div class="mega-grid">
+              <a class="mega-link" href="services.html#coaching">
+                <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6v12M18 6v12M2 9v6M22 9v6M6 12h12"/></svg></span>
+                <span><span class="mega-title" data-i18n="svc.coaching.name">Coaching remise en forme</span><span class="mega-desc" data-i18n="svc.coaching.desc">Suivi 100 % individuel, à domicile ou en salle.</span></span>
+              </a>
+              <a class="mega-link" href="services.html#pilates">
+                <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.4"/><path d="M5 20c1.6-4 4-6 7-6s5.4 2 7 6M8 11h8"/></svg></span>
+                <span><span class="mega-title" data-i18n="svc.pilates.name">Pilâtes one-to-one</span><span class="mega-desc" data-i18n="svc.pilates.desc">Séances privées en studio ou chez toi.</span></span>
+              </a>
+              <a class="mega-link" href="services.html#collectif">
+                <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span>
+                <span><span class="mega-title" data-i18n="svc.collectif.name">Cours collectifs</span><span class="mega-desc" data-i18n="svc.collectif.desc">Mardi &amp; jeudi 18 h, samedi 10 h à Wavre.</span></span>
+              </a>
+              <a class="mega-link" href="services.html#smallgroup">
+                <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20a6 6 0 0 1 12 0M15 20a5 5 0 0 1 6-4.9"/></svg></span>
+                <span><span class="mega-title" data-i18n="svc.smallgroup.name">Small group training</span><span class="mega-desc" data-i18n="svc.smallgroup.desc">2 à 4 personnes, à prix réduit.</span></span>
+              </a>
+              <a class="mega-link" href="services.html#online">
+                <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></span>
+                <span><span class="mega-title" data-i18n="svc.online.name">Coaching en ligne</span><span class="mega-desc" data-i18n="svc.online.desc">Programme sur mesure et suivi hebdomadaire.</span></span>
+              </a>
+              <a class="mega-link" href="services.html#mixte">
+                <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></svg></span>
+                <span><span class="mega-title" data-i18n="svc.mixte.name">Formule mixte</span><span class="mega-desc" data-i18n="svc.mixte.desc">Séances en salle + suivi en ligne.</span></span>
+              </a>
+            </div>
+            <div class="mega-foot">
+              <span data-i18n="mm.foot">Première séance découverte offerte, sans engagement.</span>
+              <a class="btn btn--secondary btn--sm" href="services.html"><span data-i18n="mm.footCta">Comparer les formules</span></a>
+            </div>
+          </div>
+        </li>
+        <li><a class="nav-link" href="about.html" data-i18n="nav.about">À propos</a></li>
+        <li><a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" class="search-trigger" data-cmdk-open>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m21 21-4.34-4.34M17 11a6 6 0 1 1-12 0 6 6 0 0 1 12 0Z"/></svg>
+        <span data-i18n="nav.search">Rechercher</span>
+        <kbd><span data-kbd-mod>Ctrl</span>K</kbd>
+      </button>
+
+      <button type="button" class="btn btn--icon mobile-only" data-cmdk-open data-i18n-attr="aria-label:nav.searchLabel" aria-label="Rechercher sur le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m21 21-4.34-4.34M17 11a6 6 0 1 1-12 0 6 6 0 0 1 12 0Z"/></svg>
+      </button>
+
+      <div class="switcher desktop-only" data-lang-switcher>
+        <button type="button" class="lang-trigger" data-lang-trigger aria-expanded="false" aria-haspopup="menu" data-i18n-attr="aria-label:nav.language">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18Z"/></svg>
+          <span data-lang-code>FR</span>
+        </button>
+        <div class="switcher-menu" role="menu" data-lang-menu></div>
+      </div>
+
+      <button type="button" class="btn btn--icon theme-toggle" data-theme-toggle aria-pressed="false" data-i18n-attr="aria-label:nav.theme" aria-label="Changer de thème">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      </button>
+
+      <a class="btn btn--primary btn--sm desktop-only" href="booking.html">
+        <span data-i18n="nav.book">Réserver</span>
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+      </a>
+
+      <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="drawer" data-i18n-attr="aria-label:nav.openMenu" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="progress-bar" aria-hidden="true"></div>
+</header>
+<!--#/HEADER-->
+
+<!--#DRAWER-->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-hidden="true" aria-label="Menu">
+  <div class="drawer-head">
+    <span class="brand-name">Lucie Van Horenbeke</span>
+    <button type="button" class="btn btn--icon" data-drawer-close data-i18n-attr="aria-label:nav.closeMenu" aria-label="Fermer le menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body">
+    <nav class="drawer-nav" aria-label="Navigation mobile">
+      <a href="index.html"><span data-i18n="nav.home">Accueil</span></a>
+      <a href="services.html" aria-current="page"><span data-i18n="nav.services">Services</span></a>
+      <a href="about.html"><span data-i18n="nav.about">À propos</span></a>
+      <a href="booking.html"><span data-i18n="nav.booking">Réservation</span></a>
+      <a href="contact.html"><span data-i18n="nav.contact">Contact</span></a>
+    </nav>
+
+    <div class="drawer-label" data-i18n="mm.label">Toutes les formules</div>
+    <nav class="drawer-nav" aria-label="Services">
+      <a href="services.html#coaching"><span data-i18n="svc.coaching.name">Coaching remise en forme</span></a>
+      <a href="services.html#pilates"><span data-i18n="svc.pilates.name">Pilâtes one-to-one</span></a>
+      <a href="services.html#collectif"><span data-i18n="svc.collectif.name">Cours collectifs</span></a>
+      <a href="services.html#smallgroup"><span data-i18n="svc.smallgroup.name">Small group training</span></a>
+      <a href="services.html#online"><span data-i18n="svc.online.name">Coaching en ligne</span></a>
+      <a href="services.html#mixte"><span data-i18n="svc.mixte.name">Formule mixte</span></a>
+    </nav>
+
+    <div class="drawer-label" data-i18n="nav.language">Langue</div>
+    <div class="switcher" data-lang-switcher style="display:block">
+      <button type="button" class="btn btn--secondary btn--block" data-lang-trigger aria-expanded="false" aria-haspopup="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" style="width:16px;height:16px"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18Z"/></svg>
+        <span data-lang-code>FR</span>
+      </button>
+      <div class="switcher-menu" role="menu" data-lang-menu style="left:0;right:0"></div>
+    </div>
+  </div>
+  <div class="drawer-foot">
+    <a class="btn btn--primary btn--block" href="booking.html"><span data-i18n="nav.bookLong">Réserver une séance</span></a>
+    <a class="btn btn--secondary btn--block" href="tel:+32475305861">0475 30 58 61</a>
+  </div>
+</aside>
+<!--#/DRAWER-->
+
+<main id="main">
+
+<!-- ══════════════ PAGE HERO ══════════════ -->
+<section class="page-hero">
+  <div class="container page-hero-inner has-aside">
+    <div>
+      <nav aria-label="Fil d’Ariane">
+        <ol class="breadcrumb">
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><span aria-current="page" data-i18n="nav.services">Services</span></li>
+        </ol>
+      </nav>
+      <p class="eyebrow" data-i18n="services.hero.eyebrow">Mes services</p>
+      <h1 class="display-2">
+        <span data-i18n="services.hero.titleA">Tout ce que je peux</span>
+        <em class="accent" data-i18n="services.hero.titleB">faire pour toi</em>
+      </h1>
+      <p class="lead" data-i18n="services.hero.lead">Six formules flexibles, adaptées à tous les niveaux, tous les budgets et tous les emplois du temps. Tarifs affichés, sans surprise.</p>
+    </div>
+
+    <nav aria-label="Accès rapide aux formules">
+      <p class="drawer-label" style="color:rgba(255,255,255,.5)" data-i18n="services.jump">Accès rapide</p>
+      <div class="pill-row">
+        <a class="chip" href="#coaching" data-i18n="svc.coaching.name">Coaching remise en forme</a>
+        <a class="chip" href="#pilates" data-i18n="svc.pilates.name">Pilâtes one-to-one</a>
+        <a class="chip" href="#collectif" data-i18n="svc.collectif.name">Cours collectifs</a>
+        <a class="chip" href="#smallgroup" data-i18n="svc.smallgroup.name">Small group training</a>
+        <a class="chip" href="#online" data-i18n="svc.online.name">Coaching en ligne</a>
+        <a class="chip" href="#mixte" data-i18n="svc.mixte.name">Formule mixte</a>
+        <a class="chip" href="#tarifs" data-i18n="cmp.eyebrow">Tarifs</a>
+        <a class="chip" href="#faq" data-i18n="faq.eyebrow">FAQ</a>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<!-- ══════════════ SERVICE DETAILS ══════════════ -->
+<div class="section">
+  <div class="container">
+
+    <!-- 1 — Coaching -->
+    <article class="svc" id="coaching" data-reveal>
+      <div class="media-frame media-frame--wide">
+        <img src="img/opt/lucie-halteres-800.jpg" srcset="img/opt/lucie-halteres-800.jpg 800w, img/opt/lucie-halteres-1600.jpg 1600w" sizes="(max-width:760px) 92vw, 45vw" width="800" height="1024" alt="Séance de coaching avec haltères" loading="lazy" decoding="async" />
+      </div>
+      <div>
+        <span class="badge badge--brand" data-i18n="d.coaching.tag">Remise en forme</span>
+        <h2 class="display-3" data-i18n="d.coaching.t">Coaching personnalisé</h2>
+        <p data-i18n-html="d.coaching.p">Le format le plus complet : un suivi 100 % individuel, en salle ou à ton domicile, avec un programme construit autour de tes objectifs précis. On commence toujours par un <strong>call découverte gratuit</strong> pour définir ensemble ta feuille de route.</p>
+
+        <ul class="check-list mt-6">
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.coaching.l1">Bilan complet et objectifs SMART</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.coaching.l2">Séances de 60 minutes, 1 à 3 fois par semaine</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.coaching.l3">Programme réajusté chaque mois selon ta progression</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.coaching.l4">Conseils nutrition et récupération</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.coaching.l5">Disponibilité WhatsApp entre les séances</span></li>
+        </ul>
+
+        <div class="pill-row mt-6">
+          <span class="badge" data-i18n="d.coaching.tag1">Perte de poids</span>
+          <span class="badge" data-i18n="d.coaching.tag2">Prise de muscle</span>
+          <span class="badge" data-i18n="d.coaching.tag3">Reprise sportive</span>
+          <span class="badge" data-i18n="d.coaching.tag4">Préparation physique</span>
+        </div>
+
+        <div class="pill-row mt-6">
+          <span class="price-tag price-tag--brand"><b>50 €</b> <span data-i18n="d.coaching.p1">la séance à domicile</span></span>
+          <span class="price-tag"><b>40 €</b> <span data-i18n="d.coaching.p2">la séance en salle</span></span>
+        </div>
+        <p class="drawer-label mt-6" data-i18n="d.coaching.packs">Packs coaching en salle</p>
+        <div class="pill-row">
+          <span class="price-tag"><b>400 €</b> <span data-i18n="d.coaching.p3">6 semaines</span></span>
+          <span class="price-tag"><b>780 €</b> <span data-i18n="d.coaching.p4">12 semaines · pack transformation</span></span>
+        </div>
+
+        <div class="row mt-8">
+          <a class="btn btn--primary" href="booking.html?service=Coaching%20%C3%A0%20domicile">
+            <span data-i18n="services.detailCta">Réserver cette formule</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2 — Pilâtes -->
+    <article class="svc svc--reverse" id="pilates" data-reveal>
+      <div>
+        <span class="badge badge--brand" data-i18n="d.pilates.tag">Le plus populaire</span>
+        <h2 class="display-3" data-i18n="d.pilates.t">Pilâtes one-to-one</h2>
+        <p data-i18n="d.pilates.p">Des séances de pilâtes privées, entièrement dédiées à toi. Je me déplace à domicile ou je te reçois dans mon studio à Wavre. Particulièrement recommandé pour les femmes ménopausées, les problèmes d’incontinence urinaire, ou pour démarrer le pilâtes en toute sécurité.</p>
+
+        <ul class="check-list mt-6">
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.pilates.l1">Femmes ménopausées : renforcement du plancher pelvien</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.pilates.l2">Incontinence urinaire : exercices ciblés et progressifs</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.pilates.l3">Débutantes : apprentissage des bases en douceur</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.pilates.l4">Rééducation post-partum ou post-opératoire</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.pilates.l5">À domicile ou au studio, Chaussée de Louvain 328 à Wavre</span></li>
+        </ul>
+
+        <div class="row mt-8">
+          <span class="price-tag price-tag--brand"><b>50 €</b> <span data-i18n="d.pilates.p1">la séance</span></span>
+          <a class="btn btn--primary" href="booking.html?service=Coaching%20%C3%A0%20domicile">
+            <span data-i18n="services.detailCta">Réserver cette formule</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="media-frame media-frame--wide">
+        <img src="img/opt/lucie-gym-800.jpg" srcset="img/opt/lucie-gym-800.jpg 800w, img/opt/lucie-gym-1600.jpg 1600w" sizes="(max-width:760px) 92vw, 45vw" width="800" height="533" alt="Séance de pilâtes individuelle au studio" loading="lazy" decoding="async" />
+      </div>
+    </article>
+
+    <!-- 3 — Cours collectifs -->
+    <article class="svc" id="collectif" data-reveal>
+      <div class="media-frame media-frame--wide">
+        <img src="img/opt/lucie-collectif-800.jpg" srcset="img/opt/lucie-collectif-800.jpg 800w, img/opt/lucie-collectif-1600.jpg 1600w" sizes="(max-width:760px) 92vw, 45vw" width="800" height="450" alt="Cours collectif de pilâtes au studio de Wavre" loading="lazy" decoding="async" />
+      </div>
+      <div>
+        <span class="badge badge--brand" data-i18n="d.collectif.tag">Esprit de groupe</span>
+        <h2 class="display-3" data-i18n="d.collectif.t">Cours collectifs de pilâtes</h2>
+        <p data-i18n="d.collectif.p">Des cours de pilâtes en petit groupe dans mon studio à Wavre. Une ambiance motivante et bienveillante, avec un vrai suivi pour chaque participante — parce qu’un cours collectif ne veut pas dire un cours anonyme.</p>
+
+        <ul class="check-list mt-6">
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n-html="d.collectif.l1"><strong>Mardi &amp; jeudi</strong> : 18 h 00 – 19 h 00</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n-html="d.collectif.l2"><strong>Samedi</strong> : 10 h 00 – 11 h 00</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.collectif.l3">Petit groupe, 8 personnes maximum</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.collectif.l4">Tous niveaux acceptés</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.collectif.l5">Studio équipé, tout le matériel est fourni</span></li>
+        </ul>
+
+        <p class="alert alert--brand mt-6">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 21V7M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7Zm0 0h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7Z"/></svg>
+          <span data-i18n="d.collectif.gift">1ʳᵉ séance d’essai offerte</span>
+        </p>
+
+        <div class="row mt-8">
+          <span class="price-tag price-tag--brand"><span data-i18n="common.from">à partir de</span> <b>15 €</b> <span data-i18n="d.collectif.p1">le cours</span></span>
+          <a class="btn btn--primary" href="booking.html?service=Cours%20de%20Pil%C3%A2tes">
+            <span data-i18n="d.collectif.cta">M’inscrire à un cours</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4 — Small group -->
+    <article class="svc svc--reverse" id="smallgroup" data-reveal>
+      <div>
+        <span class="badge badge--brand" data-i18n="d.smallgroup.tag">Entre amies</span>
+        <h2 class="display-3" data-i18n="d.smallgroup.t">Small group training</h2>
+        <p data-i18n="d.smallgroup.p">Tu viens avec tes amies, ta famille ou tes collègues, et on s’entraîne ensemble. Le small group combine les avantages du coaching privé — suivi personnalisé, programme adapté — avec l’énergie et la motivation du groupe.</p>
+
+        <ul class="check-list mt-6">
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.smallgroup.l1">2 à 4 personnes maximum</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.smallgroup.l2">Prix réduit par rapport à une séance privée</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.smallgroup.l3">Accès aux machines en salle à Wavre</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.smallgroup.l4">Programme adapté aux objectifs du groupe</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.smallgroup.l5">Créneaux horaires flexibles</span></li>
+        </ul>
+
+        <div class="row mt-8">
+          <span class="price-tag price-tag--brand"><b data-i18n="svc.smallgroup.price">Prix réduit</b> <span data-i18n="d.smallgroup.p1">par personne</span></span>
+          <a class="btn btn--primary" href="booking.html?service=Small%20group%20training">
+            <span data-i18n="d.smallgroup.cta">Nous inscrire</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="media-frame media-frame--wide">
+        <img src="img/opt/lucie-machine-800.jpg" srcset="img/opt/lucie-machine-800.jpg 800w, img/opt/lucie-machine-1600.jpg 1600w" sizes="(max-width:760px) 92vw, 45vw" width="800" height="1056" alt="Entraînement sur machine en petit groupe" loading="lazy" decoding="async" />
+      </div>
+    </article>
+
+    <!-- 5 — En ligne -->
+    <article class="svc" id="online" data-reveal>
+      <div class="media-frame media-frame--wide">
+        <img src="img/opt/lucie-planche-800.jpg" srcset="img/opt/lucie-planche-800.jpg 800w, img/opt/lucie-planche-1600.jpg 1600w" sizes="(max-width:760px) 92vw, 45vw" width="800" height="1200" alt="Exercice de gainage réalisable à domicile" loading="lazy" decoding="async" />
+      </div>
+      <div>
+        <span class="badge badge--brand" data-i18n="d.online.tag">Depuis chez toi</span>
+        <h2 class="display-3" data-i18n="d.online.t">Coaching en ligne</h2>
+        <p data-i18n-html="d.online.p">Disponible uniquement en pack, avec un <strong>engagement minimum de 3 mois</strong>. Je crée un programme sur mesure avec tout ce qu’il te faut pour progresser où que tu sois : programme détaillé, tableau de suivi, guide sportif, carnet de progression et un point hebdomadaire personnalisé.</p>
+
+        <ul class="check-list mt-6">
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.online.l1">Programme sur mesure + tableau Excel de suivi</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.online.l2">Guide du programme sportif détaillé</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.online.l3">Carnet de suivi pour noter tes performances</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.online.l4">1 suivi hebdomadaire (visio ou vocaux WhatsApp)</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.online.l5">Corrections techniques par vidéo</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.online.l6">Support illimité, réponse sous 24 h</span></li>
+        </ul>
+
+        <p class="alert alert--amber mt-6">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h8l-1 8 10-12h-8l1-8Z"/></svg>
+          <span data-i18n-html="d.online.note">Engagement minimum 3 mois. Pack 3 mois : <strong>−60 €</strong> · Pack 6 mois : <strong>−195 €</strong></span>
+        </p>
+
+        <div class="pill-row mt-6">
+          <span class="price-tag price-tag--brand"><b>199 €</b> <span data-i18n="d.online.p1">par mois</span></span>
+          <span class="price-tag"><b>537 €</b> <span data-i18n="d.online.p2">3 mois</span> <span class="was">597 €</span></span>
+          <span class="price-tag"><b>999 €</b> <span data-i18n="d.online.p3">6 mois</span> <span class="was">1 194 €</span></span>
+        </div>
+
+        <div class="row mt-8">
+          <a class="btn btn--primary" href="contact.html">
+            <span data-i18n="services.contactCta">Me contacter</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6 — Mixte -->
+    <article class="svc svc--reverse" id="mixte" data-reveal>
+      <div>
+        <span class="badge badge--brand" data-i18n="d.mixte.tag">Le meilleur des deux</span>
+        <h2 class="display-3" data-i18n="d.mixte.t">Formule mixte</h2>
+        <p data-i18n-html="d.mixte.p">La formule idéale pour apprendre la bonne technique et devenir autonome. <strong>Une séance en salle par semaine</strong> (4 séances par mois à Wavre) combinée au suivi en ligne complet. L’encadrement en présentiel et la flexibilité du coaching à distance. <strong>Engagement minimum de 3 mois.</strong></p>
+
+        <ul class="check-list mt-6">
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.mixte.l1">1 séance/semaine en salle à Wavre avec machines (4 séances/mois — 140 €)</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.mixte.l2">Programme sur mesure + tableau Excel de suivi (99 €)</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.mixte.l3">Guide du programme sportif détaillé</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.mixte.l4">Carnet de suivi de progression</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.mixte.l5">Suivi hebdomadaire (visio ou WhatsApp)</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.mixte.l6">Corrections techniques par vidéo</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span data-i18n="d.mixte.l7">Support illimité, réponse sous 24 h</span></li>
+        </ul>
+
+        <p class="hint mt-6" data-i18n-html="d.mixte.calc">140 € de séances + 99 € de programme et suivi = <strong>239 €/mois</strong>, soit environ <strong>35 € la séance</strong>, tout inclus.</p>
+
+        <p class="alert alert--amber mt-4">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h8l-1 8 10-12h-8l1-8Z"/></svg>
+          <span data-i18n-html="d.mixte.note">Engagement minimum 3 mois. Pack 3 mois : <strong>−100 €</strong> · Pack 6 mois : <strong>−245 €</strong></span>
+        </p>
+
+        <div class="pill-row mt-6">
+          <span class="price-tag price-tag--brand"><b>239 €</b> <span data-i18n="d.mixte.p1">par mois</span></span>
+          <span class="price-tag"><b>749 €</b> <span data-i18n="d.mixte.p2">3 mois</span></span>
+          <span class="price-tag"><b>1 499 €</b> <span data-i18n="d.mixte.p3">6 mois</span></span>
+        </div>
+
+        <div class="row mt-8">
+          <a class="btn btn--primary" href="booking.html?service=Formule%20mixte">
+            <span data-i18n="services.detailCta">Réserver cette formule</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--secondary" href="contact.html"><span data-i18n="services.contactCta">Me contacter</span></a>
+        </div>
+      </div>
+      <div class="media-frame media-frame--wide">
+        <img src="img/opt/lucie-machine2-800.jpg" srcset="img/opt/lucie-machine2-800.jpg 800w, img/opt/lucie-machine2-1600.jpg 1600w" sizes="(max-width:760px) 92vw, 45vw" width="800" height="1200" alt="Séance en salle avec accès aux machines" loading="lazy" decoding="async" />
+      </div>
+    </article>
+
   </div>
 </div>
 
-<!-- SERVICE DETAILS -->
-<section style="padding: 5rem 4rem;" id="coaching">
-  <!-- COACHING REMISE EN FORME -->
-  <div class="service-detail fade-in" id="prive">
-    <div class="detail-visual" style="padding:0; overflow:hidden;"><img src="img/lucie-halteres.jpg" alt="Coaching remise en forme" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;border-radius:24px;" /></div>
-    <div class="detail-text">
-      <span class="detail-tag">Remise en forme</span>
-      <h2>Coaching Personnalisé</h2>
-      <p>Le format le plus complet : un suivi 100% individuel, en salle de sport ou à ton domicile, avec un programme construit autour de tes objectifs précis. On commence par un <strong>call découverte gratuit</strong> pour définir ensemble tes objectifs et créer un programme adapté.</p>
-      <ul class="detail-list">
-        <li>Bilan complet et fixation d'objectifs SMART</li>
-        <li>Séances de 60 min, 1 à 3 fois par semaine</li>
-        <li>Programme ajusté chaque mois selon ta progression</li>
-        <li>Suivi nutritionnel et conseils de récupération</li>
-        <li>Disponibilité WhatsApp pour tes questions</li>
-      </ul>
-      <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:1.2rem;">
-        <span style="background:rgba(255,92,26,0.1);color:var(--orange);padding:0.3rem 0.8rem;border-radius:100px;font-size:0.78rem;font-weight:600;">Perte de poids</span>
-        <span style="background:rgba(255,92,26,0.1);color:var(--orange);padding:0.3rem 0.8rem;border-radius:100px;font-size:0.78rem;font-weight:600;">Prise de muscle</span>
-        <span style="background:rgba(255,92,26,0.1);color:var(--orange);padding:0.3rem 0.8rem;border-radius:100px;font-size:0.78rem;font-weight:600;">Reprise sportive</span>
-        <span style="background:rgba(255,92,26,0.1);color:var(--orange);padding:0.3rem 0.8rem;border-radius:100px;font-size:0.78rem;font-weight:600;">Préparation physique</span>
-      </div>
-      <div style="display:flex; flex-wrap:wrap; gap:0.8rem; margin-bottom:0.8rem;">
-        <span class="price-badge"><em>50€</em> / séance à domicile</span>
-        <span class="price-badge"><em>40€</em> / séance en salle</span>
-      </div>
-      <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">Packs coaching en salle</div>
-      <div style="display:flex; flex-wrap:wrap; gap:0.8rem; margin-bottom:1rem;">
-        <span class="price-badge"><em>400€</em> / 6 semaines</span>
-        <span class="price-badge"><em>780€</em> / 12 semaines <span style="font-size:0.75rem;opacity:0.6;font-weight:400;">Pack Transformation</span></span>
-      </div>
-      <a href="booking.html" class="btn btn-primary pulse-cta-btn">Réserver →</a>
+<!-- ══════════════ COMPARISON TABLE ══════════════ -->
+<section class="section section--subtle" id="tarifs" aria-labelledby="cmp-h">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow" data-i18n="cmp.eyebrow">Tarifs</p>
+      <h2 class="display-3" id="cmp-h">
+        <span data-i18n="cmp.titleA">Comparer les</span>
+        <em class="accent" data-i18n="cmp.titleB">formules</em>
+      </h2>
+      <p class="lead" data-i18n="cmp.lead">Toutes les formules incluent un suivi de qualité. Choisis celle qui correspond le mieux à ton rythme et à tes besoins.</p>
     </div>
-  </div>
 
-  <!-- PILATES ONE-TO-ONE -->
-  <div class="service-detail reverse fade-in" id="pilates">
-    <div class="detail-text">
-      <span class="detail-tag">Le plus populaire</span>
-      <h2>Pilâtes One-to-One</h2>
-      <p>Des séances de pilâtes privées, entièrement dédiées à toi. Je me déplace à domicile ou te reçois dans mon studio à Wavre (Chaussée de Louvain 328). Particulièrement recommandé pour les femmes ménopausées, les problèmes d'incontinence urinaire ou les personnes souhaitant commencer le pilâtes en toute sécurité.</p>
-      <ul class="detail-list">
-        <li>Femmes ménopausées : renforcement du plancher pelvien</li>
-        <li>Incontinence urinaire : exercices ciblés et progressifs</li>
-        <li>Débutantes : apprentissage des bases en douceur</li>
-        <li>Rééducation post-partum ou post-opératoire</li>
-        <li>À domicile ou en studio à Wavre</li>
-      </ul>
-      <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
-        <span class="price-badge">À partir de <em>50€</em> / séance</span>
-        <a href="booking.html" class="btn btn-primary pulse-cta-btn">Réserver →</a>
-      </div>
+    <div class="table-wrap" data-reveal>
+      <table class="table">
+        <caption class="sr-only">Comparaison des formules de coaching</caption>
+        <thead>
+          <tr>
+            <th scope="col" data-i18n="cmp.feature">Prestation</th>
+            <th scope="col" data-i18n="cmp.private">Coaching privé</th>
+            <th scope="col" class="is-featured" data-i18n="cmp.group">Cours collectifs</th>
+            <th scope="col" data-i18n="cmp.online">En ligne</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" data-i18n="cmp.r1">Suivi 100 % personnalisé</th>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only" data-i18n="cmp.yes">Inclus</span></td><td class="no"><span aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.no">Non inclus</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only" data-i18n="cmp.yes">Inclus</span></td>
+          </tr>
+          <tr>
+            <th scope="row" data-i18n="cmp.r2">Programme sur mesure</th>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only" data-i18n="cmp.yes">Inclus</span></td><td class="no"><span aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.no">Non inclus</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only" data-i18n="cmp.yes">Inclus</span></td>
+          </tr>
+          <tr>
+            <th scope="row" data-i18n="cmp.r3">Matériel fourni</th>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only" data-i18n="cmp.yes">Inclus</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only" data-i18n="cmp.yes">Inclus</span></td><td class="no"><span aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.no">Non inclus</span></td>
+          </tr>
+          <tr>
+            <th scope="row" data-i18n="cmp.r4">Bilan initial offert</th>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only" data-i18n="cmp.yes">Inclus</span></td><td class="no"><span aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.no">Non inclus</span></td><td class="no"><span aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.no">Non inclus</span></td>
+          </tr>
+          <tr>
+            <th scope="row" data-i18n="cmp.r5">Suivi WhatsApp</th>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only" data-i18n="cmp.yes">Inclus</span></td><td class="no"><span aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.no">Non inclus</span></td><td class="yes"><span aria-hidden="true">✓</span> <span data-i18n="cmp.unlimited">Illimité</span></td>
+          </tr>
+          <tr>
+            <th scope="row" data-i18n="cmp.r6">Flexibilité horaire</th>
+            <td class="yes" data-i18n="cmp.flexible">Flexible</td>
+            <td data-i18n="cmp.fixed">Mar/jeu 18 h · sam 10 h</td>
+            <td class="yes" data-i18n="cmp.flexible">Flexible</td>
+          </tr>
+          <tr>
+            <th scope="row" data-i18n="cmp.r7">À domicile possible</th>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only" data-i18n="cmp.yes">Inclus</span></td><td class="no"><span aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.no">Non inclus</span></td><td class="yes"><span aria-hidden="true">✓</span> <span data-i18n="cmp.everywhere">Partout</span></td>
+          </tr>
+          <tr class="is-total">
+            <th scope="row" data-i18n="cmp.r8">Tarif</th>
+            <td class="price" data-i18n="cmp.price1">50 € à domicile · 40 € en salle</td>
+            <td class="price" data-i18n="cmp.price2">À partir de 15 € le cours</td>
+            <td class="price" data-i18n="cmp.price3">199 € par mois</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <div class="detail-visual" style="padding:0; overflow:hidden;"><img src="img/lucie-gym.jpg" alt="Pilâtes one-to-one" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" /></div>
-  </div>
-
-  <!-- COURS COLLECTIFS -->
-  <div class="service-detail fade-in" id="collectif">
-    <div class="detail-visual" style="padding:0; overflow:hidden;"><img src="img/lucie-collectif.jpg" alt="Cours collectifs pilâtes" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;border-radius:24px;" /></div>
-    <div class="detail-text">
-      <span class="detail-tag">Esprit de groupe</span>
-      <h2>Cours Collectifs - Pilâtes</h2>
-      <p>Des cours de pilâtes en petit groupe dans mon studio à Wavre (Chaussée de Louvain 328). Une ambiance motivante et bienveillante, avec un suivi de qualité pour chaque participante.</p>
-      <ul class="detail-list">
-        <li><strong>Mardi &amp; Jeudi</strong> : 18h00 – 19h00</li>
-        <li><strong>Samedi</strong> : 10h00 – 11h00</li>
-        <li>Petit groupe (max 8 personnes)</li>
-        <li>Tous niveaux acceptés</li>
-        <li>Studio équipé à Wavre · tout le matériel fourni</li>
-      </ul>
-      <div style="background:rgba(255,92,26,0.08); border-radius:12px; padding:0.8rem 1.2rem; margin-bottom:1rem; font-size:0.85rem; color:var(--orange); font-weight:600;">
-        🎁 1ère séance d'essai OFFERTE
-      </div>
-      <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
-        <span class="price-badge">À partir de <em>15€</em> / cours</span>
-        <a href="booking.html" class="btn btn-primary pulse-cta-btn">S'inscrire →</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- SMALL GROUP TRAINING -->
-  <div class="service-detail reverse fade-in" id="smallgroup">
-    <div class="detail-text">
-      <span class="detail-tag">Entre amies</span>
-      <h2>Small Group Training</h2>
-      <p>Tu viens avec tes amies, ta famille, tes collègues, et on s'entraîne ensemble ! Le small group training combine les avantages du coaching privé (suivi personnalisé, programme adapté) avec le fun et la motivation du groupe. Disponible à mon studio à Wavre avec accès aux machines ou à domicile.</p>
-      <ul class="detail-list">
-        <li>2 à 4 personnes maximum</li>
-        <li>Prix réduit par rapport à une séance privée</li>
-        <li>Accès aux machines en salle à Wavre</li>
-        <li>Programme adapté aux objectifs du groupe</li>
-        <li>Créneau horaire flexible</li>
-      </ul>
-      <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
-        <span class="price-badge">Prix <em>réduit</em> / pers.</span>
-        <a href="contact.html" class="btn btn-primary pulse-cta-btn">Nous inscrire →</a>
-      </div>
-    </div>
-    <div class="detail-visual" style="padding:0; overflow:hidden;"><img src="img/lucie-machine.jpg" alt="Small group training" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" /></div>
-  </div>
-
-  <!-- PROGRAMMES EN LIGNE -->
-  <div class="service-detail fade-in" id="ligne">
-    <div class="detail-visual" style="padding:0; overflow:hidden;"><img src="img/lucie-planche.jpg" alt="Coaching en ligne" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" /></div>
-    <div class="detail-text">
-      <span class="detail-tag">Depuis chez toi</span>
-      <h2>Coaching en Ligne</h2>
-      <p>Disponible uniquement en pack, avec un <strong>engagement minimum de 3 mois</strong>. Je crée un programme sur mesure avec tout ce qu'il te faut pour progresser depuis n'importe où : programme détaillé, tableau de suivi, guide sportif, carnet de progression et un suivi hebdomadaire personnalisé.</p>
-      <ul class="detail-list">
-        <li>Programme sur mesure + tableau Excel de suivi</li>
-        <li>Guide du programme sportif détaillé</li>
-        <li>Carnet de suivi pour noter tes performances</li>
-        <li>1 suivi hebdomadaire (call vidéo ou messages vocaux WhatsApp)</li>
-        <li>Corrections techniques via vidéos</li>
-        <li>Support illimité — réponse sous 24h</li>
-      </ul>
-      <div style="background:rgba(255,92,26,0.06); border-radius:10px; padding:0.7rem 1rem; font-size:0.82rem; color:var(--text-muted); margin-bottom:0.8rem;">
-        ⚡ Engagement minimum 3 mois. Pack 3 mois = <strong>−60€</strong> · Pack 6 mois = <strong>−195€</strong>
-      </div>
-      <div style="display:flex; flex-wrap:wrap; gap:0.8rem; margin-bottom:0.5rem;">
-        <span class="price-badge"><em>199€</em> / mois</span>
-        <span class="price-badge"><em>537€</em> / 3 mois <span style="text-decoration:line-through;opacity:0.45;font-size:0.8rem;margin-left:0.3rem;">597€</span></span>
-        <span class="price-badge"><em>999€</em> / 6 mois <span style="text-decoration:line-through;opacity:0.45;font-size:0.8rem;margin-left:0.3rem;">1 194€</span></span>
-      </div>
-      <div style="margin-top:1rem;">
-        <a href="contact.html" class="btn btn-primary pulse-cta-btn">Me contacter →</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- FORMULE MIXTE -->
-  <div class="service-detail reverse fade-in" id="mixte">
-    <div class="detail-text">
-      <span class="detail-tag">Le meilleur des deux</span>
-      <h2>Formule Mixte</h2>
-      <p>La formule idéale pour apprendre la bonne technique et devenir autonome. <strong>1 séance en salle par semaine</strong> (4 séances/mois à Wavre) combinée à un suivi en ligne complet. Tu profites du meilleur des deux mondes : l'encadrement en présentiel et la flexibilité du coaching à distance. <strong>Engagement minimum 3 mois.</strong></p>
-      <ul class="detail-list">
-        <li>1 séance/semaine en salle à Wavre avec machines (4 séances/mois — <em>140€</em>)</li>
-        <li>Programme sur mesure + tableau Excel de suivi (<em>99€</em>)</li>
-        <li>Guide du programme sportif détaillé</li>
-        <li>Carnet de suivi de progression</li>
-        <li>Suivi hebdomadaire (call vidéo ou WhatsApp)</li>
-        <li>Corrections techniques via vidéos envoyées</li>
-        <li>Support illimité — réponse sous 24h</li>
-      </ul>
-      <div style="font-size:0.82rem; color:var(--text-muted); margin-bottom:0.8rem;">140€ séances + 99€ programme & suivi = <strong>239€/mois</strong> — soit <strong>~35€/séance</strong> tout inclus.</div>
-      <div style="background:rgba(255,92,26,0.06); border-radius:10px; padding:0.7rem 1rem; font-size:0.82rem; color:var(--text-muted); margin-bottom:0.8rem;">
-        ⚡ Engagement minimum 3 mois. Pack 3 mois = <strong>−100€</strong> · Pack 6 mois = économie <strong>−245€</strong>
-      </div>
-      <div style="display:flex; flex-wrap:wrap; gap:0.8rem;">
-        <span class="price-badge"><em>239€</em> / mois</span>
-        <span class="price-badge"><em>749€</em> / 3 mois <span style="text-decoration:line-through;opacity:0.45;font-size:0.8rem;margin-left:0.3rem;">717€</span></span>
-        <span class="price-badge"><em>1 499€</em> / 6 mois <span style="text-decoration:line-through;opacity:0.45;font-size:0.8rem;margin-left:0.3rem;">1 434€</span></span>
-      </div>
-      <div style="margin-top:1rem;">
-        <a href="contact.html" class="btn btn-primary pulse-cta-btn">Me contacter →</a>
-      </div>
-    </div>
-    <div class="detail-visual" style="padding:0; overflow:hidden;"><img src="img/lucie-machine2.jpg" alt="Formule mixte coaching" style="width:100%;height:100%;object-fit:cover;object-position:center;border-radius:24px;" /></div>
+    <p class="hint mt-4" data-i18n="cmp.hint">Fais glisser le tableau horizontalement pour voir toutes les colonnes.</p>
   </div>
 </section>
 
-<!-- PRICING TABLE -->
-<section style="background: var(--light-grey); padding: 6rem 4rem;">
-  <div class="fade-in">
-    <span class="section-tag">Tarifs</span>
-    <h2 class="section-title">Comparer les formules</h2>
-    <p class="section-sub">Toutes mes formules incluent un suivi de qualité. Choisis celle qui correspond le mieux à tes besoins.</p>
-  </div>
-  <div class="pricing-table fade-in">
-    <div class="pricing-row header">
-      <div class="pricing-cell">Formule</div>
-      <div class="pricing-cell">Coaching Privé</div>
-      <div class="pricing-cell highlight">Cours Collectifs</div>
-      <div class="pricing-cell">En Ligne</div>
+<!-- ══════════════ FAQ ══════════════ -->
+<section class="section" id="faq" aria-labelledby="faq-h">
+  <div class="container">
+    <div class="section-head section-head--split" data-reveal>
+      <div>
+        <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+        <h2 class="display-3" id="faq-h">
+          <span data-i18n="faq.titleA">Questions</span>
+          <em class="accent" data-i18n="faq.titleB">fréquentes</em>
+        </h2>
+        <p class="lead" data-i18n="faq.lead">Tout ce qu’on me demande avant de commencer. Il reste une question ? Écris-moi, je réponds sous 24 h.</p>
+      </div>
+      <div class="field" style="margin:0;min-width:min(100%,300px)">
+        <label class="sr-only" for="faqSearch" data-i18n="faq.search">Filtrer les questions…</label>
+        <input class="input" type="search" id="faqSearch" data-i18n-attr="placeholder:faq.search" placeholder="Filtrer les questions…" autocomplete="off" />
+      </div>
     </div>
-    <div class="pricing-row">
-      <div class="pricing-cell">Suivi 100% personnalisé</div>
-      <div class="pricing-cell check">✓</div>
-      <div class="pricing-cell cross">—</div>
-      <div class="pricing-cell check">✓</div>
+
+    <div class="accordion" id="faqList" data-reveal>
+      <div class="acc-item" id="faq-1">
+        <h3><button type="button" class="acc-trigger" aria-expanded="false" aria-controls="faq-1-p"><span data-i18n="faq.q1">Dois-je avoir un niveau particulier pour commencer ?</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="faq-1-p"><div><div class="acc-body" data-i18n-html="faq.a1">Absolument pas. Que ce soit pour le coaching sportif ou le pilâtes, je pars de là où tu en es. On commence toujours par un <strong>call découverte gratuit</strong> : on fait connaissance, je comprends ta situation et tes éventuelles blessures, et on définit tes objectifs ensemble avant de créer ton programme. Ensuite on s’entraîne — avec beaucoup de bienveillance.</div></div></div>
+      </div>
+
+      <div class="acc-item" id="faq-2">
+        <h3><button type="button" class="acc-trigger" aria-expanded="false" aria-controls="faq-2-p"><span data-i18n="faq.q2">De quel équipement ai-je besoin ?</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="faq-2-p"><div><div class="acc-body" data-i18n-html="faq.a2"><p><strong>Cours collectifs au studio :</strong> rien du tout, tout le matériel est fourni. Une bouteille d’eau et la bonne humeur suffisent.</p><p><strong>Coaching à domicile :</strong> rien non plus, je viens avec élastiques, haltères et tout le nécessaire.</p><p><strong>Coaching en ligne :</strong> cela dépend du programme établi ensemble. Quelques accessoires de base (tapis, élastiques) peuvent aider, mais on adapte à ce que tu as.</p></div></div></div>
+      </div>
+
+      <div class="acc-item" id="faq-3">
+        <h3><button type="button" class="acc-trigger" aria-expanded="false" aria-controls="faq-3-p"><span data-i18n="faq.q3">Puis-je faire du sport si j’ai des douleurs ou une blessure ?</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="faq-3-p"><div><div class="acc-body" data-i18n-html="faq.a3">Oui, dans beaucoup de cas. Le pilâtes en particulier est reconnu pour son approche douce et thérapeutique. Je travaille régulièrement avec des personnes ayant des douleurs dorsales, des problèmes de plancher pelvien, en post-partum ou en post-opératoire. Dis-moi ta situation lors de notre premier contact : on trouve presque toujours une approche adaptée.</div></div></div>
+      </div>
+
+      <div class="acc-item" id="faq-4">
+        <h3><button type="button" class="acc-trigger" aria-expanded="false" aria-controls="faq-4-p"><span data-i18n="faq.q4">Comment se déroule la première séance ?</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="faq-4-p"><div><div class="acc-body" data-i18n-html="faq.a4">On commence par un <strong>call découverte gratuit</strong>, en visio ou en présentiel si tu es dans la région. C’est le moment de faire connaissance et de comprendre tes objectifs, ton mode de vie et tes éventuelles douleurs. C’est à partir de cet échange que je construis un programme entièrement adapté à toi, avant même la première séance.</div></div></div>
+      </div>
+
+      <div class="acc-item" id="faq-5">
+        <h3><button type="button" class="acc-trigger" aria-expanded="false" aria-controls="faq-5-p"><span data-i18n="faq.q5">Où se passent les séances ? Tu te déplaces ?</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="faq-5-p"><div><div class="acc-body" data-i18n-html="faq.a5"><p><strong>À domicile :</strong> je me déplace chez toi dans le Brabant wallon et ses alentours (supplément possible au-delà de 15 minutes de route).</p><p><strong>Au studio :</strong> Chaussée de Louvain 328, 1300 Wavre — salle équipée avec machines.</p><p><strong>En ligne :</strong> partout dans le monde, via WhatsApp et appels vidéo.</p></div></div></div>
+      </div>
+
+      <div class="acc-item" id="faq-6">
+        <h3><button type="button" class="acc-trigger" aria-expanded="false" aria-controls="faq-6-p"><span data-i18n="faq.q6">Peut-on annuler ou reporter une séance ?</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="faq-6-p"><div><div class="acc-body" data-i18n-html="faq.a6"><p>Pour les séances privées : oui, jusqu’à 24 h avant, sans frais. En dessous de 24 h, la séance est due.</p><p>Pour les <strong>cours collectifs</strong> : une annulation à moins de 4 h du cours entraîne la comptabilisation de la séance. Réservation via WhatsApp, confirmation demandée la veille.</p></div></div></div>
+      </div>
+
+      <div class="acc-item" id="faq-7">
+        <h3><button type="button" class="acc-trigger" aria-expanded="false" aria-controls="faq-7-p"><span data-i18n="faq.q7">Le coaching en ligne, ça se passe comment exactement ?</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="faq-7-p"><div><div class="acc-body" data-i18n-html="faq.a7">Le coaching en ligne est disponible uniquement en pack, avec un <strong>engagement minimum de 3 mois</strong>. Tu reçois un programme sur mesure avec tableau Excel de suivi, guide sportif détaillé et carnet de progression. Chaque semaine, on fait un point ensemble (visio ou messages vocaux WhatsApp). Si tu as un doute sur l’exécution d’un exercice, tu m’envoies une vidéo et je te corrige à distance. Support illimité, réponse sous 24 h.</div></div></div>
+      </div>
+
+      <div class="acc-item" id="faq-8">
+        <h3><button type="button" class="acc-trigger" aria-expanded="false" aria-controls="faq-8-p"><span data-i18n="faq.q8">Conditions générales des cours de pilâtes</span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="faq-8-p"><div><div class="acc-body">
+          <p data-i18n="faq.a8">Le document ci-dessous reprend les conditions générales applicables aux cours de pilâtes (réservation, annulation, paiement).</p>
+          <img class="mt-4" style="border-radius:var(--r-md);max-width:520px;margin-inline:auto"
+               src="img/opt/conditions-generales-pilates-800.jpg"
+               srcset="img/opt/conditions-generales-pilates-800.jpg 800w, img/opt/conditions-generales-pilates-1600.jpg 1268w"
+               sizes="(max-width:760px) 88vw, 520px" width="800" height="1132"
+               data-i18n-attr="alt:faq.a8alt" alt="Conditions générales des cours de pilâtes" loading="lazy" decoding="async" />
+        </div></div></div>
+      </div>
     </div>
-    <div class="pricing-row">
-      <div class="pricing-cell">Programme sur mesure</div>
-      <div class="pricing-cell check">✓</div>
-      <div class="pricing-cell cross">—</div>
-      <div class="pricing-cell check">✓</div>
+
+    <div class="card text-center mt-6" id="faqEmpty" hidden>
+      <p class="card-title" data-i18n="faq.noresult">Aucune question ne correspond à ta recherche.</p>
+      <p class="card-text" data-i18n="faq.noresultHint">Essaie « matériel », « annulation » ou « blessure ».</p>
     </div>
-    <div class="pricing-row">
-      <div class="pricing-cell">Matériel fourni</div>
-      <div class="pricing-cell check">✓</div>
-      <div class="pricing-cell check">✓</div>
-      <div class="pricing-cell cross">—</div>
-    </div>
-    <div class="pricing-row">
-      <div class="pricing-cell">Bilan initial offert (1ère séance)</div>
-      <div class="pricing-cell check">✓</div>
-      <div class="pricing-cell cross">—</div>
-      <div class="pricing-cell cross">—</div>
-    </div>
-    <div class="pricing-row">
-      <div class="pricing-cell">Suivi WhatsApp</div>
-      <div class="pricing-cell check">✓</div>
-      <div class="pricing-cell cross">—</div>
-      <div class="pricing-cell check">✓ illimité</div>
-    </div>
-    <div class="pricing-row">
-      <div class="pricing-cell">Flexibilité horaire</div>
-      <div class="pricing-cell check">✓ flexible</div>
-      <div class="pricing-cell">Mar/Jeu 18h · Sam 10h</div>
-      <div class="pricing-cell check">✓ flexible</div>
-    </div>
-    <div class="pricing-row">
-      <div class="pricing-cell">À domicile possible</div>
-      <div class="pricing-cell check">✓</div>
-      <div class="pricing-cell cross">—</div>
-      <div class="pricing-cell check">✓ (partout)</div>
-    </div>
-    <div class="pricing-row" style="background: var(--white);">
-      <div class="pricing-cell" style="font-weight:800;">Prix</div>
-      <div class="pricing-cell" style="font-weight:800; color:var(--orange);">50€ / séance (domicile)<br/>40€ / séance (salle)</div>
-      <div class="pricing-cell" style="font-weight:800; color:var(--orange);">À partir de 15€ / cours</div>
-      <div class="pricing-cell" style="font-weight:800; color:var(--orange);">199€ / mois</div>
+
+    <div class="card mt-8" data-reveal style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem">
+      <div>
+        <p class="card-title" data-i18n="faq.stillTitle">Ta question n’est pas là ?</p>
+        <p class="card-text" data-i18n="faq.stillText">Écris-moi directement, je réponds personnellement sous 24 heures.</p>
+      </div>
+      <a class="btn btn--dark" href="contact.html">
+        <span data-i18n="services.contactCta">Me contacter</span>
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq" class="faq-section" style="padding: 6rem 4rem;">
-  <div class="fade-in">
-    <span class="section-tag">FAQ</span>
-    <h2 class="section-title">Questions fréquentes</h2>
-  </div>
-  <div class="faq-list">
-    <div class="faq-item fade-in">
-      <div class="faq-question">
-        Dois-je avoir un niveau particulier pour commencer ?
-        <div class="faq-toggle">+</div>
-      </div>
-      <div class="faq-answer">Absolument pas ! Que ce soit pour le coaching sportif ou le pilâtes, je pars de là où tu en es. On commence toujours par un <strong>call découverte gratuit</strong> : on fait connaissance, je comprends ta situation, tes éventuelles blessures, et on définit tes objectifs ensemble avant de créer ton programme. Ensuite on s'entraîne — avec beaucoup de bienveillance.</div>
-    </div>
-    <div class="faq-item fade-in">
-      <div class="faq-question">
-        De quel équipement ai-je besoin ?
-        <div class="faq-toggle">+</div>
-      </div>
-      <div class="faq-answer">
-        <strong>Cours collectifs (studio Wavre) :</strong> rien du tout ! Tout le matériel est fourni. Une bouteille d'eau et la bonne humeur suffisent.<br/><br/>
-        <strong>Coaching à domicile :</strong> rien non plus. Je viens avec élastiques, haltères et tout le nécessaire.<br/><br/>
-        <strong>Coaching en ligne :</strong> cela dépend du programme établi ensemble. En général, quelques accessoires de base (tapis, élastiques) peuvent être utiles, mais on adapte selon ce que tu as.
-      </div>
-    </div>
-    <div class="faq-item fade-in">
-      <div class="faq-question">
-        Puis-je faire du sport si j'ai des douleurs ou une blessure ?
-        <div class="faq-toggle">+</div>
-      </div>
-      <div class="faq-answer">Oui, dans beaucoup de cas ! Le pilâtes en particulier est connu pour son approche douce et thérapeutique. Je travaille régulièrement avec des personnes ayant des douleurs dorsales, des problèmes de plancher pelvien, en post-partum ou post-opératoire. Dis-moi ta situation lors de notre premier contact — on trouve toujours une approche adaptée.</div>
-    </div>
-    <div class="faq-item fade-in">
-      <div class="faq-question">
-        Comment se déroule la première séance ?
-        <div class="faq-toggle">+</div>
-      </div>
-      <div class="faq-answer">On commence par un <strong>call découverte gratuit</strong> (en visio ou en présentiel si tu es dans la région). C'est le moment pour faire connaissance, comprendre tes objectifs, ton mode de vie, tes éventuelles douleurs. C'est à partir de cet échange que je construis un programme entièrement adapté à toi — avant même la première séance.</div>
-    </div>
-    <div class="faq-item fade-in">
-      <div class="faq-question">
-        Où se passent les séances ? Tu te déplaces ?
-        <div class="faq-toggle">+</div>
-      </div>
-      <div class="faq-answer">
-        <strong>Coaching à domicile :</strong> je me déplace chez toi dans le Brabant Wallon et ses alentours (possible supplément si +15 min de route).<br/><br/>
-        <strong>Studio à Wavre :</strong> Chaussée de Louvain 328, 1300 Wavre — salle équipée avec machines.<br/><br/>
-        <strong>En ligne :</strong> partout dans le monde, via WhatsApp et appels vidéo.
-      </div>
-    </div>
-    <div class="faq-item fade-in">
-      <div class="faq-question">
-        Peut-on annuler ou reporter une séance ?
-        <div class="faq-toggle">+</div>
-      </div>
-      <div class="faq-answer">Pour les séances privées, oui, jusqu'à 24h avant sans frais. En dessous de 24h, la séance est due.<br/><br/>Pour les <strong>cours collectifs</strong> : annulation moins de 4h avant le cours → séance comptabilisée quand même. Réservation via WhatsApp, confirmation demandée la veille.</div>
-    </div>
-    <div class="faq-item fade-in">
-      <div class="faq-question">
-        Le coaching en ligne, c'est comment exactement ?
-        <div class="faq-toggle">+</div>
-      </div>
-      <div class="faq-answer">Le coaching en ligne est disponible uniquement en pack, avec un <strong>engagement minimum de 3 mois</strong>. Tu reçois un programme sur mesure avec tableau Excel de suivi, guide sportif détaillé et carnet de progression. Chaque semaine, on fait un point ensemble (call vidéo ou messages vocaux WhatsApp). Si tu as un doute sur l'exécution d'un exercice, tu m'envoies une vidéo et je te la corrige à distance. Support illimité avec réponse sous 24h.</div>
-    </div>
-    <div class="faq-item fade-in">
-      <div class="faq-question">
-        Conditions générales — Cours de Pilâtes
-        <div class="faq-toggle">+</div>
-      </div>
-      <div class="faq-answer" style="padding: 1rem 1.5rem;">
-        <img src="img/conditions-generales-pilates.jpeg" alt="Conditions générales — Cours de Pilâtes" style="width:82%; margin:0 auto; border-radius:8px; display:block;" />
-      </div>
+<!-- ══════════════ CTA ══════════════ -->
+<section class="cta-band">
+  <div class="container">
+    <h2 class="display-2" data-reveal>
+      <span data-i18n="services.cta.titleA">Convaincue ?</span><br />
+      <span data-i18n="services.cta.titleB">Passons à l’action</span>
+    </h2>
+    <p data-reveal data-i18n="services.cta.text">Un call découverte gratuit pour définir tes objectifs, puis on démarre. Simple, rapide, sans engagement.</p>
+    <div class="row" data-reveal>
+      <a class="btn btn--onBrand btn--lg" href="booking.html">
+        <span data-i18n="services.cta.primary">Réserver ma séance</span>
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn--onDark btn--lg" href="contact.html"><span data-i18n="services.cta.secondary">Poser une question</span></a>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section">
-  <h2>Convaincue ?<br/>Passons à l'action</h2>
-  <p>Un call découverte gratuit pour définir tes objectifs, puis on démarre. Simple, rapide, sans engagement.</p>
-  <a href="booking.html" class="btn btn-outline pulse-cta-btn">Réserver ma séance →</a>
-</section>
+</main>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-brand">
-    <img src="img/lucie-logo.png" alt="Lucie Coach" style="height:160px; width:auto; margin-bottom:1rem;" />
-    <p>Coach sportif à Wavre, Belgique. Je t'accompagne vers un corps plus fort, une posture alignée et un mental apaisé.</p>
-  </div>
-  <div class="footer-col">
-    <h4>Navigation</h4>
-    <a href="index.html">Accueil</a>
-    <a href="about.html">À propos</a>
-    <a href="services.html">Services</a>
-    <a href="booking.html">Réservation</a>
-    <a href="contact.html">Contact</a>
-  </div>
-  <div class="footer-col">
-    <h4>Services</h4>
-    <a href="#coaching">Coaching Remise en Forme</a>
-    <a href="#pilates">Pilâtes One-to-One</a>
-    <a href="#collectif">Cours Collectifs</a>
-    <a href="#ligne">Programmes en Ligne</a>
-  </div>
-  <div class="footer-col">
-    <h4>Contact</h4>
-    <a href="mailto:lucie.coach.pt@gmail.com">lucie.coach.pt@gmail.com</a>
-    <a href="tel:+32475305861">0475/30.58.61</a>
-    <a href="https://www.instagram.com/lucie.coach" target="_blank">Instagram</a>
-    <a href="https://maps.google.com/?q=Chaussée+de+Louvain+328,+1300+Wavre" target="_blank">Wavre, Belgique</a>
+<!--#FOOTER-->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="img/lucie-logo.png" alt="Lucie Van Horenbeke" width="56" height="56" loading="lazy" />
+        <p data-i18n="footer.tagline">Coach sportif et instructrice pilâtes à Wavre. Je t’accompagne vers un corps plus fort, une posture alignée et un mental apaisé.</p>
+        <h3 class="sr-only" id="f-social" data-i18n="footer.followTitle">Suivre</h3>
+        <div class="social-row" role="list" aria-labelledby="f-social">
+          <a class="social-btn" href="https://www.instagram.com/lucie.coach" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a class="social-btn" href="https://www.tiktok.com/@lucie.coach" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.3V2h-3.4v13.7a2.9 2.9 0 1 1-2.9-2.9c.3 0 .5 0 .8.1V9a6.3 6.3 0 1 0 5.5 6.3V8.7a8.2 8.2 0 0 0 4.8 1.5V6.8a4.9 4.9 0 0 1-1-.1Z"/></svg></a>
+          <a class="social-btn" href="https://www.linkedin.com/in/lucie-vanhorenbeke" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.9 20.5H3.6V9h3.3v11.5ZM5.2 7.4a1.9 1.9 0 1 1 0-3.9 1.9 1.9 0 0 1 0 3.9Zm15.3 13.1h-3.3v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.9V9h3.1v1.6h.1a3.5 3.5 0 0 1 3.1-1.7c3.3 0 3.9 2.2 3.9 5v6.6Z"/></svg></a>
+          <a class="social-btn" href="https://wa.me/32475305861" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.8 7.2L3 21l2-4.9A8.4 8.4 0 1 1 21 11.5Z"/></svg></a>
+        </div>
+      </div>
+
+      <nav class="footer-col" aria-labelledby="f-nav">
+        <h3 id="f-nav" data-i18n="footer.nav">Navigation</h3>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+          <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="booking.html" data-i18n="nav.booking">Réservation</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-labelledby="f-svc">
+        <h3 id="f-svc" data-i18n="footer.services">Services</h3>
+        <ul>
+          <li><a href="services.html#coaching" data-i18n="svc.coaching.name">Coaching remise en forme</a></li>
+          <li><a href="services.html#pilates" data-i18n="svc.pilates.name">Pilâtes one-to-one</a></li>
+          <li><a href="services.html#collectif" data-i18n="svc.collectif.name">Cours collectifs</a></li>
+          <li><a href="services.html#online" data-i18n="svc.online.name">Coaching en ligne</a></li>
+          <li><a href="services.html#mixte" data-i18n="svc.mixte.name">Formule mixte</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h3 data-i18n="footer.contact">Contact</h3>
+        <ul>
+          <li><a href="mailto:lucie.coach.pt@gmail.com">lucie.coach.pt@gmail.com</a></li>
+          <li><a href="tel:+32475305861">0475 30 58 61</a></li>
+          <li><a href="https://maps.google.com/?q=Chauss%C3%A9e+de+Louvain+328,+1300+Wavre" target="_blank" rel="noopener" data-i18n="footer.studio">Chaussée de Louvain 328, 1300 Wavre</a></li>
+          <li><a href="https://share.google/Q34PTdS56j8m9Qonz" target="_blank" rel="noopener">Google · 5,0 ★</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Lucie Van Horenbeke · <span data-i18n="footer.rights">Tous droits réservés.</span></span>
+      <span class="footer-legal">
+        <a href="mentions-legales.html" data-i18n="nav.legal">Mentions légales</a>
+        <a href="mentions-legales.html#rgpd" data-i18n="footer.privacy">Confidentialité &amp; RGPD</a>
+        <span data-i18n="footer.company">BCE BE1016001952 · Franchise de base, non assujettie à la TVA</span>
+      </span>
+    </div>
   </div>
 </footer>
-<div class="footer-bottom">
-  © 2026 Lucie VH · Tous droits réservés · <a href="mentions-legales.html" style="color:inherit;">Mentions légales</a>
+<!--#/FOOTER-->
+
+<!--#FLOATING-->
+<div class="fab-stack">
+  <a class="fab fab--wa" href="https://wa.me/32475305861" target="_blank" rel="noopener" data-i18n-attr="aria-label:common.whatsapp" aria-label="Écrire sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.53.15-.17.2-.3.3-.5.1-.19.05-.37-.02-.51-.08-.15-.67-1.62-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.28.18-1.41-.08-.12-.28-.2-.57-.34M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.89-9.89 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.43 9.89-9.88 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42Z"/></svg>
+  </a>
+  <button type="button" class="fab fab--top" id="backTop" data-i18n-attr="aria-label:common.backTop" aria-label="Revenir en haut">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5m-7 7 7-7 7 7"/></svg>
+  </button>
 </div>
 
-<a href="https://wa.me/32475305861" target="_blank" class="whatsapp-float" aria-label="Contacter sur WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
-<script src="main.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<!--#/FLOATING-->
+
+<script src="i18n.js" defer></script>
+<script src="main.js" defer></script>
+<script src="ui.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://www.lucievanhorenbeke.be/index.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lucievanhorenbeke.be/index.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.lucievanhorenbeke.be/index.html?lang=nl"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.lucievanhorenbeke.be/index.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lucievanhorenbeke.be/index.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.lucievanhorenbeke.be/index.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.lucievanhorenbeke.be/index.html?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.lucievanhorenbeke.be/index.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.lucievanhorenbeke.be/services.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lucievanhorenbeke.be/services.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.lucievanhorenbeke.be/services.html?lang=nl"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.lucievanhorenbeke.be/services.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lucievanhorenbeke.be/services.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.lucievanhorenbeke.be/services.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.lucievanhorenbeke.be/services.html?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.lucievanhorenbeke.be/services.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.lucievanhorenbeke.be/booking.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lucievanhorenbeke.be/booking.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.lucievanhorenbeke.be/booking.html?lang=nl"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.lucievanhorenbeke.be/booking.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lucievanhorenbeke.be/booking.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.lucievanhorenbeke.be/booking.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.lucievanhorenbeke.be/booking.html?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.lucievanhorenbeke.be/booking.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.lucievanhorenbeke.be/about.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lucievanhorenbeke.be/about.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.lucievanhorenbeke.be/about.html?lang=nl"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.lucievanhorenbeke.be/about.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lucievanhorenbeke.be/about.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.lucievanhorenbeke.be/about.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.lucievanhorenbeke.be/about.html?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.lucievanhorenbeke.be/about.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.lucievanhorenbeke.be/contact.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lucievanhorenbeke.be/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.lucievanhorenbeke.be/contact.html?lang=nl"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.lucievanhorenbeke.be/contact.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lucievanhorenbeke.be/contact.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.lucievanhorenbeke.be/contact.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.lucievanhorenbeke.be/contact.html?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.lucievanhorenbeke.be/contact.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.lucievanhorenbeke.be/mentions-legales.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
