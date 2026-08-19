@@ -497,6 +497,24 @@ em.accent, .accent {
   --btn-fg: #fff;
   box-shadow: var(--sh-glow), var(--sh-inset-top);
 }
+/* Pulse ring — opacity+scale only, true GPU composite, no paint */
+.btn--primary::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  background: transparent;
+  border: 2px solid var(--brand-solid);
+  opacity: 0;
+  transform: scale(1);
+  animation: pulse-ring 2.2s ease-out infinite;
+  pointer-events: none;
+}
+.btn--primary:hover::after { animation: none; }
+@keyframes pulse-ring {
+  0%   { opacity: .6; transform: scale(1); }
+  100% { opacity: 0;  transform: scale(1.45); }
+}
 .btn--primary:hover { --btn-bg: var(--brand-700); box-shadow: 0 12px 30px -8px rgba(255, 92, 26, .6), var(--sh-inset-top); transform: translateY(-2px); }
 
 .btn--secondary {
@@ -2555,7 +2573,13 @@ a.info-tile:hover { border-color: color-mix(in srgb, var(--brand-500) 40%, trans
 @media (max-width: 760px) {
   .testi-grid { columns: 1; }
   .steps::before { display: none; }
-  .split--reverse > *:first-child, .svc--reverse > *:first-child { order: 0; }
+  /* On mobile all svc sections: image always first, text always second */
+  .svc > *:first-child { order: 0; }
+  .svc .media-frame { order: -1; }
+  .svc--reverse > *:first-child { order: 0; }
+  .split--reverse > *:first-child { order: 0; }
+  /* Taller photo frames on mobile so subjects aren't cropped */
+  .svc .media-frame--wide { aspect-ratio: 3 / 4; }
   .hero-trust { gap: 1.25rem 1.75rem; }
   .cta-band .row { flex-direction: column; align-items: stretch; }
   .cta-band .btn { width: 100%; }
