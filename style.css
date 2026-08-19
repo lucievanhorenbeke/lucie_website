@@ -497,23 +497,22 @@ em.accent, .accent {
   --btn-fg: #fff;
   box-shadow: var(--sh-glow), var(--sh-inset-top);
 }
-/* Pulse ring — opacity+scale only, true GPU composite, no paint */
+/* Subtle blink — opacity only, true GPU composite, no paint */
 .btn--primary::after {
   content: "";
   position: absolute;
   inset: -3px;
   border-radius: inherit;
   background: transparent;
-  border: 2px solid var(--brand-solid);
+  border: 1.5px solid var(--brand-solid);
   opacity: 0;
-  transform: scale(1);
-  animation: pulse-ring 2.2s ease-out infinite;
+  animation: pulse-blink 2.8s ease-in-out infinite;
   pointer-events: none;
 }
 .btn--primary:hover::after { animation: none; }
-@keyframes pulse-ring {
-  0%   { opacity: .45; transform: scale(1); }
-  100% { opacity: 0;   transform: scale(1.18); }
+@keyframes pulse-blink {
+  0%, 100% { opacity: 0; }
+  50%       { opacity: .28; }
 }
 .btn--primary:hover { --btn-bg: var(--brand-700); box-shadow: 0 12px 30px -8px rgba(255, 92, 26, .6), var(--sh-inset-top); transform: translateY(-2px); }
 
@@ -1795,7 +1794,8 @@ mark {
   font-weight: 600;
   color: var(--brand-ink);
 }
-.go svg { width: 14px; height: 14px; flex: none; transition: transform var(--dur-2) var(--ease-out); }
+.go { margin-top: .75rem; }
+.go svg { width: 17px; height: 17px; flex: none; transition: transform var(--dur-2) var(--ease-out); }
 .service-card .go svg { width: 14px; height: 14px; transition: transform var(--dur-2) var(--ease-out); }
 .card--interactive:hover .go svg { transform: translateX(3px); }
 .card-title { font-size: var(--step-1); font-weight: 620; letter-spacing: -0.022em; margin-bottom: .5rem; }
