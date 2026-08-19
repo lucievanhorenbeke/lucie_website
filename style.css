@@ -365,7 +365,8 @@ em.accent, .accent {
 .container--narrow { max-width: 880px; }
 
 .section { padding-block: var(--section-y); position: relative; }
-.section--tight { padding-block: clamp(3rem, 2.4rem + 3vw, 5rem); }
+.section--tight  { padding-block: clamp(3rem, 2.4rem + 3vw, 5rem); }
+.section--compact { padding-block: clamp(2rem, 1.2rem + 2vw, 3rem); }
 .section--subtle { background: var(--bg-subtle); }
 .section--sunken { background: var(--bg-sunken); }
 
@@ -497,22 +498,22 @@ em.accent, .accent {
   --btn-fg: #fff;
   box-shadow: var(--sh-glow), var(--sh-inset-top);
 }
-/* Subtle blink — opacity only, true GPU composite, no paint */
+/* Very faint glow blink — GPU composite only */
 .btn--primary::after {
   content: "";
   position: absolute;
-  inset: -3px;
+  inset: -4px;
   border-radius: inherit;
   background: transparent;
-  border: 1.5px solid var(--brand-solid);
+  border: 1px solid var(--brand-solid);
   opacity: 0;
-  animation: pulse-blink 2.8s ease-in-out infinite;
+  animation: pulse-blink 3.5s ease-in-out infinite;
   pointer-events: none;
 }
 .btn--primary:hover::after { animation: none; }
 @keyframes pulse-blink {
   0%, 100% { opacity: 0; }
-  50%       { opacity: .28; }
+  50%       { opacity: .18; }
 }
 .btn--primary:hover { --btn-bg: var(--brand-700); box-shadow: 0 12px 30px -8px rgba(255, 92, 26, .6), var(--sh-inset-top); transform: translateY(-2px); }
 
@@ -1088,11 +1089,13 @@ em.accent, .accent {
   gap: .85rem;
   padding: .8rem .9rem;
   border-radius: var(--r-md);
-  background: var(--bg-subtle, rgba(0,0,0,.03));
-  border: 1px solid var(--border-soft);
+  background: rgba(0, 0, 0, .045);
+  border: 1px solid rgba(0, 0, 0, .08);
   transition: background-color var(--dur-1) var(--ease-out), border-color var(--dur-1) var(--ease-out);
 }
-.mega-link:hover { background: var(--bg-sunken); border-color: color-mix(in srgb, var(--brand-500) 18%, var(--border-soft)); }
+:root[data-theme="dark"] .mega-link { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.1); }
+.mega-link:hover { background: rgba(0,0,0,.08); border-color: color-mix(in srgb, var(--brand-500) 30%, transparent); }
+:root[data-theme="dark"] .mega-link:hover { background: rgba(255,255,255,.11); }
 .mega-link .mega-ico {
   display: grid;
   place-items: center;
@@ -1794,7 +1797,7 @@ mark {
   font-weight: 600;
   color: var(--brand-ink);
 }
-.go { margin-top: .75rem; }
+.go { display: inline-flex; align-items: center; gap: .3rem; margin-top: 1rem; }
 .go svg { width: 17px; height: 17px; flex: none; transition: transform var(--dur-2) var(--ease-out); }
 .service-card .go svg { width: 14px; height: 14px; transition: transform var(--dur-2) var(--ease-out); }
 .card--interactive:hover .go svg { transform: translateX(3px); }
