@@ -918,7 +918,8 @@ em.accent, .accent {
    6. HEADER & NAVIGATION
    ========================================================================== */
 
-.skip-link {
+.skip-link { display: none; }
+.skip-link--hidden {
   position: fixed;
   top: .75rem;
   left: 50%;
@@ -1082,6 +1083,15 @@ em.accent, .accent {
   color: var(--text);
 }
 :root[data-theme="dark"] .mega { background: var(--surface); }
+/* Mega always solid — even when header is over the dark hero */
+.site-header.is-onDark:not(.is-scrolled) .mega {
+  background: var(--n-0);
+  --text: var(--n-800);
+  --text-muted: var(--n-500);
+  --border: var(--n-200);
+  color: var(--n-800);
+}
+:root[data-theme="dark"] .site-header.is-onDark:not(.is-scrolled) .mega { background: var(--n-900); --text: var(--n-100); --text-muted: var(--n-400); }
 .nav-item.is-open .mega { opacity: 1; scale: 1; translate: -50% 0; pointer-events: auto; }
 .mega-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .35rem; }
 .mega-link {
@@ -1107,8 +1117,8 @@ em.accent, .accent {
 }
 :root[data-theme="dark"] .mega-link .mega-ico { background: rgba(255, 92, 26, .14); }
 .mega-link .mega-ico svg { width: 18px; height: 18px; }
-.mega-title { font-size: var(--step--1); font-weight: 600; letter-spacing: -0.012em; }
-.mega-desc { font-size: var(--step--2); color: var(--text-muted); line-height: 1.5; margin-top: .1rem; }
+.mega-title { font-size: var(--step--1); font-weight: 600; letter-spacing: -0.012em; display: block; }
+.mega-desc { font-size: var(--step--2); color: var(--text-muted); line-height: 1.5; display: block; margin-top: .35rem; }
 .mega-foot {
   display: flex;
   flex-wrap: wrap;
