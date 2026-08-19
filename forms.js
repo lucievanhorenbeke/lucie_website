@@ -124,18 +124,28 @@
         submitBtn.disabled = true;
 
         try {
-          // Build a JSON payload — more reliable than FormData with Web3Forms
+          // FormSubmit.co AJAX — no account needed, instant delivery
           const fd = new FormData(form);
-          const payload = {};
-          fd.forEach((v, k) => { payload[k] = v; });
+          const payload = {
+            _subject:  "[Lucie.coach] Nouveau message depuis le site",
+            _captcha:  "false",
+            _template: "table",
+            prenom:    fd.get("first_name") || "",
+            nom:       fd.get("last_name")  || "",
+            email:     fd.get("email")      || "",
+            telephone: fd.get("phone")      || "",
+            sujet:     fd.get("subject_choice") || "",
+            message:   fd.get("message")    || ""
+          };
 
-          const res = await fetch("https://api.web3forms.com/submit", {
+          const res = await fetch("https://formsubmit.co/ajax/lucie.coach.pt@gmail.com", {
             method: "POST",
             headers: { "Content-Type": "application/json", "Accept": "application/json" },
             body: JSON.stringify(payload)
           });
           const json = await res.json();
-          if (!json.success) throw new Error(json.message || "failed");
+          // FormSubmit.co returns success as the string "true"
+          if (json.success !== "true" && json.success !== true) throw new Error(json.message || "failed");
 
           form.reset();
           autosaveKey && store.del(autosaveKey);

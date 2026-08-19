@@ -233,11 +233,6 @@
         <p class="lead mt-4 mb-8" data-i18n="contact.form.lead">Que ce soit pour une question pratique ou pour démarrer un suivi, n’hésite pas.</p>
 
         <form class="form-card" id="contactForm" data-validate data-autosave="lvh.contact.draft" novalidate>
-          <!-- Web3Forms — endpoint et champs inchangés -->
-          <input type="hidden" name="access_key" value="4d25a9b1-e3e0-4d91-ac39-57015a6980f6" />
-          <input type="hidden" name="subject" value="[Lucie.coach] Nouveau message depuis le site" />
-          <input type="hidden" name="from_name" value="Site Lucie Coach" />
-          <input type="hidden" name="redirect" value="false" />
           <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
           <div class="field-row">
@@ -402,76 +397,55 @@
         </div>
 
         <div class="card">
-          <h2 class="card-title mb-4" data-i18n="contact.social.t">Réseaux sociaux</h2>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.55rem">
+          <h2 class="card-title mb-6" data-i18n="contact.social.t">Réseaux sociaux</h2>
+          <div class="stack" style="gap:.6rem">
 
             <!-- Instagram -->
-            <a href="https://www.instagram.com/lucie.coach" target="_blank" rel="noopener"
-               style="display:flex;align-items:center;gap:.65rem;padding:.75rem .9rem;border-radius:.75rem;border:1.5px solid var(--border);text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s;background:var(--surface)"
-               onmouseover="this.style.borderColor='#E1306C';this.style.boxShadow='0 0 0 3px rgba(225,48,108,.12)'"
-               onmouseout="this.style.borderColor='';this.style.boxShadow=''">
-              <span style="width:36px;height:36px;border-radius:.5rem;display:flex;align-items:center;justify-content:center;flex:none;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" style="width:18px;height:18px"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            <a class="info-tile" href="https://www.instagram.com/lucie.coach" target="_blank" rel="noopener">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+              <span>
+                <span class="k">Instagram</span>
+                <span class="v">@lucie.coach</span>
               </span>
-              <span style="display:flex;flex-direction:column;line-height:1.2;min-width:0">
-                <span class="k" style="font-size:.72rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--text-muted)">Instagram</span>
-                <span class="v" style="font-size:.85rem;font-weight:500;margin-top:.15rem">@lucie.coach</span>
-              </span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px;opacity:.4;flex:none"><path d="M7 17 17 7M8 7h9v9"/></svg>
             </a>
 
             <!-- Facebook -->
-            <a href="https://www.facebook.com/share/19B4R4rfxy/" target="_blank" rel="noopener"
-               style="display:flex;align-items:center;gap:.65rem;padding:.75rem .9rem;border-radius:.75rem;border:1.5px solid var(--border);text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s;background:var(--surface)"
-               onmouseover="this.style.borderColor='#1877F2';this.style.boxShadow='0 0 0 3px rgba(24,119,242,.12)'"
-               onmouseout="this.style.borderColor='';this.style.boxShadow=''">
-              <span style="width:36px;height:36px;border-radius:.5rem;display:flex;align-items:center;justify-content:center;flex:none;background:#1877F2;color:#fff">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:18px;height:18px"><path d="M24 12.1C24 5.4 18.6 0 12 0S0 5.4 0 12.1c0 6 4.4 11 10.2 11.9v-8.4H7.1v-3.5h3.1V9.4c0-3 1.8-4.7 4.6-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9v2.2h3.3l-.5 3.5h-2.8V24C19.6 23.1 24 18.1 24 12.1Z"/></svg>
+            <a class="info-tile" href="https://www.facebook.com/share/19B4R4rfxy/" target="_blank" rel="noopener">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg></span>
+              <span>
+                <span class="k">Facebook</span>
+                <span class="v">Lucie Van Horenbeke</span>
               </span>
-              <span style="display:flex;flex-direction:column;line-height:1.2;min-width:0">
-                <span class="k" style="font-size:.72rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--text-muted)">Facebook</span>
-                <span class="v" style="font-size:.85rem;font-weight:500;margin-top:.15rem">Lucie Van Horenbeke</span>
-              </span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px;opacity:.4;flex:none"><path d="M7 17 17 7M8 7h9v9"/></svg>
             </a>
 
             <!-- TikTok -->
-            <a href="https://www.tiktok.com/@lucie.coach" target="_blank" rel="noopener"
-               style="display:flex;align-items:center;gap:.65rem;padding:.75rem .9rem;border-radius:.75rem;border:1.5px solid var(--border);text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s;background:var(--surface)"
-               onmouseover="this.style.borderColor='#69C9D0';this.style.boxShadow='0 0 0 3px rgba(105,201,208,.15)'"
-               onmouseout="this.style.borderColor='';this.style.boxShadow=''">
-              <span style="width:36px;height:36px;border-radius:.5rem;display:flex;align-items:center;justify-content:center;flex:none;background:#010101;color:#fff">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:18px;height:18px"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.3V2h-3.4v13.7a2.9 2.9 0 1 1-2.9-2.9c.3 0 .5 0 .8.1V9a6.3 6.3 0 1 0 5.5 6.3V8.7a8.2 8.2 0 0 0 4.8 1.5V6.8a4.9 4.9 0 0 1-1-.1Z"/></svg>
+            <a class="info-tile" href="https://www.tiktok.com/@lucie.coach" target="_blank" rel="noopener">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></span>
+              <span>
+                <span class="k">TikTok</span>
+                <span class="v">@lucie.coach</span>
               </span>
-              <span style="display:flex;flex-direction:column;line-height:1.2;min-width:0">
-                <span class="k" style="font-size:.72rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--text-muted)">TikTok</span>
-                <span class="v" style="font-size:.85rem;font-weight:500;margin-top:.15rem">@lucie.coach</span>
-              </span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px;opacity:.4;flex:none"><path d="M7 17 17 7M8 7h9v9"/></svg>
             </a>
 
             <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/lucie-vanhorenbeke" target="_blank" rel="noopener"
-               style="display:flex;align-items:center;gap:.65rem;padding:.75rem .9rem;border-radius:.75rem;border:1.5px solid var(--border);text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s;background:var(--surface)"
-               onmouseover="this.style.borderColor='#0A66C2';this.style.boxShadow='0 0 0 3px rgba(10,102,194,.12)'"
-               onmouseout="this.style.borderColor='';this.style.boxShadow=''">
-              <span style="width:36px;height:36px;border-radius:.5rem;display:flex;align-items:center;justify-content:center;flex:none;background:#0A66C2;color:#fff">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:18px;height:18px"><path d="M6.9 20.5H3.6V9h3.3v11.5ZM5.2 7.4a1.9 1.9 0 1 1 0-3.9 1.9 1.9 0 0 1 0 3.9Zm15.3 13.1h-3.3v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.9V9h3.1v1.6h.1a3.5 3.5 0 0 1 3.1-1.7c3.3 0 3.9 2.2 3.9 5v6.6Z"/></svg>
+            <a class="info-tile" href="https://www.linkedin.com/in/lucie-vanhorenbeke" target="_blank" rel="noopener">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+              <span>
+                <span class="k">LinkedIn</span>
+                <span class="v">Lucie Van Horenbeke</span>
               </span>
-              <span style="display:flex;flex-direction:column;line-height:1.2;min-width:0">
-                <span class="k" style="font-size:.72rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--text-muted)">LinkedIn</span>
-                <span class="v" style="font-size:.85rem;font-weight:500;margin-top:.15rem">Lucie Van Horenbeke</span>
-              </span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px;opacity:.4;flex:none"><path d="M7 17 17 7M8 7h9v9"/></svg>
             </a>
 
-            <!-- Google Reviews — full width -->
-            <a href="https://share.google/Q34PTdS56j8m9Qonz" target="_blank" rel="noopener"
-               style="display:flex;align-items:center;gap:.65rem;padding:.75rem .9rem;border-radius:.75rem;border:1.5px solid var(--border);text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s;background:var(--surface);grid-column:1/-1"
-               onmouseover="this.style.borderColor='#FBBC04';this.style.boxShadow='0 0 0 3px rgba(251,188,4,.18)'"
-               onmouseout="this.style.borderColor='';this.style.boxShadow=''">
-              <span style="width:36px;height:36px;border-radius:.5rem;display:flex;align-items:center;justify-content:center;flex:none;background:#fff;border:1.5px solid #e8e8e8">
-                <svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px"><path fill="#4285F4" d="M22.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h6c-.3 1.4-1 2.5-2.1 3.3v2.7h3.4c2-1.8 3.3-4.5 3.3-7.8Z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.4-2.7c-1 .7-2.3 1-3.9 1-3 0-5.5-2-6.4-4.7H2.1v2.8A11 11 0 0 0 12 23Z"/><path fill="#FBBC04" d="M5.6 14c-.2-.7-.4-1.3-.4-2s.1-1.4.4-2V7.2H2.1A11 11 0 0 0 1 12c0 1.7.4 3.4 1.1 4.8L5.6 14Z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.6l3.2-3.2A11 11 0 0 0 12 1 11 11 0 0 0 2.1 7.2l3.5 2.8C6.5 7.3 9 5.4 12 5.4Z"/></svg>
-              </span>
-              <span style="display:flex;flex-direction:column;line-height:1.2;min-width:0;flex:1">
-                <span class="k" style="font-size:.72rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--text-muted)">Avis Google</span>
-                <span class="v" style="font-size:.85rem;font-weight:500;margin-top:.15rem" id="google-reviews-val">5,0 ★ · <span id="google-review-count">7</span> avis</span>
+            <!-- Google Avis -->
+            <a class="info-tile" href="https://share.google/Q34PTdS56j8m9Qonz" target="_blank" rel="noopener">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg></span>
+              <span>
+                <span class="k">Avis Google</span>
+                <span class="v" id="google-reviews-val">5,0 ★ · <span id="google-review-count">7</span> avis</span>
               </span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px;opacity:.4;flex:none"><path d="M7 17 17 7M8 7h9v9"/></svg>
             </a>
@@ -488,9 +462,13 @@
                data-embed-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2530.1!2d4.6!3d50.72!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c17f3a5b4e4e4e%3A0x0!2sChauss%C3%A9e+de+Louvain+328%2C+1300+Wavre!5e0!3m2!1sfr!2sbe!4v1"
                data-embed-title="Carte du studio, Chaussée de Louvain 328, 1300 Wavre"
                style="min-height:280px"></div>
-          <div style="padding:1rem 1.35rem 1.35rem">
+          <div style="padding:1rem 1.35rem 1.35rem;display:flex;flex-direction:column;gap:.55rem">
             <a class="btn btn--secondary btn--sm btn--block" href="https://maps.google.com/?q=Chauss%C3%A9e+de+Louvain+328,+1300+Wavre" target="_blank" rel="noopener">
               <span data-i18n="contact.map.cta">Ouvrir dans Google Maps</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+            <a class="btn btn--secondary btn--sm btn--block" href="https://waze.com/ul?q=Chauss%C3%A9e+de+Louvain+328+1300+Wavre&navigate=yes" target="_blank" rel="noopener">
+              <span data-i18n="contact.map.waze">Ouvrir dans Waze</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
             </a>
           </div>
