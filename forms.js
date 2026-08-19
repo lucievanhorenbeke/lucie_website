@@ -124,9 +124,15 @@
         submitBtn.disabled = true;
 
         try {
+          // Build a JSON payload — more reliable than FormData with Web3Forms
+          const fd = new FormData(form);
+          const payload = {};
+          fd.forEach((v, k) => { payload[k] = v; });
+
           const res = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
-            body: new FormData(form)
+            headers: { "Content-Type": "application/json", "Accept": "application/json" },
+            body: JSON.stringify(payload)
           });
           const json = await res.json();
           if (!json.success) throw new Error(json.message || "failed");
