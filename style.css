@@ -497,25 +497,7 @@ em.accent, .accent {
   --btn-fg: #fff;
   box-shadow: var(--sh-glow), var(--sh-inset-top);
 }
-/* Pulse ring via composited ::after — no repaint */
-.btn--primary { position: relative; overflow: visible; }
-.btn--primary::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  box-shadow: 0 0 0 0 rgba(255, 92, 26, .5);
-  animation: pulse-ring 2s ease-out infinite;
-  pointer-events: none;
-  will-change: box-shadow, opacity;
-}
 .btn--primary:hover { --btn-bg: var(--brand-700); box-shadow: 0 12px 30px -8px rgba(255, 92, 26, .6), var(--sh-inset-top); transform: translateY(-2px); }
-.btn--primary:hover::after { animation: none; box-shadow: none; }
-@keyframes pulse-ring {
-  0%   { box-shadow: 0 0 0 0   rgba(255, 92, 26, .45); }
-  70%  { box-shadow: 0 0 0 10px rgba(255, 92, 26, 0); }
-  100% { box-shadow: 0 0 0 0   rgba(255, 92, 26, 0); }
-}
 
 .btn--secondary {
   --btn-bg: var(--surface);
@@ -544,25 +526,8 @@ em.accent, .accent {
 }
 .btn--onDark:hover { --btn-bg: rgba(255, 255, 255, .12); --btn-bd: rgba(255, 255, 255, .5); transform: translateY(-2px); }
 
-/* Pulse ring via composited ::after — no repaint */
-.btn--onBrand { --btn-bg: #fff; --btn-fg: var(--brand-700); box-shadow: var(--sh-lg); position: relative; overflow: visible; }
-.btn--onBrand::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  box-shadow: 0 0 0 0 rgba(255, 255, 255, .5);
-  animation: pulse-ring-white 2s ease-out infinite;
-  pointer-events: none;
-  will-change: box-shadow, opacity;
-}
+.btn--onBrand { --btn-bg: #fff; --btn-fg: var(--brand-700); box-shadow: var(--sh-lg); }
 .btn--onBrand:hover { --btn-bg: var(--n-50); transform: translateY(-2px); }
-.btn--onBrand:hover::after { animation: none; box-shadow: none; }
-@keyframes pulse-ring-white {
-  0%   { box-shadow: 0 0 0 0    rgba(255, 255, 255, .5); }
-  70%  { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
-  100% { box-shadow: 0 0 0 0    rgba(255, 255, 255, 0); }
-}
 
 .btn--lg { min-height: 54px; padding: .95rem 1.75rem; font-size: var(--step-0); }
 .btn--sm { min-height: 38px; padding: .45rem 1rem; font-size: var(--step--2); }
@@ -1476,15 +1441,7 @@ mark {
 .fab:hover { transform: scale(1.07); }
 .fab svg { width: 25px; height: 25px; }
 .fab--wa { background: var(--whatsapp); color: #fff; position: relative; }
-.fab--wa::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: var(--whatsapp);
-  animation: soft-pulse 2.8s var(--ease-in-out) infinite;
-  z-index: -1;
-}
+.fab--wa::before { display: none; }
 .fab--top {
   width: 42px; height: 42px;
   background: var(--surface);
