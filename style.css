@@ -2074,7 +2074,7 @@ mark {
   isolation: isolate;
   overflow: hidden;
   text-align: center;
-  padding-block: clamp(2.2rem, 1.2rem + 2.5vw, 3.8rem);
+  padding-block: clamp(3rem, 2.4rem + 3vw, 5rem);
   background: linear-gradient(140deg, var(--brand-600) 0%, var(--brand-solid) 45%, #A83006 100%);
   color: #fff;
 }
