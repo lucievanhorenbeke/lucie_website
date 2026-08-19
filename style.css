@@ -1892,9 +1892,8 @@ mark {
 .gallery a:hover .gallery-cta { background: linear-gradient(to top, rgba(190, 59, 8, .85), rgba(255, 92, 26, .5)); }
 
 /* --- Testimonials -------------------------------------------------------------------- */
-.testi-grid { columns: 3; column-gap: var(--sp-4); }
+.testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-4); align-items: start; }
 .testi {
-  break-inside: avoid;
   margin-bottom: var(--sp-5);
   padding: 1.5rem;
   border-radius: var(--r-lg);
@@ -2583,7 +2582,7 @@ a.info-tile:hover { border-color: color-mix(in srgb, var(--brand-500) 40%, trans
   .hero-inner { grid-template-columns: minmax(0, 1fr); }
   .hero-aside { display: none; }
   .hero { min-height: auto; }
-  .testi-grid { columns: 2; }
+  .testi-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 1023px) {
@@ -2604,7 +2603,7 @@ a.info-tile:hover { border-color: color-mix(in srgb, var(--brand-500) 40%, trans
 }
 
 @media (max-width: 760px) {
-  .testi-grid { columns: 1; }
+  .testi-grid { grid-template-columns: 1fr; }
   .steps::before { display: none; }
   /* On mobile all svc sections: image always first, text always second */
   .svc > *:first-child { order: 0; }
