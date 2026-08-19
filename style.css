@@ -1643,7 +1643,7 @@ mark {
 .page-hero {
   position: relative;
   isolation: isolate;
-  padding-block: calc(var(--header-h) + clamp(2.5rem, 2rem + 3vw, 4.5rem)) clamp(2.5rem, 2rem + 3vw, 4.5rem);
+  padding-block: calc(var(--header-h) + clamp(2.5rem, 2rem + 3vw, 4.5rem)) clamp(1.2rem, 0.8rem + 1.5vw, 2rem);
   background: var(--n-950);
   color: #fff;
   overflow: hidden;
