@@ -1882,7 +1882,7 @@ mark {
 .gallery a:hover .gallery-cta { background: linear-gradient(to top, rgba(190, 59, 8, .85), rgba(255, 92, 26, .5)); }
 
 /* --- Testimonials -------------------------------------------------------------------- */
-.testi-grid { columns: 3; column-gap: var(--sp-5); }
+.testi-grid { columns: 3; column-gap: var(--sp-4); }
 .testi {
   break-inside: avoid;
   margin-bottom: var(--sp-5);
@@ -1906,8 +1906,8 @@ mark {
   font-weight: 640;
   flex: none;
 }
-.testi .who { font-size: var(--step--1); font-weight: 590; }
-.testi .when { font-size: var(--step--2); color: var(--text-muted); }
+.testi .who { font-size: var(--step--1); font-weight: 590; display: block; }
+.testi .when { font-size: var(--step--2); color: var(--text-muted); display: block; margin-top: .25rem; }
 
 .rating-summary {
   display: inline-flex;
@@ -2065,7 +2065,7 @@ mark {
   isolation: isolate;
   overflow: hidden;
   text-align: center;
-  padding-block: clamp(1.4rem, 0.6rem + 2vw, 2.2rem);
+  padding-block: clamp(2.2rem, 1.2rem + 2.5vw, 3.8rem);
   background: linear-gradient(140deg, var(--brand-600) 0%, var(--brand-solid) 45%, #A83006 100%);
   color: #fff;
 }
