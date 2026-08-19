@@ -496,12 +496,24 @@ em.accent, .accent {
   --btn-fg: #fff;
   box-shadow: var(--sh-glow), var(--sh-inset-top);
 }
-.btn--primary { animation: pulse-btn 2s ease-in-out infinite; }
-.btn--primary:hover { --btn-bg: var(--brand-700); box-shadow: 0 12px 30px -8px rgba(255, 92, 26, .6), var(--sh-inset-top); transform: translateY(-2px); animation: none; }
-@keyframes pulse-btn {
-  0%   { box-shadow: 0 0 0 0 rgba(255, 92, 26, .55), 0 4px 14px rgba(255, 92, 26, .3); }
-  70%  { box-shadow: 0 0 0 10px rgba(255, 92, 26, 0), 0 4px 14px rgba(255, 92, 26, .3); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 92, 26, 0), 0 4px 14px rgba(255, 92, 26, .3); }
+/* Pulse ring via composited ::after — no repaint */
+.btn--primary { position: relative; overflow: visible; }
+.btn--primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 rgba(255, 92, 26, .5);
+  animation: pulse-ring 2s ease-out infinite;
+  pointer-events: none;
+  will-change: box-shadow, opacity;
+}
+.btn--primary:hover { --btn-bg: var(--brand-700); box-shadow: 0 12px 30px -8px rgba(255, 92, 26, .6), var(--sh-inset-top); transform: translateY(-2px); }
+.btn--primary:hover::after { animation: none; box-shadow: none; }
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0   rgba(255, 92, 26, .45); }
+  70%  { box-shadow: 0 0 0 10px rgba(255, 92, 26, 0); }
+  100% { box-shadow: 0 0 0 0   rgba(255, 92, 26, 0); }
 }
 
 .btn--secondary {
@@ -531,12 +543,24 @@ em.accent, .accent {
 }
 .btn--onDark:hover { --btn-bg: rgba(255, 255, 255, .12); --btn-bd: rgba(255, 255, 255, .5); transform: translateY(-2px); }
 
-.btn--onBrand { --btn-bg: #fff; --btn-fg: var(--brand-700); box-shadow: var(--sh-lg); animation: pulse-btn-white 2s ease-in-out infinite; }
-.btn--onBrand:hover { --btn-bg: var(--n-50); transform: translateY(-2px); animation: none; }
-@keyframes pulse-btn-white {
-  0%   { box-shadow: 0 0 0 0 rgba(255,255,255,.55), var(--sh-lg); }
-  70%  { box-shadow: 0 0 0 10px rgba(255,255,255,0), var(--sh-lg); }
-  100% { box-shadow: 0 0 0 0 rgba(255,255,255,0), var(--sh-lg); }
+/* Pulse ring via composited ::after — no repaint */
+.btn--onBrand { --btn-bg: #fff; --btn-fg: var(--brand-700); box-shadow: var(--sh-lg); position: relative; overflow: visible; }
+.btn--onBrand::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, .5);
+  animation: pulse-ring-white 2s ease-out infinite;
+  pointer-events: none;
+  will-change: box-shadow, opacity;
+}
+.btn--onBrand:hover { --btn-bg: var(--n-50); transform: translateY(-2px); }
+.btn--onBrand:hover::after { animation: none; box-shadow: none; }
+@keyframes pulse-ring-white {
+  0%   { box-shadow: 0 0 0 0    rgba(255, 255, 255, .5); }
+  70%  { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+  100% { box-shadow: 0 0 0 0    rgba(255, 255, 255, 0); }
 }
 
 .btn--lg { min-height: 54px; padding: .95rem 1.75rem; font-size: var(--step-0); }
