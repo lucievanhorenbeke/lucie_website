@@ -675,6 +675,42 @@
       });
     });
 
+    /* ---------------------------------------------------------------- testimonial pagination */
+    (function () {
+      const grid   = document.getElementById("testiGrid");
+      const prev   = document.getElementById("testiPrev");
+      const next   = document.getElementById("testiNext");
+      const dotsEl = document.getElementById("testiDots");
+      if (!grid || !prev || !next) return;
+
+      const items = Array.from(grid.querySelectorAll(".testi"));
+      const PER_PAGE = 3;
+      const pages = Math.ceil(items.length / PER_PAGE);
+      let current = 0;
+
+      // Build dots
+      dotsEl.innerHTML = Array.from({ length: pages }, (_, i) =>
+        `<span class="dot${i === 0 ? " is-active" : ""}" aria-hidden="true"></span>`
+      ).join("");
+      const dots = Array.from(dotsEl.querySelectorAll(".dot"));
+
+      function show(page) {
+        current = page;
+        items.forEach((el, i) => {
+          const inPage = i >= page * PER_PAGE && i < (page + 1) * PER_PAGE;
+          el.hidden = !inPage;
+        });
+        dots.forEach((d, i) => d.classList.toggle("is-active", i === page));
+        prev.disabled = page === 0;
+        next.disabled = page >= pages - 1;
+      }
+
+      on(prev, "click", () => show(current - 1));
+      on(next, "click", () => show(current + 1));
+
+      show(0); // init
+    })();
+
     // Expose the pieces the page-level modules need.
     window.LVH = { t, svg, $, $$, on, store, KEYS, Toast, Theme, setLang, prefersReduced, ICON };
     document.dispatchEvent(new CustomEvent("lvh:ready"));

@@ -648,7 +648,7 @@ em.accent, .accent {
     border-color var(--dur-2) var(--ease-out),
     background-color var(--dur-2) var(--ease-out);
 }
-.card--interactive { display: block; }
+.card--interactive { display: block; -webkit-tap-highlight-color: transparent; }
 .card--interactive:hover {
   transform: translateY(-4px);
   box-shadow: var(--sh-lg);
@@ -1768,6 +1768,21 @@ mark {
   color: var(--text);
 }
 .service-card .price small { font-size: var(--step--2); font-weight: 500; color: var(--text-muted); letter-spacing: 0; }
+/* Dual-price layout for coaching card */
+.price-dual { display: flex; flex-direction: column; gap: .15rem; }
+.price-dual .price-row { display: flex; align-items: baseline; gap: .35rem; }
+.price-dual .price-row .amount { font-size: var(--step-2); font-weight: 660; letter-spacing: -0.03em; color: var(--text); }
+.price-dual .price-row .unit   { font-size: var(--step--2); font-weight: 500; color: var(--text-muted); }
+/* Testimonial pagination */
+.testi-nav { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 2rem; }
+.testi-nav button { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer; transition: border-color var(--dur-2) var(--ease-out), background var(--dur-2) var(--ease-out); }
+.testi-nav button:hover:not(:disabled) { border-color: var(--brand-500); background: var(--brand-50); color: var(--brand-ink); }
+.testi-nav button:disabled { opacity: .35; cursor: default; }
+.testi-nav button svg { width: 18px; height: 18px; }
+.testi-nav .dots { display: flex; gap: .45rem; }
+.testi-nav .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--border); transition: background var(--dur-2) var(--ease-out), transform var(--dur-2) var(--ease-out); }
+.testi-nav .dot.is-active { background: var(--brand-500); transform: scale(1.3); }
+.testi[hidden] { display: none !important; }
 .service-card .go {
   display: inline-flex;
   align-items: center;

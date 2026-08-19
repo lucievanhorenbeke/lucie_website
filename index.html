@@ -448,7 +448,10 @@
         <h3 class="card-title" data-i18n="svc.coaching.name">Coaching remise en forme</h3>
         <p class="card-text" data-i18n="svc.coaching.desc">Perte de poids, renforcement, cardio. Suivi 100 % individuel à domicile ou en salle à Wavre, matériel fourni.</p>
         <div class="price-line">
-          <span class="price"><span data-i18n="svc.coaching.price">50 €</span> <small data-i18n="svc.coaching.unit">à domicile · 40 € en salle</small></span>
+          <div class="price-dual">
+            <div class="price-row"><span class="amount">50 €</span><span class="unit">à domicile</span></div>
+            <div class="price-row"><span class="amount">40 €</span><span class="unit">en salle</span></div>
+          </div>
           <span class="go"><span data-i18n="home.services.detail">Voir le détail</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -654,7 +657,7 @@
       </div>
     </div>
 
-    <div class="testi-grid" data-reveal>
+    <div class="testi-grid" id="testiGrid" data-reveal>
       <figure class="testi">
         <div class="stars" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg></div>
         <blockquote data-i18n="testi.2.q">« Je suis absolument ravie de mes cours de pilâtes ! L’ambiance est bienveillante et les cours sont de qualité. La professeure est aux petits soins, elle corrige les postures avec douceur et précision, ce qui fait vraiment la différence. »</blockquote>
@@ -665,6 +668,12 @@
         <div class="stars" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg></div>
         <blockquote data-i18n="testi.3.q">« Prof motivante et toujours souriante. Exercices adaptés à la capacité de chacun en fonction des pathologies. Prix raisonnable et parking à proximité. Adresse à retenir ! »</blockquote>
         <figcaption><span class="avatar" aria-hidden="true">A</span><span><span class="who" data-i18n="testi.3.n">Anne Lambillon</span><span class="when" data-i18n="testi.verified">Avis Google vérifié</span></span></figcaption>
+      </figure>
+
+      <figure class="testi">
+        <div class="stars" aria-label="5 étoiles sur 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.1 4.8 1.3 7L12 18l-6.2 3.3 1.3-7L2 9.5l7-.9z"/></svg></div>
+        <blockquote>« Top coach ! Séances bien structurées, atmosphère agréable et résultats au rendez-vous. Je recommande à 100 %. »</blockquote>
+        <figcaption><span class="avatar" aria-hidden="true">L</span><span><span class="who">Luc Houtman</span><span class="when" data-i18n="testi.verified">Avis Google vérifié</span></span></figcaption>
       </figure>
 
       <figure class="testi">
@@ -691,6 +700,16 @@
         <figcaption><span class="avatar" aria-hidden="true">L</span><span><span class="who" data-i18n="testi.4.n">Luwiza Ahloumou</span><span class="when" data-i18n="testi.verified">Avis Google vérifié</span></span></figcaption>
       </figure>
     </div>
+
+    <nav class="testi-nav" id="testiNav" aria-label="Naviguer entre les avis">
+      <button id="testiPrev" aria-label="Avis précédents" disabled>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="dots" id="testiDots"></div>
+      <button id="testiNext" aria-label="Avis suivants">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </nav>
 
     <div class="text-center mt-8" data-reveal>
       <a class="btn btn--secondary" href="https://share.google/Q34PTdS56j8m9Qonz" target="_blank" rel="noopener">
