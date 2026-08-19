@@ -142,7 +142,7 @@ window.LOCALES.en = {
   "home.about.f4": "Fully personalised online programmes",
   "home.about.cta": "Discover my background",
   "home.about.cta2": "Get in touch",
-  "home.about.badgeT": "Lucie Van Horenbeke",
+  "home.about.badgeT": "Lucie",
   "home.about.badgeS": "Personal trainer & Pilates · Wavre",
 
   "home.services.eyebrow": "My services",

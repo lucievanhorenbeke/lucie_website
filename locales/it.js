@@ -142,7 +142,7 @@ window.LOCALES.it = {
   "home.about.f4": "Programmi online completamente personalizzati",
   "home.about.cta": "Scopri il mio percorso",
   "home.about.cta2": "Contattami",
-  "home.about.badgeT": "Lucie Van Horenbeke",
+  "home.about.badgeT": "Lucie",
   "home.about.badgeS": "Personal trainer e pilates · Wavre",
 
   "home.services.eyebrow": "I miei servizi",

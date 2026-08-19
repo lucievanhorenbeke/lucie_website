@@ -161,7 +161,7 @@ window.LOCALES.fr = {
   "home.about.f4": "Programmes en ligne entièrement personnalisés",
   "home.about.cta": "Découvrir mon parcours",
   "home.about.cta2": "Me contacter",
-  "home.about.badgeT": "Lucie Van Horenbeke",
+  "home.about.badgeT": "Lucie",
   "home.about.badgeS": "Coach sportif & pilates · Wavre",
 
   "home.services.eyebrow": "Mes services",
