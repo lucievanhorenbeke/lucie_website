@@ -512,8 +512,8 @@ em.accent, .accent {
 }
 .btn--primary:hover::after { animation: none; }
 @keyframes pulse-ring {
-  0%   { opacity: .6; transform: scale(1); }
-  100% { opacity: 0;  transform: scale(1.45); }
+  0%   { opacity: .45; transform: scale(1); }
+  100% { opacity: 0;   transform: scale(1.18); }
 }
 .btn--primary:hover { --btn-bg: var(--brand-700); box-shadow: 0 12px 30px -8px rgba(255, 92, 26, .6), var(--sh-inset-top); transform: translateY(-2px); }
 
@@ -1791,6 +1791,7 @@ mark {
   font-weight: 600;
   color: var(--brand-ink);
 }
+.go svg { width: 14px; height: 14px; flex: none; transition: transform var(--dur-2) var(--ease-out); }
 .service-card .go svg { width: 14px; height: 14px; transition: transform var(--dur-2) var(--ease-out); }
 .card--interactive:hover .go svg { transform: translateX(3px); }
 .card-title { font-size: var(--step-1); font-weight: 620; letter-spacing: -0.022em; margin-bottom: .5rem; }
@@ -2057,7 +2058,7 @@ mark {
   isolation: isolate;
   overflow: hidden;
   text-align: center;
-  padding-block: clamp(2rem, 1rem + 3vw, 3.5rem);
+  padding-block: clamp(1.4rem, 0.6rem + 2vw, 2.2rem);
   background: linear-gradient(140deg, var(--brand-600) 0%, var(--brand-solid) 45%, #A83006 100%);
   color: #fff;
 }
@@ -2070,10 +2071,10 @@ mark {
     radial-gradient(60% 90% at 15% 10%, rgba(255, 255, 255, .22), transparent 60%),
     radial-gradient(50% 80% at 88% 90%, rgba(0, 0, 0, .28), transparent 60%);
 }
-.cta-band h2 { color: #fff; margin-bottom: .9rem; }
-.cta-band p { color: rgba(255, 255, 255, .88); max-width: 46ch; margin: 0 auto 2rem; font-size: var(--step-1); }
+.cta-band h2 { color: #fff; margin-bottom: .6rem; }
+.cta-band p { color: rgba(255, 255, 255, .88); max-width: 46ch; margin: 0 auto 1.4rem; font-size: var(--step-0); }
 .cta-band .row { justify-content: center; }
-.cta-band .fineprint { margin-top: 1.5rem; font-size: var(--step--2); color: rgba(255, 255, 255, .72); }
+.cta-band .fineprint { margin-top: 1rem; font-size: var(--step--2); color: rgba(255, 255, 255, .72); white-space: nowrap; }
 
 /* --- Info tiles ------------------------------------------------------------------------------------- */
 .info-tile {
