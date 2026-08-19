@@ -433,6 +433,15 @@
         const open = item.classList.toggle("is-open");
         trigger.setAttribute("aria-expanded", String(open));
         if (open && item.id) history.replaceState({}, "", "#" + item.id);
+        // Close all other acc-items in the same parent (one-open-at-a-time)
+        if (open) {
+          $$(".acc-item", item.closest(".accordion, #faqList") || document).forEach((other) => {
+            if (other === item) return;
+            other.classList.remove("is-open");
+            const t = $(".acc-trigger", other);
+            if (t) t.setAttribute("aria-expanded", "false");
+          });
+        }
       });
     });
 
