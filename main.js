@@ -75,7 +75,7 @@
       const meta = $('meta[name="theme-color"]');
       if (meta) meta.setAttribute("content", dark ? "#0C0B09" : "#FFFFFF");
       $$("[data-theme-toggle]").forEach((b) => b.setAttribute("aria-pressed", String(dark)));
-      if (announce) Toast.show(t(dark ? "toast.themeDark" : "toast.themeLight"), "success");
+      // No toast notification when toggling theme
     },
     current() { return store.get(KEYS.theme, "system"); },
     toggle() {
