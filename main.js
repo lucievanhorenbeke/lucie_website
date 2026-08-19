@@ -377,7 +377,7 @@
             const sibs = $$("[data-reveal]", group);
             el.style.setProperty("--reveal-delay", Math.min(sibs.indexOf(el), 8) * 70 + "ms");
           }
-          el.classList.add("is-revealed");
+          el.classList.add("is-entering", "is-revealed");
           io.unobserve(el);
         });
       },

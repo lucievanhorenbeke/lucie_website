@@ -417,8 +417,9 @@ em.accent, .accent {
   transition:
     opacity var(--dur-4) var(--ease-out) var(--reveal-delay, 0ms),
     transform var(--dur-4) var(--ease-out) var(--reveal-delay, 0ms);
-  will-change: opacity, transform;
+  /* will-change set only when entering viewport, via .is-entering class */
 }
+[data-reveal].is-entering { will-change: opacity, transform; }
 [data-reveal="scale"] { transform: translate3d(0, 22px, 0) scale(.97); }
 [data-reveal="left"]  { transform: translate3d(-24px, 0, 0); }
 [data-reveal="right"] { transform: translate3d(24px, 0, 0); }
@@ -674,8 +675,8 @@ em.accent, .accent {
 .card--flush { padding: 0; overflow: hidden; }
 .card--glass {
   background: var(--surface-glass);
-  backdrop-filter: blur(18px) saturate(150%);
-  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-color: rgba(255, 255, 255, .18);
 }
 
@@ -967,8 +968,8 @@ em.accent, .accent {
 }
 .site-header.is-scrolled {
   background: var(--surface-glass);
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom-color: var(--border);
   box-shadow: 0 1px 20px -6px rgba(23, 21, 18, .12);
 }
@@ -1601,8 +1602,8 @@ mark {
   border-radius: var(--r-xl);
   background: rgba(255, 255, 255, .07);
   border: 1px solid rgba(255, 255, 255, .14);
-  backdrop-filter: blur(22px) saturate(160%);
-  -webkit-backdrop-filter: blur(22px) saturate(160%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 30px 70px -30px rgba(0, 0, 0, .8);
   color: #fff;
 }
@@ -1741,8 +1742,8 @@ mark {
   padding: .8rem 1rem;
   border-radius: var(--r-md);
   background: rgba(20, 18, 16, .62);
-  backdrop-filter: blur(16px) saturate(160%);
-  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, .14);
   color: #fff;
   font-size: var(--step--2);
