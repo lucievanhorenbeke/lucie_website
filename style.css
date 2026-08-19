@@ -1089,9 +1089,11 @@ em.accent, .accent {
   gap: .85rem;
   padding: .8rem .9rem;
   border-radius: var(--r-md);
-  transition: background-color var(--dur-1) var(--ease-out);
+  background: var(--bg-subtle, rgba(0,0,0,.03));
+  border: 1px solid var(--border-soft);
+  transition: background-color var(--dur-1) var(--ease-out), border-color var(--dur-1) var(--ease-out);
 }
-.mega-link:hover { background: var(--bg-sunken); }
+.mega-link:hover { background: var(--bg-sunken); border-color: color-mix(in srgb, var(--brand-500) 18%, var(--border-soft)); }
 .mega-link .mega-ico {
   display: grid;
   place-items: center;
@@ -1769,10 +1771,12 @@ mark {
 }
 .service-card .price small { font-size: var(--step--2); font-weight: 500; color: var(--text-muted); letter-spacing: 0; }
 /* Dual-price layout for coaching card */
-.price-dual { display: flex; flex-direction: column; gap: .15rem; }
-.price-dual .price-row { display: flex; align-items: baseline; gap: .35rem; }
-.price-dual .price-row .amount { font-size: var(--step-2); font-weight: 660; letter-spacing: -0.03em; color: var(--text); }
+.price-dual { display: flex; flex-direction: column; gap: .1rem; }
+.price-dual .price-row { display: flex; align-items: baseline; gap: .3rem; }
+.price-dual .price-row .amount { font-size: var(--step-2); font-weight: 760; letter-spacing: -0.03em; color: var(--text); line-height: 1.1; }
 .price-dual .price-row .unit   { font-size: var(--step--2); font-weight: 500; color: var(--text-muted); }
+/* Keep price-line aligned center when dual price is inside */
+.service-card .price-line:has(.price-dual) { align-items: center; }
 /* Testimonial pagination */
 .testi-nav { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 2rem; }
 .testi-nav button { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer; transition: border-color var(--dur-2) var(--ease-out), background var(--dur-2) var(--ease-out); }
