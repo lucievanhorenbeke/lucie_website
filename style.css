@@ -1964,7 +1964,11 @@ mark {
 .price-tag .was { text-decoration: line-through; opacity: .5; font-size: var(--step--2); }
 .price-tag--brand { background: var(--brand-50); border-color: color-mix(in srgb, var(--brand-500) 22%, transparent); }
 .price-tag--brand b { color: var(--brand-ink); }
-:root[data-theme="dark"] .price-tag--brand { background: rgba(255, 92, 26, .12); }
+:root[data-theme="dark"] .price-tag--brand { background: rgba(255, 92, 26, .15); border-color: rgba(255, 92, 26, .4); }
+:root[data-theme="dark"] .price-tag--brand b { color: var(--brand-500); }
+:root[data-theme="dark"] .price-tag { background: rgba(255, 92, 26, .1); border-color: rgba(255, 92, 26, .3); color: var(--brand-500); }
+:root[data-theme="dark"] .price-tag b { color: var(--brand-500); }
+:root[data-theme="dark"] .price-tag small { color: rgba(255, 140, 60, .8); }
 
 .pill-row { display: flex; flex-wrap: wrap; gap: .45rem; }
 
