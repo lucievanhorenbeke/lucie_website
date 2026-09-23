@@ -550,7 +550,7 @@
       const banner = $("#consent");
       banner && banner.classList.remove("is-open");
       if (value === "all") Consent.releaseEmbeds();
-      Toast.show(t("toast.consentSaved"), "success");
+      Toast.show(t("toast.consentSaved"), "info");
     },
     releaseEmbeds() {
       $$("[data-embed-gate]").forEach((gate) => {
