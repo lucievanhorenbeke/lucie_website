@@ -232,7 +232,7 @@ window.LOCALES.fr = {
 
   "home.cta.titleA": "Prête à commencer",
   "home.cta.titleB": "l’aventure ?",
-  "home.cta.text": "Le premier pas mérite d’être sans pression. Réserve ta séance découverte — appel gratuit, sans engagement.",
+  "home.cta.text": "Un premier call découverte gratuit pour apprendre à se connaître et définir un plan d’action ensemble.",
   "home.cta.primary": "Réserver ma séance",
   "home.cta.secondary": "Poser une question",
   "home.cta.fine": "Sans engagement · Annulation gratuite jusqu’à 24 h avant la séance",
@@ -366,7 +366,7 @@ window.LOCALES.fr = {
   "cmp.everywhere": "Partout",
   "cmp.yes": "Inclus",
   "cmp.no": "Non inclus",
-  "cmp.price1": "50 € à domicile · 40 € en salle",
+  "cmp.price1": "À dom. : 60 €/séance · dès 43,06 €/séance en pack 3 mois — En salle : carnet 10 séances · dès 28,13 €/séance",
   "cmp.price2": "À partir de 15 € le cours",
   "cmp.price3": "199 € par mois",
 

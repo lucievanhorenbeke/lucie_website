@@ -444,11 +444,8 @@
         <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
         <h3 class="card-title">Coaching à domicile</h3>
         <p class="card-text">Suivi 100 % individuel, programme sur mesure à domicile. Matériel fourni.</p>
-        <div class="price-line">
-          <div class="price-dual">
-            <div class="price-row"><span class="amount">60 €</span><span class="unit">séance unique</span></div>
-            <div class="price-row"><span class="amount">dès 43,06 €/séance</span><span class="unit">en pack 3 mois</span></div>
-          </div>
+        <div class="price-line" style="flex-direction:column;gap:.3rem;align-items:flex-start">
+          <span style="font-size:.78rem;color:var(--text-muted)">60 € la séance · <b style="color:var(--text)">dès 43,06 €/séance</b> en pack 3 mois</span>
           <span class="go"><span data-i18n="home.services.detail">Voir le détail</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -476,12 +473,9 @@
       <a class="card card--interactive card--spotlight service-card" href="services.html#coaching-salle" data-reveal="scale">
         <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6v12M18 6v12M2 9v6M22 9v6M6 12h12"/></svg></span>
         <h3 class="card-title">Coaching en salle</h3>
-        <p class="card-text">Salle Evolve à Wavre. Programme sur mesure, accès inclus, solo ou en groupe.</p>
-        <div class="price-line">
-          <div class="price-dual">
-            <div class="price-row"><span class="amount">60 €</span><span class="unit">séance unique</span></div>
-            <div class="price-row"><span class="amount">dès 28,13 €/séance</span><span class="unit">en forfait solo</span></div>
-          </div>
+        <p class="card-text">Salle Evolve à Wavre. Suivi 100 % personnalisé, programme sur mesure, accès inclus.</p>
+        <div class="price-line" style="flex-direction:column;gap:.3rem;align-items:flex-start">
+          <span style="font-size:.78rem;color:var(--text-muted)">60 € la séance · <b style="color:var(--text)">dès 28,13 €/séance</b> en forfait solo</span>
           <span class="go"><span data-i18n="home.services.detail">Voir le détail</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
         </div>
       </a>
@@ -612,9 +606,9 @@
     <div class="gallery" data-reveal>
       <figure><img src="img/opt/lucie-kettlebell-800.jpg" width="800" height="1120" alt="Lucie en travail de gainage avec kettlebell" loading="lazy" decoding="async" style="object-fit:cover;object-position:50% 0%" /></figure>
       <figure><img src="img/opt/lucie-halteres-800.jpg" width="800" height="1024" alt="Séance de renforcement avec haltères" loading="lazy" decoding="async" style="object-position:50% 0%" /></figure>
-      <figure><img src="img/opt/lucie-arc-800.jpg" width="800" height="1067" alt="Pose d'arc en pilates" loading="lazy" decoding="async" style="object-fit:cover;object-position:50% 25%" /></figure>
+      <figure><img src="img/opt/lucie-arc-800.jpg" width="800" height="1067" alt="Pose d'arc en pilates" loading="lazy" decoding="async" style="object-fit:cover;object-position:50% 0%" /></figure>
       <figure><img src="img/opt/lucie-pont-800.jpg" width="800" height="1067" alt="Exercice de pont en salle" loading="lazy" decoding="async" style="object-fit:cover;object-position:50% 40%" /></figure>
-      <figure><img src="img/opt/lucie-allongee-800.jpg" width="800" height="1067" alt="Exercice de mobilité au sol" loading="lazy" decoding="async" style="object-fit:cover;object-position:50% 0%" /></figure>
+      <figure><img src="img/opt/lucie-allongee-800.jpg" width="800" height="1067" alt="Exercice de mobilité au sol" loading="lazy" decoding="async" style="object-fit:cover;object-position:0% 0%" /></figure>
       <figure><img src="img/opt/lucie-etirement-800.jpg" width="800" height="1067" alt="Séance d'étirement en salle" loading="lazy" decoding="async" style="object-fit:cover;object-position:50% 0%" /></figure>
       <figure><img src="img/opt/lucie-collectif-800.jpg" width="800" height="450" alt="Cours collectif de pilâtes au studio de Wavre" loading="lazy" decoding="async" /></figure>
       <a href="https://www.instagram.com/lucie.coach" target="_blank" rel="noopener">
@@ -726,7 +720,8 @@
       <span data-i18n="home.cta.titleA">Prête à commencer</span><br />
       <span data-i18n="home.cta.titleB">l’aventure ?</span>
     </h2>
-    <p data-reveal data-i18n="home.cta.text">Le premier pas mérite d’être sans pression. Réserve ta séance découverte — elle est offerte.</p>
+    <p data-reveal data-i18n="home.cta.text">Un premier call découverte gratuit pour apprendre à se connaître et définir un plan d’action ensemble.</p>
+    <p class="hint mt-3" style="color:rgba(255,255,255,.65)" data-reveal>La 1ʳᵉ séance est offerte pour les cours collectifs de Pilates.</p>
     <div class="row" data-reveal>
       <a class="btn btn--onBrand btn--lg" href="booking.html">
         <span data-i18n="home.cta.primary">Réserver ma séance</span>
