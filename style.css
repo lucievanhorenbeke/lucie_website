@@ -2629,7 +2629,7 @@ a.info-tile:hover { border-color: color-mix(in srgb, var(--brand-500) 40%, trans
   .svc-photos-pair .media-frame { aspect-ratio: 1 / 1 !important; }
   /* Mobile-only photo position overrides (desktop keeps inline values) */
   .img-pos-domicile { object-position: 50% 50% !important; }
-  .img-pos-online   { object-position: 0%  30% !important; }
+  .img-pos-online   { object-position: 0%  15% !important; }
   .img-pos-mixte    { object-position: 50% 45% !important; }
   /* Services hero: group Formule mixte + Tarifs + FAQ on same line */
   .chip-last-group { display: flex; gap: .5rem; flex-wrap: nowrap; align-items: center; }
