@@ -2620,7 +2620,7 @@ a.info-tile:hover { border-color: color-mix(in srgb, var(--brand-500) 40%, trans
   .svc-photos-pair .media-frame--wide { aspect-ratio: 1 / 1; }
   .split--reverse > *:first-child { order: 0; }
   /* Smaller photo frames on mobile */
-  .svc .media-frame--wide { aspect-ratio: 16 / 9; max-height: 220px; }
+  .svc .media-frame--wide { aspect-ratio: 5 / 2; }
   .hero-trust { gap: 1.25rem 1.75rem; }
   .cta-band .row { flex-direction: column; align-items: stretch; }
   .cta-band .btn { width: 100%; }
