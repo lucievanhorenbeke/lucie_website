@@ -2621,6 +2621,9 @@ a.info-tile:hover { border-color: color-mix(in srgb, var(--brand-500) 40%, trans
   .split--reverse > *:first-child { order: 0; }
   /* Smaller photo frames on mobile */
   .svc .media-frame--wide { aspect-ratio: 5 / 2; }
+  /* services.html: override inline aspect-ratio 3/4 to landscape */
+  .svc .media-frame { aspect-ratio: 5 / 2 !important; }
+  .svc-photos-pair .media-frame { aspect-ratio: 1 / 1 !important; }
   .hero-trust { gap: 1.25rem 1.75rem; }
   .cta-band .row { flex-direction: column; align-items: stretch; }
   .cta-band .btn { width: 100%; }
