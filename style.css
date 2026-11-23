@@ -613,6 +613,9 @@ em.accent, .accent {
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--green-500) 25%, transparent);
 }
 
+/* On desktop the chip-last-group wrapper is transparent to flex layout */
+.chip-last-group { display: contents; }
+
 .chip {
   display: inline-flex;
   align-items: center;
@@ -2624,6 +2627,12 @@ a.info-tile:hover { border-color: color-mix(in srgb, var(--brand-500) 40%, trans
   /* services.html: override inline aspect-ratio 3/4 to landscape */
   .svc .media-frame { aspect-ratio: 3 / 2 !important; }
   .svc-photos-pair .media-frame { aspect-ratio: 1 / 1 !important; }
+  /* Mobile-only photo position overrides (desktop keeps inline values) */
+  .img-pos-domicile { object-position: 50% 20% !important; }
+  .img-pos-online   { object-position: 0%  0%  !important; }
+  .img-pos-mixte    { object-position: 50% 0%  !important; }
+  /* Services hero: group Formule mixte + Tarifs + FAQ on same line */
+  .chip-last-group { display: flex; gap: .5rem; flex-wrap: nowrap; align-items: center; }
   .hero-trust { gap: 1.25rem 1.75rem; }
   .cta-band .row { flex-direction: column; align-items: stretch; }
   .cta-band .btn { width: 100%; }
