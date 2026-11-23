@@ -2615,6 +2615,9 @@ a.info-tile:hover { border-color: color-mix(in srgb, var(--brand-500) 40%, trans
   .svc > *:first-child { order: 0; }
   .svc .media-frame { order: -1; }
   .svc--reverse > *:first-child { order: 0; }
+  .svc-photos-pair { order: -1; flex-direction: row !important; }
+  .svc-photos-pair .media-frame { flex: 1; min-width: 0; }
+  .svc-photos-pair .media-frame--wide { aspect-ratio: 1 / 1; }
   .split--reverse > *:first-child { order: 0; }
   /* Taller photo frames on mobile so subjects aren't cropped */
   .svc .media-frame--wide { aspect-ratio: 3 / 4; }

@@ -232,8 +232,8 @@ window.LOCALES.fr = {
 
   "home.cta.titleA": "Prête à commencer",
   "home.cta.titleB": "l’aventure ?",
-  "home.cta.text": "Le premier pas mérite d’être sans pression. Réserve ta séance découverte — elle est offerte.",
-  "home.cta.primary": "Réserver ma séance offerte",
+  "home.cta.text": "Le premier pas mérite d’être sans pression. Réserve ta séance découverte — appel gratuit, sans engagement.",
+  "home.cta.primary": "Réserver ma séance",
   "home.cta.secondary": "Poser une question",
   "home.cta.fine": "Sans engagement · Annulation gratuite jusqu’à 24 h avant la séance",
 
