@@ -226,6 +226,7 @@
         <a class="chip" href="#collectif" data-i18n="svc.collectif.name">Cours collectifs</a>
         <a class="chip" href="#online" data-i18n="svc.online.name">Coaching en ligne</a>
         <a class="chip" href="#mixte" data-i18n="svc.mixte.name">Formule mixte</a>
+        <div style="flex-basis:100%;height:0"></div>
         <a class="chip" href="#tarifs" data-i18n="cmp.eyebrow">Tarifs</a>
         <a class="chip" href="#faq" data-i18n="faq.eyebrow">FAQ</a>
       </div>
@@ -587,7 +588,8 @@
         <thead>
           <tr>
             <th scope="col" data-i18n="cmp.feature">Prestation</th>
-            <th scope="col" data-i18n="cmp.private">Coaching privé</th>
+            <th scope="col">Coaching à domicile</th>
+            <th scope="col">Coaching en salle</th>
             <th scope="col" class="is-featured" data-i18n="cmp.group">Cours collectifs</th>
             <th scope="col" data-i18n="cmp.online">En ligne</th>
           </tr>
@@ -595,37 +597,57 @@
         <tbody>
           <tr>
             <th scope="row" data-i18n="cmp.r1">Suivi 100 % personnalisé</th>
-            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only" data-i18n="cmp.yes">Inclus</span></td><td class="no"><span aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.no">Non inclus</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only" data-i18n="cmp.yes">Inclus</span></td>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Inclus</span></td>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Inclus</span></td>
+            <td class="no"><span aria-hidden="true">—</span><span class="sr-only">Non inclus</span></td>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Inclus</span></td>
           </tr>
           <tr>
             <th scope="row" data-i18n="cmp.r2">Programme sur mesure</th>
-            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only" data-i18n="cmp.yes">Inclus</span></td><td class="no"><span aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.no">Non inclus</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only" data-i18n="cmp.yes">Inclus</span></td>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Inclus</span></td>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Inclus</span></td>
+            <td class="no"><span aria-hidden="true">—</span><span class="sr-only">Non inclus</span></td>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Inclus</span></td>
           </tr>
           <tr>
             <th scope="row" data-i18n="cmp.r3">Matériel fourni</th>
-            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only" data-i18n="cmp.yes">Inclus</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="sr-only" data-i18n="cmp.yes">Inclus</span></td><td class="no"><span aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.no">Non inclus</span></td>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Inclus</span></td>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Inclus</span></td>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Inclus</span></td>
+            <td class="no"><span aria-hidden="true">—</span><span class="sr-only">Non inclus</span></td>
           </tr>
           <tr>
             <th scope="row" data-i18n="cmp.r4">Bilan initial offert</th>
-            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only" data-i18n="cmp.yes">Inclus</span></td><td class="no"><span aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.no">Non inclus</span></td><td class="no"><span aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.no">Non inclus</span></td>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Inclus</span></td>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Inclus</span></td>
+            <td class="no"><span aria-hidden="true">—</span><span class="sr-only">Non inclus</span></td>
+            <td class="no"><span aria-hidden="true">—</span><span class="sr-only">Non inclus</span></td>
           </tr>
           <tr>
             <th scope="row" data-i18n="cmp.r5">Suivi WhatsApp</th>
-            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only" data-i18n="cmp.yes">Inclus</span></td><td class="no"><span aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.no">Non inclus</span></td><td class="yes"><span aria-hidden="true">✓</span> <span data-i18n="cmp.unlimited">Illimité</span></td>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Inclus</span></td>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Inclus</span></td>
+            <td class="no"><span aria-hidden="true">—</span><span class="sr-only">Non inclus</span></td>
+            <td class="yes"><span aria-hidden="true">✓</span> <span data-i18n="cmp.unlimited">Illimité</span></td>
           </tr>
           <tr>
             <th scope="row" data-i18n="cmp.r6">Flexibilité horaire</th>
+            <td class="yes" data-i18n="cmp.flexible">Flexible</td>
             <td class="yes" data-i18n="cmp.flexible">Flexible</td>
             <td data-i18n="cmp.fixed">Mar/jeu 18 h · sam 10 h</td>
             <td class="yes" data-i18n="cmp.flexible">Flexible</td>
           </tr>
           <tr>
             <th scope="row" data-i18n="cmp.r7">À domicile possible</th>
-            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only" data-i18n="cmp.yes">Inclus</span></td><td class="no"><span aria-hidden="true">—</span><span class="sr-only" data-i18n="cmp.no">Non inclus</span></td><td class="yes"><span aria-hidden="true">✓</span> <span data-i18n="cmp.everywhere">Partout</span></td>
+            <td class="yes"><span aria-hidden="true">✓</span><span class="sr-only">Inclus</span></td>
+            <td class="no"><span aria-hidden="true">—</span><span class="sr-only">Non inclus</span></td>
+            <td class="no"><span aria-hidden="true">—</span><span class="sr-only">Non inclus</span></td>
+            <td class="yes"><span aria-hidden="true">✓</span> <span data-i18n="cmp.everywhere">Partout</span></td>
           </tr>
           <tr class="is-total">
             <th scope="row" data-i18n="cmp.r8">Tarif</th>
-            <td class="price" data-i18n="cmp.price1">À dom. : 60 €/séance · dès 43,06 €/séance en pack 3 mois<br>En salle : carnet 10 séances · dès 28,13 €/séance</td>
+            <td class="price">dès 43,06 €/séance<br><small style="font-weight:400">en pack 3 mois · 60 € sans pack</small></td>
+            <td class="price">dès 28,13 €/séance<br><small style="font-weight:400">en forfait solo · 60 € sans forfait</small></td>
             <td class="price" data-i18n="cmp.price2">20 €/séance · carte 10 séances 150 €</td>
             <td class="price" data-i18n="cmp.price3">Pack 3 mois 525 € · Pack 6 mois 1 000 €</td>
           </tr>

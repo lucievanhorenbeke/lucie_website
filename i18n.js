@@ -206,7 +206,7 @@ window.LOCALES.fr = {
   "home.gallery.eyebrow": "En séance",
   "home.gallery.titleA": "Le travail,",
   "home.gallery.titleB": "en vrai",
-  "home.gallery.lead": "Studio, domicile, salle : des séances concrètes, sans filtre et sans mise en scène.",
+  "home.gallery.lead": "Studio, domicile, salle : des séances en images.",
   "gallery.follow": "Voir sur Instagram",
 
   "home.testi.eyebrow": "Avis vérifiés",
@@ -232,7 +232,7 @@ window.LOCALES.fr = {
 
   "home.cta.titleA": "Prête à commencer",
   "home.cta.titleB": "l’aventure ?",
-  "home.cta.text": "Un premier call découverte gratuit pour apprendre à se connaître et définir un plan d’action ensemble.",
+  "home.cta.text": "Le premier pas mérite d’être sans pression. Réserve un premier call découverte — offert, sans engagement.",
   "home.cta.primary": "Réserver ma séance",
   "home.cta.secondary": "Poser une question",
   "home.cta.fine": "Sans engagement · Annulation gratuite jusqu’à 24 h avant la séance",
