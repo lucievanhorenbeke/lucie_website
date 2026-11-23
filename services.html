@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css?v=16" />
+<link rel="stylesheet" href="style.css?v=17" />
 
 <script>try{var m=JSON.parse(localStorage.getItem("lvh.theme")||'"system"');if(m!=="system")document.documentElement.setAttribute("data-theme",m);}catch(e){}</script>
 
@@ -86,8 +86,12 @@
           <div class="mega">
             <div class="mega-grid">
               <a class="mega-link" href="services.html#coaching">
+                <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+                <span><span class="mega-title">Coaching à domicile</span><span class="mega-desc">Suivi 100 % individuel, programme sur mesure.</span></span>
+              </a>
+              <a class="mega-link" href="services.html#coaching-salle">
                 <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6v12M18 6v12M2 9v6M22 9v6M6 12h12"/></svg></span>
-                <span><span class="mega-title" data-i18n="svc.coaching.name">Coaching remise en forme</span><span class="mega-desc" data-i18n="svc.coaching.desc">Suivi 100 % individuel, à domicile ou en salle.</span></span>
+                <span><span class="mega-title">Coaching en salle</span><span class="mega-desc">Salle Evolve à Wavre, solo ou en groupe.</span></span>
               </a>
               <a class="mega-link" href="services.html#pilates">
                 <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.4"/><path d="M5 20c1.6-4 4-6 7-6s5.4 2 7 6M8 11h8"/></svg></span>
@@ -175,7 +179,8 @@
 
     <div class="drawer-label" data-i18n="mm.label">Toutes les formules</div>
     <nav class="drawer-nav" aria-label="Services">
-      <a href="services.html#coaching"><span data-i18n="svc.coaching.name">Coaching remise en forme</span></a>
+      <a href="services.html#coaching"><span>Coaching à domicile</span></a>
+      <a href="services.html#coaching-salle"><span>Coaching en salle</span></a>
       <a href="services.html#pilates"><span data-i18n="svc.pilates.name">Pilates one-to-one</span></a>
       <a href="services.html#collectif"><span data-i18n="svc.collectif.name">Cours collectifs</span></a>
       <a href="services.html#online"><span data-i18n="svc.online.name">Coaching en ligne</span></a>
@@ -293,7 +298,7 @@
       <div>
         <span class="badge badge--brand">🏋️ En salle — Team Evolve</span>
         <h2 class="display-3">Coaching personnalisé — en salle</h2>
-        <p>Des séances de coaching dans la salle Team Evolve à Wavre. Accès libre à la salle inclus dans tous les forfaits. Tu viens seul·e ou en groupe — les forfaits Duo et les carnets multi-personnes correspondent au small group training.</p>
+        <p>Tes séances de coaching en salle (Evolve à Wavre). Accès libre à la salle inclus dans tous les forfaits. Tu viens seul·e ou en groupe. Suivi 100 % personnalisé, programme construit autour de tes objectifs. On commence toujours par un call découverte gratuit pour définir ensemble où tu veux aller.</p>
 
         <ul class="check-list mt-6">
           <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span><span>Bilan complet et objectifs SMART</span></li>
@@ -316,7 +321,7 @@
           <span class="price-tag price-tag--brand"><b>60 €</b></span>
         </div>
 
-        <p class="drawer-label mt-6">Carnet 10 séances <small style="font-weight:400;opacity:.6">(solo ou small group)</small></p>
+        <p class="drawer-label mt-6">Carnet 10 séances</p>
         <div class="pill-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
           <span class="price-tag" style="width:100%;justify-content:space-between">
             <span>1 personne</span>
@@ -765,11 +770,14 @@
       <nav class="footer-col" aria-labelledby="f-svc">
         <h3 id="f-svc" data-i18n="footer.services">Services</h3>
         <ul>
-          <li><a href="services.html#coaching" data-i18n="svc.coaching.name">Coaching remise en forme</a></li>
+          <li><a href="services.html#coaching">Coaching à domicile</a></li>
+          <li><a href="services.html#coaching-salle">Coaching en salle</a></li>
           <li><a href="services.html#pilates" data-i18n="svc.pilates.name">Pilates one-to-one</a></li>
           <li><a href="services.html#collectif" data-i18n="svc.collectif.name">Cours collectifs</a></li>
           <li><a href="services.html#online" data-i18n="svc.online.name">Coaching en ligne</a></li>
           <li><a href="services.html#mixte" data-i18n="svc.mixte.name">Formule mixte</a></li>
+          <li><a href="services.html">Tarifs</a></li>
+          <li><a href="services.html#faq">FAQ</a></li>
         </ul>
       </nav>
 

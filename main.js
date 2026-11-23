@@ -300,6 +300,7 @@
       on(item, "keydown", (e) => {
         if (e.key === "Escape") { close(0); trigger.focus(); }
       });
+      $$("a", panel).forEach((a) => on(a, "click", () => close(0)));
     });
   }
 
